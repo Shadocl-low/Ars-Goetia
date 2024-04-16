@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\1\Downloads\Ars Goetia\MainMenu\App.xaml
-11407045341
+3-1802814464
 
-5-842160634
+71894625769
 198-759771931
-MainWindow.xaml;
+GameForm.xaml;MainWindow.xaml;OptionMenu.xaml;
 
-False
+True
 

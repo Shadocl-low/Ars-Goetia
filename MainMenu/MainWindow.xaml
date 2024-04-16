@@ -10,18 +10,17 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Ars Goetia" Grid.ColumnSpan="3" x:Name="textLabel" Background="Black" Foreground="White" FontSize="320" FontFamily="Chiller" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <StackPanel Grid.Row="2" Grid.Column="1" >
-            <Button x:Name="Start" Height="75" Width="200" Content="New game" FontSize="30" Background="#000000" Foreground="White" BorderBrush="#000000" FontFamily="Gabriola"/>
-            <Button x:Name="Option" Height="75" Width="200" Content="Option" FontSize="30" Background="#000000" Foreground="White" BorderBrush="#000000" FontFamily="Gabriola"/>
-            <Button x:Name="Quit" Height="75" Width="200" Content="Quit" FontSize="30" Background="#000000" Foreground="White" BorderBrush="#000000" FontFamily="Gabriola" Click="Quit_Click"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Ars Goetia" Grid.ColumnSpan="3" x:Name="textLabel" Background="Black" Foreground="White" FontSize="320" FontFamily="Chiller" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,50,0,0" >
+            <Button x:Name="Start" Height="75" Width="200" Margin="0,0,0,50" Content="New game" FontSize="50" Background="#000000" Foreground="White" BorderBrush="#000000" FontFamily="Gabriola" Click="Start_Click"/>
+            <Button x:Name="Option" Height="75" Width="200" Margin="0,0,0,50" Content="Option" FontSize="50" Background="#000000" Foreground="White" BorderBrush="#000000" FontFamily="Gabriola" Click="Option_Click"/>
+            <Button x:Name="Quit" Height="75" Width="200" Margin="0,0,0,50" Content="Quit" FontSize="50" Background="#000000" Foreground="White" BorderBrush="#000000" FontFamily="Gabriola" Click="Quit_Click"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -25,9 +25,27 @@ namespace MainMenu
             InitializeComponent();
         }
 
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
+            GameForm gameForm = new GameForm();
+            gameForm.Show();
+            Task.Delay(1000);
+            this.Hide();
+        }
+        private void Option_Click(object sender, RoutedEventArgs e)
+        {
+            OptionMenu optionMenu = new OptionMenu();
+            optionMenu.Show();
+            Task.Delay(1000);
+            this.Hide();
+        }
         private void Quit_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            OptionMenu optionMenu = new OptionMenu();
+            GameForm gameForm = new GameForm();
+            optionMenu.Close();
+            gameForm.Close();
+            this.Close();
         }
     }
 }

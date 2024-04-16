@@ -1,0 +1,12 @@
+﻿<Window x:Class="MainMenu.OptionMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainMenu"
+        mc:Ignorable="d"
+        Title="OptionMenu" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None" Background="Black">
+    <Grid>
+        <Button x:Name="QuitBtnOption" Width="100" Height="50" Content="Back" Background="#000000" BorderBrush="#000000" Foreground="White" FontSize="30" FontFamily="Gabriola" Click="QuitBtnOption_Click"/>
+    </Grid>
+</Window>

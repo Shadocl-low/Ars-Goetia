@@ -38,3 +38,7 @@ C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\refint\MainMen
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.pdb
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.genruntimeconfig.cache
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\ref\MainMenu.dll
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionMenu.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionMenu.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GameForm.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GameForm.baml
