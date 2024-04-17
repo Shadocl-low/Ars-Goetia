@@ -41,11 +41,7 @@ namespace MainMenu
         }
         private void Quit_Click(object sender, RoutedEventArgs e)
         {
-            OptionMenu optionMenu = new OptionMenu();
-            GameForm gameForm = new GameForm();
-            optionMenu.Close();
-            gameForm.Close();
-            this.Close();
+            Application.Current.Shutdown();
         }
     }
 }

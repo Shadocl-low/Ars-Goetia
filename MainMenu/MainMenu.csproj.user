@@ -13,6 +13,12 @@
     <Compile Update="OptionMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="OptionPages\Controls.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OptionPages\Window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="GameForm.xaml">
@@ -22,6 +28,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OptionMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OptionPages\Controls.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OptionPages\Window.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

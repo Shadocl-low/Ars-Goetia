@@ -42,3 +42,7 @@ C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionMenu.g.c
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionMenu.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GameForm.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GameForm.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionPages\Controls.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionPages\Window.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionPages\Controls.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionPages\Window.baml
