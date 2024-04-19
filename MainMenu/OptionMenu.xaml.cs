@@ -33,25 +33,25 @@ namespace MainMenu
         }
         protected void InitializeBrush()
         {
-            LinearGradientBrush ButtonUnderlineBrush = new LinearGradientBrush();
-            ButtonUnderlineBrush.StartPoint = new Point(0.5, 0);
-            ButtonUnderlineBrush.EndPoint = new Point(0.5, 1);
+            LinearGradientBrush UnderlineBrush = new LinearGradientBrush();
+            UnderlineBrush.StartPoint = new Point(0.5, 0);
+            UnderlineBrush.EndPoint = new Point(0.5, 1);
 
-            ButtonUnderlineBrush.GradientStops.Add(new GradientStop(Colors.Black, 0.7));
-            ButtonUnderlineBrush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#FF673535"), 1));
+            UnderlineBrush.GradientStops.Add(new GradientStop(Colors.Black, 0.7));
+            UnderlineBrush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#FF454545"), 1));
 
-            linearGradientBrushes.Add(ButtonUnderlineBrush);
+            linearGradientBrushes.Add(UnderlineBrush);
         }
         protected void InitializeEmptyBrush()
         {
-            LinearGradientBrush ButtonUnderlineBrush = new LinearGradientBrush();
-            ButtonUnderlineBrush.StartPoint = new Point(0.5, 0);
-            ButtonUnderlineBrush.EndPoint = new Point(0.5, 1);
+            LinearGradientBrush UnderlineBrush = new LinearGradientBrush();
+            UnderlineBrush.StartPoint = new Point(0.5, 0);
+            UnderlineBrush.EndPoint = new Point(0.5, 1);
 
-            ButtonUnderlineBrush.GradientStops.Add(new GradientStop(Colors.Black, 0.7));
-            ButtonUnderlineBrush.GradientStops.Add(new GradientStop(Colors.Black, 1));
+            UnderlineBrush.GradientStops.Add(new GradientStop(Colors.Black, 0.7));
+            UnderlineBrush.GradientStops.Add(new GradientStop(Colors.Black, 1));
 
-            linearGradientBrushes.Add(ButtonUnderlineBrush);
+            linearGradientBrushes.Add(UnderlineBrush);
         }
 
         private void QuitBtnOption_Click(object sender, RoutedEventArgs e)
@@ -67,16 +67,16 @@ namespace MainMenu
         {
             OptionControl.Content = ControlsPages[0];
 
-            GameOptions.Background = linearGradientBrushes[1];
-            WindowOptions.Background = linearGradientBrushes[0];
+            GameOptionsUnderline.Background = linearGradientBrushes[1];
+            WindowOptionsUnderline.Background = linearGradientBrushes[0];
         }
 
         private void ShowWindowOptions(object sender, RoutedEventArgs e)
         {
             OptionControl.Content = ControlsPages[1];
 
-            GameOptions.Background = linearGradientBrushes[0];
-            WindowOptions.Background = linearGradientBrushes[1];
+            GameOptionsUnderline.Background = linearGradientBrushes[0];
+            WindowOptionsUnderline.Background = linearGradientBrushes[1];
         }
     }
 }

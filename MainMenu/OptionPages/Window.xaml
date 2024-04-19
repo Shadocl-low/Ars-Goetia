@@ -6,9 +6,51 @@
       xmlns:local="clr-namespace:MainMenu.OptionPages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Window" Background="white">
-
-    <Grid>
-        
-    </Grid>
+      Title="Window" Background="#000000">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="1" Grid.RowSpan="6" Grid.ColumnSpan="2" Background="#000000">
+                <GroupBox Header="Display" FontSize="25" FontFamily="Monotype Corsiva" Foreground="White" Margin="100,0,100,0">
+                    <StackPanel Margin="100,0,100,0">
+                        <DockPanel VerticalAlignment="Center">
+                            <TextBlock Text="Screen Mode" Grid.Column="0" HorizontalAlignment="Left" FontSize="20"></TextBlock>
+                            <ComboBox Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White" Background="Black" BorderBrush="Red">
+                                <ComboBoxItem IsSelected="True">Full-screen</ComboBoxItem>
+                                <ComboBoxItem>Windowed</ComboBoxItem>
+                            </ComboBox>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Resolution" Grid.Column="0" FontSize="20" HorizontalAlignment="Left"></TextBlock>
+							<ComboBox Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White" Background="Black" BorderBrush="Red">
+								<ComboBoxItem IsSelected="True">1920x1080</ComboBoxItem>
+								<ComboBoxItem>1760x990</ComboBoxItem>
+								<ComboBoxItem>1680x1050</ComboBoxItem>
+								<ComboBoxItem>1600x900</ComboBoxItem>
+								<ComboBoxItem>1366x768</ComboBoxItem>
+								<ComboBoxItem>1280x1024</ComboBoxItem>
+								<ComboBoxItem>1280x720</ComboBoxItem>
+								<ComboBoxItem>1128x634</ComboBoxItem>
+								<ComboBoxItem>1024x768</ComboBoxItem>
+								<ComboBoxItem>800x600</ComboBoxItem>
+							</ComboBox>
+                        </DockPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Page>

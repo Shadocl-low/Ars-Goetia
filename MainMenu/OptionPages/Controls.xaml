@@ -7,20 +7,88 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Controls" Background="Black">
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1" Grid.RowSpan="6" Background="Aqua">
-            
-        </StackPanel>
-    </Grid>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Hidden">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="1" Grid.RowSpan="6" Grid.ColumnSpan="2" Background="#000000">
+                <GroupBox Header="Movement" FontSize="25" Foreground="White" Margin="200,0,200,25" FontFamily="Papyrus">
+                    <StackPanel Margin="100,0,100,0">
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Move Up" FontSize="20"></TextBlock>
+                            <Label Content="W" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Move Left" Grid.Column="0" FontSize="20" HorizontalAlignment="Left"></TextBlock>
+                            <Label Content="A" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Move Down" Grid.Column="0" FontSize="20" HorizontalAlignment="Left"></TextBlock>
+                            <Label Content="S" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Move Right" Grid.Column="0" FontSize="20" HorizontalAlignment="Left"></TextBlock>
+                            <Label Content="D" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Attack" FontSize="25" FontFamily="Papyrus" Foreground="White" VerticalAlignment="Center" Margin="200,0,200,25">
+                    <StackPanel Margin="100,0,100,0">
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Simple Attack" Grid.Column="0" FontSize="20"></TextBlock>
+                            <Label Content="LeftClick" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Heavy Attack" Grid.Column="0" FontSize="20"></TextBlock>
+                            <Label Content="LongLeftClick" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Block" Grid.Column="0" FontSize="20"></TextBlock>
+                            <Label Content="RightClick" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Roll" Grid.Column="0" FontSize="20"></TextBlock>
+                            <Label Content="Ctrl" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Equipment" FontSize="25" FontFamily="Papyrus" Foreground="White" VerticalAlignment="Center" Margin="200,0,200,25">
+                    <StackPanel Margin="100,0,100,0">
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Use Estus Flask" Grid.Column="0" FontSize="20"></TextBlock>
+                            <Label Content="Q" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Use Сonsumable Item" Grid.Column="0" FontSize="20"></TextBlock>
+                            <Label Content="F" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Other" FontSize="25" FontFamily="Papyrus" Foreground="White" VerticalAlignment="Center" Margin="200,0,200,0">
+                    <StackPanel Margin="100,0,100,0">
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Open Inventory" Grid.Column="0" FontSize="20"></TextBlock>
+                            <Label Content="E" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                        <DockPanel Margin="0, 10, 0, 10">
+                            <TextBlock Text="Open Map" Grid.Column="0" FontSize="20"></TextBlock>
+                            <Label Content="Tab" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                        </DockPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Page>
