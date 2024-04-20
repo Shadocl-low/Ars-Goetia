@@ -76,19 +76,19 @@ namespace MainMenu
         }
         private void GameTick(object sender, EventArgs e)
         {
-            if (UpKeyPressed)
+            if (UpKeyPressed && Canvas.GetTop(KnightPlayer) > 20)
             {
                 SpeedY += Speed;
             }
-            if (LeftKeyPressed)
+            if (LeftKeyPressed && Canvas.GetLeft(KnightPlayer) > 20)
             {
                 SpeedX -= Speed;
             }
-            if (DownKeyPressed)
+            if (DownKeyPressed && Canvas.GetTop(KnightPlayer) < GameScreen.ActualHeight - 70)
             {
                 SpeedY -= Speed;
             }
-            if (RightKeyPressed)
+            if (RightKeyPressed && Canvas.GetLeft(KnightPlayer) < GameScreen.ActualWidth - 70)
             {
                 SpeedX += Speed;
             }
