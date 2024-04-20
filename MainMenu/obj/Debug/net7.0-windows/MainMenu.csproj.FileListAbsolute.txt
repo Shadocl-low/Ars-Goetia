@@ -3,15 +3,11 @@ C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\MainMenu.deps.
 C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\MainMenu.runtimeconfig.json
 C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\MainMenu.dll
 C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\MainMenu.pdb
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GameForm.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainWindow.g.cs
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionMenu.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu_MarkupCompile.cache
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu_MarkupCompile.lref
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GameForm.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainWindow.baml
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionMenu.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.g.resources
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.AssemblyInfoInputs.cache
@@ -31,3 +27,11 @@ C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\EscMenu.
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\Resolution.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\EscMenu.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\Resolution.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\GameForm.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMenu.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\SplashScreen.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\GameForm.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMenu.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\SplashScreen.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMenuInGame.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMenuInGame.baml

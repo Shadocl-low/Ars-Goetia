@@ -7,10 +7,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="GameForm.xaml.cs">
+    <Compile Update="Forms\GameForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="OptionMenu.xaml.cs">
+    <Compile Update="Forms\OptionMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Forms\SplashScreen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\Controls.xaml.cs">
@@ -24,13 +27,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="GameForm.xaml">
+    <Page Update="Forms\GameForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Forms\OptionMenuInGame.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Forms\SplashScreen.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="OptionMenu.xaml">
+    <Page Update="Forms\OptionMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Controls.xaml">

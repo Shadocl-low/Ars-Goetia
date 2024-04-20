@@ -28,15 +28,15 @@ namespace MainMenu.Pages
         }
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            new OptionMenu().Show();
-            Task.Delay(1000);
+            new OptionMenuInGame().Show();
+            Task.Delay(1000).Wait();
             new GameForm().Hide();
         }
 
         private void QuitToMenu_Click(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();
-            Task.Delay(1000);
+            Task.Delay(1000).Wait();
             new GameForm().Hide();
         }
         private void QuitFromGame_Click(object sender, RoutedEventArgs e)

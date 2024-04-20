@@ -32,13 +32,13 @@ namespace MainMenu
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             Forms[0].Show();
-            Task.Delay(1000);
+            Task.Delay(1000).Wait();
             this.Hide();
         }
         private void Option_Click(object sender, RoutedEventArgs e)
         {
             Forms[1].Show();
-            Task.Delay(1000);
+            Task.Delay(1000).Wait();
             this.Hide();
         }
         private void Quit_Click(object sender, RoutedEventArgs e)
