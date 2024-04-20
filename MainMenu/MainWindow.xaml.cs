@@ -20,22 +20,24 @@ namespace MainMenu
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Window> Forms = new List<Window>();
         public MainWindow()
         {
             InitializeComponent();
+
+            Forms.Add(new GameForm());
+            Forms.Add(new OptionMenu());
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            GameForm gameForm = new GameForm();
-            gameForm.Show();
+            Forms[0].Show();
             Task.Delay(1000);
             this.Hide();
         }
         private void Option_Click(object sender, RoutedEventArgs e)
         {
-            OptionMenu optionMenu = new OptionMenu();
-            optionMenu.Show();
+            Forms[1].Show();
             Task.Delay(1000);
             this.Hide();
         }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\1\Downloads\Ars Goetia\MainMenu\App.xaml
-71171756901
+8-195841553
 
-71907697310
+8-2128085675
 198650335325
-GameForm.xaml;MainWindow.xaml;OptionMenu.xaml;OptionPages\Controls.xaml;OptionPages\Window.xaml;Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;
+GameForm.xaml;MainWindow.xaml;OptionMenu.xaml;Pages\Controls.xaml;Pages\EscMenu.xaml;Pages\Resolution.xaml;Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;
 
 False
 

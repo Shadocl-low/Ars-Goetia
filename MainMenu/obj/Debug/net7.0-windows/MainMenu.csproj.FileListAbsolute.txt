@@ -6,16 +6,12 @@ C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\MainMenu.pdb
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GameForm.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionMenu.g.cs
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionPages\Controls.g.cs
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionPages\Window.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu_MarkupCompile.cache
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu_MarkupCompile.lref
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GameForm.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionMenu.baml
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionPages\Controls.baml
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\OptionPages\Window.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.g.resources
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.AssemblyInfoInputs.cache
@@ -29,3 +25,9 @@ C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\ref\MainMenu.d
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\App.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Styles\ButtonStyles.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Styles\ComboBoxStyles.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\Controls.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\Controls.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\EscMenu.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\Resolution.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\EscMenu.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Pages\Resolution.baml

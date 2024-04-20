@@ -21,14 +21,15 @@ namespace MainMenu
     {
         List<Page> ControlsPages = new List<Page>();
         List<LinearGradientBrush> linearGradientBrushes = new List<LinearGradientBrush>();
+        List<Window> Forms = new List<Window>();
         public OptionMenu()
         {
             InitializeComponent();
             InitializeEmptyBrush();
             InitializeBrush();
 
-            ControlsPages.Add(new OptionPages.Controls());
-            ControlsPages.Add(new OptionPages.Window());
+            ControlsPages.Add(new Pages.Controls());
+            ControlsPages.Add(new Pages.Resolution());
             OptionControl.Content = ControlsPages[0];
         }
         protected void InitializeBrush()
@@ -56,8 +57,7 @@ namespace MainMenu
 
         private void QuitBtnOption_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            new MainWindow().Show();
             Task.Delay(1000);
             this.Hide();
 

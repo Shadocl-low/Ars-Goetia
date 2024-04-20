@@ -1,0 +1,20 @@
+﻿MainMenu
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\
+MainMenu
+none
+false
+TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+C:\Users\1\Downloads\Ars Goetia\MainMenu\App.xaml
+8-195841553
+
+10-1737076752
+198650335325
+GameForm.xaml;MainWindow.xaml;OptionMenu.xaml;Pages\Controls.xaml;Pages\EscMenu.xaml;Pages\Resolution.xaml;Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;
+
+False
+
