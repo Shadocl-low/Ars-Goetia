@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\gameform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\gameform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\optionmenuingame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\optionmenuingame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\gameform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\gameform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\pages\\escmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\pages\\escmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\optionmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\optionmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\gameform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\gameform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\optionmenuingame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\optionmenuingame.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\optionmenuingame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\optionmenuingame.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\splashscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\splashscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\optionmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\optionmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\pages\\escmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\pages\\escmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,7 +39,8 @@
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\splashscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\splashscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,8 +51,16 @@
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\pages\\escmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\splashscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\splashscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\styles\\comboboxstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\styles\\comboboxstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\pages\\resolution.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\pages\\resolution.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\pages\\resolution.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\pages\\resolution.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\forms\\optionmenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -66,18 +75,6 @@
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\pages\\resolution.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\pages\\resolution.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\pages\\resolution.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\pages\\resolution.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\styles\\comboboxstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\styles\\comboboxstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\ars goetia\\mainmenu\\styles\\buttonstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\styles\\buttonstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -89,11 +86,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "GameForm.xaml",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\GameForm.xaml",
+              "RelativeDocumentMoniker": "MainMenu\\Forms\\GameForm.xaml",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\GameForm.xaml",
+              "RelativeToolTip": "MainMenu\\Forms\\GameForm.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-20T08:49:53.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameForm.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\GameForm.xaml.cs",
+              "RelativeDocumentMoniker": "MainMenu\\Forms\\GameForm.xaml.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\GameForm.xaml.cs",
+              "RelativeToolTip": "MainMenu\\Forms\\GameForm.xaml.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAA5wGQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T08:49:55.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "OptionMenuInGame.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenuInGame.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\OptionMenuInGame.xaml",
@@ -105,20 +127,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "OptionMenuInGame.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenuInGame.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\OptionMenuInGame.xaml.cs",
               "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenuInGame.xaml.cs",
               "RelativeToolTip": "MainMenu\\Forms\\OptionMenuInGame.xaml.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAADwAAAAcAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T19:14:25.399Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "SplashScreen.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\SplashScreen.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\SplashScreen.xaml.cs",
@@ -131,45 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameForm.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\GameForm.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\GameForm.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\GameForm.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\GameForm.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-20T08:49:53.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameForm.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\GameForm.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\GameForm.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\GameForm.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\GameForm.xaml.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAcwCIAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T08:49:55.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OptionMenu.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenu.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\OptionMenu.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenu.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\OptionMenu.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEYAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:40:43.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "EscMenu.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Pages\\EscMenu.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Pages\\EscMenu.xaml.cs",
@@ -177,8 +161,19 @@
               "RelativeToolTip": "MainMenu\\Pages\\EscMenu.xaml.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:34:16.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T11:34:16.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OptionMenu.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenu.xaml.cs",
+              "RelativeDocumentMoniker": "MainMenu\\Forms\\OptionMenu.xaml.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenu.xaml.cs",
+              "RelativeToolTip": "MainMenu\\Forms\\OptionMenu.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEYAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T11:40:43.958Z"
             },
             {
               "$type": "Document",
@@ -190,21 +185,7 @@
               "RelativeToolTip": "MainMenu\\App.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T19:05:28.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Microsoft.WinFX.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
-              "ViewState": "AQIAAK8CAAAAAAAAAAAswMECAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-04-20T19:08:29.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T19:05:28.789Z"
             },
             {
               "$type": "Document",
@@ -220,15 +201,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "SplashScreen.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\SplashScreen.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\SplashScreen.xaml",
               "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\SplashScreen.xaml",
               "RelativeToolTip": "MainMenu\\Forms\\SplashScreen.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-20T18:40:29.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T18:40:29.111Z"
             },
             {
               "$type": "Document",
@@ -240,8 +220,7 @@
               "RelativeToolTip": "MainMenu\\MainWindow.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T19:03:16.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T19:03:16.777Z"
             },
             {
               "$type": "Document",
@@ -252,12 +231,11 @@
               "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Pages\\EscMenu.xaml",
               "RelativeToolTip": "MainMenu\\Pages\\EscMenu.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-20T11:33:54.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T11:33:54.102Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 12,
               "Title": "ComboBoxStyles.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Styles\\ComboBoxStyles.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Styles\\ComboBoxStyles.xaml",
@@ -269,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 13,
               "Title": "Resolution.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Pages\\Resolution.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Pages\\Resolution.xaml",
@@ -280,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 14,
               "Title": "Resolution.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Pages\\Resolution.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Pages\\Resolution.xaml.cs",
@@ -292,30 +270,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "OptionMenu.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenu.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\OptionMenu.xaml",
               "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Forms\\OptionMenu.xaml",
               "RelativeToolTip": "MainMenu\\Forms\\OptionMenu.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-17T15:24:59.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T15:24:59.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Controls.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Pages\\Controls.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Pages\\Controls.xaml",
               "ToolTip": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Pages\\Controls.xaml",
               "RelativeToolTip": "MainMenu\\Pages\\Controls.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-17T15:26:01.268Z"
+              "WhenOpened": "2024-04-17T15:26:01.268Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainMenu\\MainWindow.xaml",
@@ -326,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "ButtonStyles.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\Styles\\ButtonStyles.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Styles\\ButtonStyles.xaml",

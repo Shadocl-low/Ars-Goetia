@@ -8,11 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\MainCharacter.jpg" />
+    <None Remove="Images\MainCharacter.png" />
     <None Remove="Images\SplashScreen.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="UserControls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\MainCharacter.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -13,20 +13,17 @@
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Border x:Name="GameOptionsUnderline" BorderBrush="Black" BorderThickness="1" CornerRadius="50">
+            <Border x:Name="WindowOptionsUnderline" BorderBrush="Black" BorderThickness="1" CornerRadius="50">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0.7"/>
                         <GradientStop Color="#FF454545" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <Button x:Name="GameOptions" Content="Game" FontSize="80" Click="ShowGameOptions" Margin="50,0,50,-20" Width="350" FontFamily="Gabriola"/>
-            </Border>
-            <Border x:Name="WindowOptionsUnderline" BorderBrush="Transparent" BorderThickness="1" CornerRadius="50">
-                <Button x:Name="WindowOptions" Content="Window" FontSize="80" Click="ShowWindowOptions" Margin="50,0,50,-20" Width="350" FontFamily="Gabriola"></Button>
+                <Button x:Name="WindowOptions" Content="Window" FontSize="80" Margin="50,0,50,-20" Width="350" FontFamily="Gabriola"></Button>
             </Border>
         </StackPanel>
-        <Frame x:Name="OptionControl" Grid.Row="1" Background="DimGray" NavigationUIVisibility="Hidden"></Frame>
+        <Frame x:Name="OptionControlInGame" Grid.Row="1" Background="Transparent" NavigationUIVisibility="Hidden" Content="Pages/Resolution.xaml"></Frame>
         <Button x:Name="QuitBtnOption" Grid.Row="2" Content="Back" Background="#000000" BorderBrush="#000000" Foreground="White" FontSize="45" FontFamily="Gabriola" Click="QuitBtnOption_Click" HorizontalAlignment="Right" Margin="0,0,50,0"/>
     </Grid>
 </Window>
