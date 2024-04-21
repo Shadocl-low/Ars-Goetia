@@ -53,7 +53,7 @@ namespace MainMenu.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainMenu;component/pages/controls.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainMenu;V1.0.0.0;component/pages/controls.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\Controls.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

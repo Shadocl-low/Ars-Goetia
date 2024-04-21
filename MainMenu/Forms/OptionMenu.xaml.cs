@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MainMenu.Pages;
 
 namespace MainMenu
 {
@@ -31,6 +33,7 @@ namespace MainMenu
             ControlsPages.Add(new Pages.Controls());
             ControlsPages.Add(new Pages.Resolution());
             OptionControl.Content = ControlsPages[0];
+
         }
         protected void InitializeBrush()
         {
@@ -54,7 +57,6 @@ namespace MainMenu
 
             linearGradientBrushes.Add(UnderlineBrush);
         }
-
         private void QuitBtnOption_Click(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();
@@ -62,7 +64,6 @@ namespace MainMenu
             this.Hide();
 
         }
-
         private void ShowGameOptions(object sender, RoutedEventArgs e)
         {
             OptionControl.Content = ControlsPages[0];
@@ -78,5 +79,6 @@ namespace MainMenu
             GameOptionsUnderline.Background = linearGradientBrushes[0];
             WindowOptionsUnderline.Background = linearGradientBrushes[1];
         }
+        
     }
 }

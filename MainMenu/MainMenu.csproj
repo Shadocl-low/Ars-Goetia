@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EntityCL\EntityCL.csproj" />
+    <ProjectReference Include="..\ItemCL\ItemCL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\MainCharacter.png" />
   </ItemGroup>
 

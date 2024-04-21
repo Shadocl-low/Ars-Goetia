@@ -61,7 +61,7 @@ namespace MainMenu.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainMenu;component/pages/resolution.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainMenu;V1.0.0.0;component/pages/resolution.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\Resolution.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

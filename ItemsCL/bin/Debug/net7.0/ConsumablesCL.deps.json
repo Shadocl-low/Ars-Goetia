@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ConsumablesCL/1.0.0": {
+        "dependencies": {
+          "EntityCL": "1.0.0"
+        },
+        "runtime": {
+          "ConsumablesCL.dll": {}
+        }
+      },
+      "EntityCL/1.0.0": {
+        "runtime": {
+          "EntityCL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsumablesCL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntityCL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

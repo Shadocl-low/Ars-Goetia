@@ -7,14 +7,55 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "MainMenu/1.0.0": {
+        "dependencies": {
+          "ConsumablesCL": "1.0.0",
+          "EntityCL": "1.0.0",
+          "ItemCL": "1.0.0"
+        },
         "runtime": {
           "MainMenu.dll": {}
+        }
+      },
+      "ConsumablesCL/1.0.0": {
+        "dependencies": {
+          "EntityCL": "1.0.0"
+        },
+        "runtime": {
+          "ConsumablesCL.dll": {}
+        }
+      },
+      "EntityCL/1.0.0": {
+        "runtime": {
+          "EntityCL.dll": {}
+        }
+      },
+      "ItemCL/1.0.0": {
+        "dependencies": {
+          "EntityCL": "1.0.0"
+        },
+        "runtime": {
+          "ItemCL.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MainMenu/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ConsumablesCL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntityCL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ItemCL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

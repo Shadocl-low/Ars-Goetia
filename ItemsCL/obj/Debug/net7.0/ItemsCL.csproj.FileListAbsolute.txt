@@ -1,0 +1,15 @@
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ItemsCL.csproj.AssemblyReference.cache
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ItemsCL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ItemsCL.AssemblyInfoInputs.cache
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ItemsCL.AssemblyInfo.cs
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ItemsCL.csproj.CoreCompileInputs.cache
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\bin\Debug\net7.0\ItemsCL.deps.json
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\bin\Debug\net7.0\ItemsCL.dll
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\bin\Debug\net7.0\ItemsCL.pdb
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\bin\Debug\net7.0\EntityCL.dll
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\bin\Debug\net7.0\EntityCL.pdb
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ItemsCL.csproj.Up2Date
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ItemsCL.dll
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\refint\ItemsCL.dll
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ItemsCL.pdb
+C:\Users\1\Downloads\Ars Goetia\ItemsCL\obj\Debug\net7.0\ref\ItemsCL.dll

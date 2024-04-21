@@ -85,7 +85,7 @@ namespace MainMenu {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainMenu;component/forms/optionmenuingame.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainMenu;V1.0.0.0;component/forms/optionmenuingame.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Forms\OptionMenuInGame.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

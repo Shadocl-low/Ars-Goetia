@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Windows.Navigation;
 using MainMenu.Pages;
 using System.Windows.Threading;
+using ItemCL;
 
 namespace MainMenu
 {
@@ -35,6 +36,8 @@ namespace MainMenu
             GameTimer.Interval = TimeSpan.FromMilliseconds(16);
             GameTimer.Tick += GameTick;
             GameTimer.Start();
+
+            Item Box1 = new Box(100, 100, 50);
         }
         private void KeyBoardUp(object sender, KeyEventArgs e)
         {
@@ -112,6 +115,14 @@ namespace MainMenu
             {
                 EscMenuFrame.Content = null;
             }
+        }
+        private void GameOver(string message)
+        {
+            GameTimer.Stop();
+            MessageBox.Show(message, "ARS GOETIA");
+
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
         }
     }
 }
