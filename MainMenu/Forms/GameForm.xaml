@@ -5,17 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainMenu"
         mc:Ignorable="d"
-        Title="GameForm" Height="865" Width="1920" WindowState="Maximized" WindowStyle="None" Background="Black" KeyDown="ShowMenu">
+        Title="GameForm" Height="865" Width="1920" WindowState="Maximized" WindowStyle="None" Background="Gray" KeyDown="ShowMenu">
     <Canvas x:Name="GameScreen" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
 
-        <Rectangle Name="KnightPlayer" Height="50" Width="50" Canvas.Left="80" Canvas.Top="408">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="/Images/MainCharacter.png" TileMode="Tile"/>
-            </Rectangle.Fill>
-        </Rectangle>
-
-        <Label Content="HP:" Foreground="Wheat" FontSize="40"/>
-
+        <Label x:Name="PlayerHealth" Foreground="Wheat" FontSize="40"/>
 
 
         <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,400,0" Opacity="0.5"/>

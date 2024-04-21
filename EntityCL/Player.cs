@@ -10,9 +10,10 @@ namespace EntityCL
     {
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
-        public Player(string name, int maxhp, double hp, int atk, string weapon) : base(name, maxhp, hp, atk)
+        public Player(string name, int maxhp, double hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
             Weapon = weapon;
+            AmoutOfEstus = estus;
         }
         public override void Burning()
         {

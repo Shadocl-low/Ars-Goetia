@@ -35,11 +35,9 @@ C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMe
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\SplashScreen.baml
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMenuInGame.g.cs
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMenuInGame.baml
-C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\ConsumablesCL.dll
 C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\EntityCL.dll
 C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\ItemCL.dll
 C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\EntityCL.pdb
 C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\ItemCL.pdb
-C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\ConsumablesCL.pdb
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.csproj.AssemblyReference.cache
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.csproj.Up2Date

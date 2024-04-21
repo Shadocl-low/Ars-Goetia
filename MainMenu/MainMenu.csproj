@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\ArcherEnemy.png" />
+    <None Remove="Images\ArcherEnemyAttack.png" />
     <None Remove="Images\MainCharacter.jpg" />
     <None Remove="Images\MainCharacter.png" />
     <None Remove="Images\SplashScreen.png" />
@@ -23,6 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\ArcherEnemy.png" />
+    <Resource Include="Images\ArcherEnemyAttack.png" />
     <Resource Include="Images\MainCharacter.png" />
   </ItemGroup>
 

@@ -77,7 +77,7 @@ namespace MainMenu.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainMenu;V1.0.0.0;component/pages/escmenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainMenu;component/pages/escmenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\EscMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
