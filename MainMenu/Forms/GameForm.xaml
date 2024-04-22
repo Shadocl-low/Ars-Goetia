@@ -11,6 +11,6 @@
         <Label x:Name="PlayerHealth" Foreground="Wheat" FontSize="40"/>
 
 
-        <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,400,0" Opacity="0.5"/>
+        <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,350,0" Opacity="0.5"/>
     </Canvas>
 </Window>

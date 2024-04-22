@@ -37,6 +37,7 @@ namespace MainMenu
 
         Rectangle KnightPlayer = CreateMainCharacter();
         List<Rectangle> Enemies = new List<Rectangle>();
+        List<Rectangle> arrows = new List<Rectangle>();
         Player ActualKnightPlayer = new Player("Shadocl", 10, 10, 2, "Sword and shild", 5);
         public GameForm()
         {
@@ -44,7 +45,11 @@ namespace MainMenu
 
             Enemies.Add(CreateArcherEnemy());
 
-            AddToCanvas(Enemies[0], GameScreen, 1000, 200);
+            for (int i = 0; i < Enemies.Count; i++)
+            {
+                AddToCanvas(Enemies[i], GameScreen, rand.Next(100, 1000), rand.Next(100, 700));
+            }
+            
             AddToCanvas(KnightPlayer, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
             GameScreen.Focus();
@@ -124,12 +129,24 @@ namespace MainMenu
                 RightKeyPressed = true;
             }
         }
-        private List<double> Normalize(Canvas GameField, Rectangle Element, Rectangle Player)
+        private List<double> GetVectorCoordinates(Rectangle Element, double TargetX, double TargetY)
         {
-            double Model = Math.Sqrt(Math.Pow(Canvas.GetTop(Player), 2) + Math.Pow(Canvas.GetTop(Element), 2));
-            double X = Canvas.GetLeft(Element) / Model;
-            double Y = Canvas.GetTop(Element) / Model;
+            double Xcord = TargetX - Canvas.GetLeft(Element);
+            double Ycord = TargetY - Canvas.GetTop(Element);
+            return new List<double> { Xcord, Ycord };
+        }
+        private List<double> Normalize(Rectangle Element, double TargetX, double TargetY)
+        {
+            List<double> Coordinates = GetVectorCoordinates(Element, TargetX, TargetY);
+            double Model = Math.Sqrt(Math.Pow(Coordinates[0], 2) + Math.Pow(Coordinates[1], 2));
+            double X = Coordinates[0] / Model;
+            double Y = Coordinates[1] / Model;
             return new List<double> { X, Y };
+        }
+        private double GetDeegrese(Rectangle Element, double TargetX, double TargetY)
+        {
+            List<double> Coordinates = GetVectorCoordinates(Element, TargetX, TargetY);
+            return Math.Atan(Coordinates[1]/ Coordinates[0]);
         }
         private void GameTick(object sender, EventArgs e)
         {
@@ -160,32 +177,52 @@ namespace MainMenu
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
             {
-                if (element is Rectangle && (string)element.Tag == "arrow" && Canvas.GetLeft(Enemies[0]) != Canvas.GetLeft(KnightPlayer))
+                if (element is Rectangle && (string)element.Tag == "arrow")
                 {
-                    List<double> xy = Normalize(GameScreen, Enemies[0], KnightPlayer);
-                    Canvas.SetLeft(element, Canvas.GetLeft(element) - ((Canvas.GetLeft(Enemies[0]) - TargetAimX) / xy[0]) * (Friction * 0.5));
-                    Canvas.SetTop(element, Canvas.GetTop(element) - ((Canvas.GetTop(Enemies[0]) - TargetAimY) / xy[1]) * (Friction * 0.5));
+                    for(int i = 0; i < Enemies.Count; i++)
+                    {
+                        List<double> xy = Normalize(Enemies[i], TargetAimX, TargetAimY);
+                        Canvas.SetLeft(element, Canvas.GetLeft(element) + xy[0] * 20);
+                        Canvas.SetTop(element, Canvas.GetTop(element) + xy[1] * 20);
+
+                        Rect arrowHitBox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
+                    
+                        if (Canvas.GetTop(element) < 10 || Canvas.GetLeft(element) < 10 || Canvas.GetBottom(element) < 10 || Canvas.GetRight(element) < 10)
+                        {
+                            arrows.Remove(element);
+                            //GameScreen.Children.Remove(element);
+                        }
+                    }
                 }
             }
         }
         private void ShotsTick(object sender, EventArgs e)
         {
-            Rectangle newArrow = new Rectangle
+            int i = 0;
+            for (i = 0; i < Enemies.Count; i++)
             {
-                Tag = "arrow",
-                Height = 5,
-                Width = 20,
-                Fill = Brushes.Brown,
-                Stroke = Brushes.Black
-            };
+                Rectangle newArrow = new Rectangle
+                {
+                    Tag = "arrow",
+                    Height = 5,
+                    Width = 20,
+                    Fill = Brushes.Brown,
+                    Stroke = Brushes.Black,
+                };
+                newArrow.RenderTransformOrigin = new Point(0.5, 0.5);
+                arrows.Add(newArrow);
 
-            Canvas.SetLeft(newArrow, Canvas.GetLeft(Enemies[0]) - Enemies[0].Width);
-            Canvas.SetTop(newArrow, Canvas.GetTop(Enemies[0]) + Enemies[0].Height / 2);
+                Canvas.SetLeft(arrows[i], Canvas.GetLeft(Enemies[i]) - Enemies[i].Width / 2);
+                Canvas.SetTop(arrows[i], Canvas.GetTop(Enemies[i]) + Enemies[i].Height / 2);
 
-            GameScreen.Children.Add(newArrow);
 
-            TargetAimY = Canvas.GetTop(KnightPlayer) + 25;
-            TargetAimX = Canvas.GetLeft(KnightPlayer) + 25;
+                TargetAimY = Canvas.GetTop(KnightPlayer);
+                TargetAimX = Canvas.GetLeft(KnightPlayer) + KnightPlayer.Width / 2;
+
+                arrows[i].RenderTransform = new RotateTransform(GetDeegrese(arrows[i], TargetAimX, TargetAimY) * 180 / Math.PI);
+
+                GameScreen.Children.Add(arrows[i]);
+            }
         }
 
         private void ShowMenu(object sender, KeyEventArgs e)
@@ -195,10 +232,15 @@ namespace MainMenu
                 EscMenuFrame.Content = Menu;
                 EscMenuFrame.Height = 860;
                 EscMenuFrame.Width = 1920;
+
+                GameTimer.Stop();
+                ShotsInterval.Stop();
             }
             else if (e.Key == Key.Escape && EscMenuFrame.Content == Menu)
             {
                 EscMenuFrame.Content = null;
+                GameTimer.Start();
+                ShotsInterval.Start();
             }
         }
         private void GameOver(string message)
