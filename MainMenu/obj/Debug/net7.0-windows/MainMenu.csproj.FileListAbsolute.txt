@@ -41,3 +41,6 @@ C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\EntityCL.pdb
 C:\Users\1\Downloads\Ars Goetia\MainMenu\bin\Debug\net7.0-windows\ItemCL.pdb
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.csproj.AssemblyReference.cache
 C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.csproj.Up2Date
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Styles\PlayerHealthBarStyles.baml
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\Themes\Generic.baml

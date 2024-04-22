@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Shapes;
 
 namespace EntityCL.Enemies
 {
     public class SwordsmanC : EnemyAC
     {
+        public override Rectangle EntityRect { get; protected set; }
+        public override Rect EntityHitBox { get; protected set; }
         public SwordsmanC() : base()
         {
             MAXHealthPoints = 12;
             HealthPoints = 12;
-            AttackGamage = 1;
+            AttackDamage = 1;
             EntityName = "Royal Guard";
             Class = "Knight";
         }

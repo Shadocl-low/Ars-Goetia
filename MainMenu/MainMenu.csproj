@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UserControls\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\EntityCL\EntityCL.csproj" />
     <ProjectReference Include="..\ItemCL\ItemCL.csproj" />
   </ItemGroup>

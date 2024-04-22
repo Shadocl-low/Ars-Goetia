@@ -3,14 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MainMenu"
+        xmlns:local="clr-namespace:MainMenu" xmlns:BuildItems="clr-namespace:MainMenu.CustomItems"
         mc:Ignorable="d"
         Title="GameForm" Height="865" Width="1920" WindowState="Maximized" WindowStyle="None" Background="Gray" KeyDown="ShowMenu">
     <Canvas x:Name="GameScreen" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
 
         <Label x:Name="PlayerHealth" Foreground="Wheat" FontSize="40"/>
+        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="10" Value="{Binding ElementName=PlayerHealth, Path=Content}" Maximum="10" Canvas.Left="100" Canvas.Top="50" Width="100"/>
 
+        <BuildItems:Wall Canvas.Left="421" Canvas.Top="530"/>
+
+        <BuildItems:ColumnItem Canvas.Left="629" Canvas.Top="530" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <BuildItems:Chest Canvas.Left="792" Canvas.Top="533"/>
 
         <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,350,0" Opacity="0.5"/>
+
     </Canvas>
 </Window>
