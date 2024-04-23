@@ -110,10 +110,12 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition></RowDefinition>
                                     <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
 
                                 <Border Grid.Row="0" Background="#CA9E46" Height="25" Width="100" CornerRadius="25, 25, 0, 0" BorderBrush="Black" BorderThickness="1,1,1,0"></Border>
-                                <Border Grid.Row="1" Background="#8F5517" Height="45" Width="100" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                <Border Grid.Row="1" Margin="0,-20,0,-20" Background="#746E6E" Height="10" Width="8" BorderBrush="Black" BorderThickness="1" CornerRadius="2" Panel.ZIndex="2"></Border>
+                                <Border Grid.Row="2" Background="#8F5517" Height="45" Width="100" BorderBrush="Black" BorderThickness="1,0,1,1">
                                     <Grid>
                                         <!-- Rounded mask (stretches to fill Grid) -->
                                         <Border Name="mask" Background="#8F5517"/>
