@@ -5,19 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainMenu" xmlns:BuildItems="clr-namespace:MainMenu.CustomItems"
         mc:Ignorable="d"
-        Title="GameForm" Height="865" Width="1920" WindowState="Maximized" WindowStyle="None" Background="Gray" KeyDown="ShowMenu">
+        Title="GameForm" Height="865" Width="1570" WindowState="Maximized" WindowStyle="None" Background="Gray" KeyDown="ShowMenu">
     <Canvas x:Name="GameScreen" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
 
         <Label x:Name="PlayerHealth" Foreground="Wheat" FontSize="40"/>
-        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="10" Value="{Binding ElementName=PlayerHealth, Path=Content}" Maximum="10" Canvas.Left="100" Canvas.Top="50" Width="100"/>
+        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="10" Value="{Binding ElementName=PlayerHealth, Path=Content}" Maximum="10" Canvas.Left="125" Canvas.Top="111" Width="100"/>
 
-        <BuildItems:Wall Canvas.Left="421" Canvas.Top="530"/>
+        <BuildItems:Wall Canvas.Top="790"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="150" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="300" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="450" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="600" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="750" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="900" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="1050" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="1200" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="1350" VerticalAlignment="Center"/>
+        <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="1500" VerticalAlignment="Center" Width="70"/>
 
-        <BuildItems:ColumnItem Canvas.Left="629" Canvas.Top="530" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:ColumnItem Canvas.Left="1195" Canvas.Top="370" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-        <BuildItems:Chest Canvas.Left="792" Canvas.Top="533"/>
+        <BuildItems:Chest Canvas.Left="1334" Canvas.Top="329"/>
+
+        <BuildItems:Slime Canvas.Left="1394" Canvas.Top="432"/>
 
         <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,350,0" Opacity="0.5"/>
+        <BuildItems:Wall HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="150" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="300" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="450" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="600" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="750" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="900" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="1050" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="1200" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="1350" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:Wall Canvas.Left="1500" Width="70" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="715" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="640" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="565" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:HalfWall Canvas.Top="490" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:HalfWall Canvas.Top="415" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:HalfWall Canvas.Top="340" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:HalfWall Canvas.Top="265" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:HalfWall Canvas.Top="190" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:HalfWall Canvas.Top="116" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <BuildItems:HalfWall Canvas.Top="75" Canvas.Left="1500" Width="70" HorizontalAlignment="Center" VerticalAlignment="Top" Height="43"/>
+        <BuildItems:HalfWall Canvas.Top="717" Width="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="642" Width="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="567" Width="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="492" Width="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="417" Width="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="342" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="267" Width="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="192" Width="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="118" Width="51" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <BuildItems:HalfWall Canvas.Top="75" Width="50" Height="46" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
     </Canvas>
 </Window>
