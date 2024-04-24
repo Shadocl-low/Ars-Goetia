@@ -21,18 +21,17 @@ namespace MainMenu
     /// </summary>
     public partial class OptionMenu : Window
     {
-        List<Page> ControlsPages = new List<Page>();
+        MainWindow mainWindow = new MainWindow();
+        Controls controls = new Controls();
+        Resolution resolution = new Resolution();
         List<LinearGradientBrush> linearGradientBrushes = new List<LinearGradientBrush>();
-        List<Window> Forms = new List<Window>();
         public OptionMenu()
         {
             InitializeComponent();
             InitializeEmptyBrush();
             InitializeBrush();
 
-            ControlsPages.Add(new Pages.Controls());
-            ControlsPages.Add(new Pages.Resolution());
-            OptionControl.Content = ControlsPages[0];
+            OptionControl.Content = controls;
 
         }
         protected void InitializeBrush()
@@ -59,14 +58,13 @@ namespace MainMenu
         }
         private void QuitBtnOption_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
-            Task.Delay(1000);
+            mainWindow.Show();
             this.Hide();
 
         }
         private void ShowGameOptions(object sender, RoutedEventArgs e)
         {
-            OptionControl.Content = ControlsPages[0];
+            OptionControl.Content = controls;
 
             GameOptionsUnderline.Background = linearGradientBrushes[1];
             WindowOptionsUnderline.Background = linearGradientBrushes[0];
@@ -74,7 +72,7 @@ namespace MainMenu
 
         private void ShowWindowOptions(object sender, RoutedEventArgs e)
         {
-            OptionControl.Content = ControlsPages[1];
+            OptionControl.Content = resolution;
 
             GameOptionsUnderline.Background = linearGradientBrushes[0];
             WindowOptionsUnderline.Background = linearGradientBrushes[1];

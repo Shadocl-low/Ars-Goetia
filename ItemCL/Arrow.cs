@@ -40,7 +40,6 @@ namespace ItemCL
             Canvas.SetLeft(newArrow, Canvas.GetLeft(Parent.EntityRect) - Parent.EntityRect.Width / 2);
             Canvas.SetTop(newArrow, Canvas.GetTop(Parent.EntityRect) + Parent.EntityRect.Height / 2);
 
-
             double TargetAimY = Canvas.GetTop(Target.EntityRect);
             double TargetAimX = Canvas.GetLeft(Target.EntityRect) + Target.EntityRect.Width / 2;
 

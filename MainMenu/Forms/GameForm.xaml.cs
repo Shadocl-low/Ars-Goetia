@@ -47,8 +47,10 @@ namespace MainMenu
             InitializeComponent();
 
             EnemiesList.Add(archer);
-            
+            EnemiesList.Add(archer2);
+
             AddToCanvas(EnemiesList[0].EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
+            AddToCanvas(EnemiesList[1].EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
@@ -57,7 +59,7 @@ namespace MainMenu
             GameTimer.Tick += GameTick;
             GameTimer.Start();
 
-            ShotsInterval.Interval = TimeSpan.FromSeconds(2);
+            ShotsInterval.Interval = TimeSpan.FromSeconds(rand.Next(3,8));
             ShotsInterval.Tick += ShotsTick;
             ShotsInterval.Start();
         }
@@ -122,8 +124,6 @@ namespace MainMenu
                 {
                     Rect ArrowHitBox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
 
-                    archer.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
-
                     MainPlayer.SetHitBox();
                     if (MainPlayer.EntityHitBox.IntersectsWith(ArrowHitBox))
                     {
@@ -136,6 +136,12 @@ namespace MainMenu
                         itemRemover.Add(element);
                     }
                 }
+            }
+
+            if (archer.arrow != null && archer2.arrow != null)
+            {
+                archer.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
+                archer2.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
             }
 
             foreach (Rectangle element in itemRemover)
@@ -151,6 +157,7 @@ namespace MainMenu
         private void ShotsTick(object sender, EventArgs e)
         {
             EnemiesList[0].CreateArrow(GameScreen, MainPlayer);
+            EnemiesList[1].CreateArrow(GameScreen, MainPlayer);
 
             TargetAimX = Canvas.GetLeft(MainPlayer.EntityRect) + MainPlayer.EntityRect.Width / 2;
             TargetAimY = Canvas.GetTop(MainPlayer.EntityRect);

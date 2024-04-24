@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MainMenu.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,25 +21,23 @@ namespace MainMenu
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Window> Forms = new List<Window>();
+        OptionMenu optMenu = new OptionMenu();
+        GameForm gameForm = new GameForm();
+        KeysControl keys = new KeysControl();
         public MainWindow()
         {
             InitializeComponent();
-
-            Forms.Add(new GameForm());
-            Forms.Add(new OptionMenu());
+            this.DataContext = keys;
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            Forms[0].Show();
-            Task.Delay(1000).Wait();
+            gameForm.Show();
             this.Hide();
         }
         private void Option_Click(object sender, RoutedEventArgs e)
         {
-            Forms[1].Show();
-            Task.Delay(1000).Wait();
+            optMenu.Show();
             this.Hide();
         }
         private void Quit_Click(object sender, RoutedEventArgs e)
