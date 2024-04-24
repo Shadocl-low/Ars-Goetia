@@ -8,8 +8,8 @@
         Title="GameForm" Height="865" Width="1570" WindowState="Maximized" WindowStyle="None" Background="Gray" KeyDown="ShowMenu">
     <Canvas x:Name="GameScreen" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
 
-        <Label x:Name="PlayerHealth" Foreground="Wheat" FontSize="40"/>
-        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="10" Value="{Binding ElementName=PlayerHealth, Path=Content}" Maximum="10" Canvas.Left="125" Canvas.Top="111" Width="100"/>
+        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="10" Value="10" Maximum="10" Canvas.Left="75" Canvas.Top="88" Width="100"/>
+        <Label x:Name="RestEstus" Width="100" Height="40" Canvas.Left="75" Canvas.Top="116" FontSize="12"/>
 
         <BuildItems:Wall Canvas.Top="790"/>
         <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="150" VerticalAlignment="Center"/>

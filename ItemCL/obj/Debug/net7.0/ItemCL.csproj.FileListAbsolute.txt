@@ -37,3 +37,9 @@ C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\System.IO.Packaging.xml
 C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\System.Windows.Extensions.xml
 C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\System.Security.Permissions.xml
 C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\System.Drawing.Common.xml
+C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\MainMenu.dll
+C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\MainMenu.pdb
+C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\WindowsBase.dll
+C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\System.Security.Cryptography.Xml.dll
+C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\WindowsBase.xml
+C:\Users\1\Downloads\Ars Goetia\ItemCL\bin\Debug\net7.0\System.Security.Cryptography.Xml.xml

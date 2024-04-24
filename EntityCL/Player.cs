@@ -41,7 +41,7 @@ namespace EntityCL
         }
         public void DrinkEstus()
         {
-            if ((int)HealthPoints != MAXHealthPoints)
+            if ((int)HealthPoints != MAXHealthPoints && AmoutOfEstus != 0)
             {
                 AmoutOfEstus--;
                 HealthPoints = MAXHealthPoints;
@@ -72,7 +72,7 @@ namespace EntityCL
             Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) - SpeedY);
             Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + SpeedX);
         }
-        public void SetHitBox(Canvas GameScreen)
+        public void SetHitBox()
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
         }

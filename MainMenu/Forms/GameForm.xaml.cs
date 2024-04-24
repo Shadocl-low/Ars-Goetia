@@ -37,20 +37,18 @@ namespace MainMenu
         private double TargetAimY, TargetAimX;
 
         List<ArcherC> EnemiesList = new List<ArcherC>();
-        List<Rectangle> arrows = new List<Rectangle>();
         List<Rectangle> itemRemover = new List<Rectangle>();
+
         Player MainPlayer = new Player("Shadocl", 10, 10, 2, "Sword and shild", 5);
+        ArcherC archer = new ArcherC();
+        ArcherC archer2 = new ArcherC();
         public GameForm()
         {
             InitializeComponent();
 
-            ArcherC archer = new ArcherC();
             EnemiesList.Add(archer);
-
-            for (int i = 0; i < EnemiesList.Count; i++)
-            {
-                AddToCanvas(EnemiesList[i].EntityRect, GameScreen, rand.Next(100, 1000), rand.Next(100, 700));
-            }
+            
+            AddToCanvas(EnemiesList[0].EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
@@ -59,7 +57,7 @@ namespace MainMenu
             GameTimer.Tick += GameTick;
             GameTimer.Start();
 
-            ShotsInterval.Interval = TimeSpan.FromSeconds(6);
+            ShotsInterval.Interval = TimeSpan.FromSeconds(2);
             ShotsInterval.Tick += ShotsTick;
             ShotsInterval.Start();
         }
@@ -106,34 +104,35 @@ namespace MainMenu
             {
                 RightKeyPressed = true;
             }
+            if (e.Key == Key.Q)
+            {
+                MainPlayer.DrinkEstus();
+            }
         }
         private void GameTick(object sender, EventArgs e)
         {
             MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Speed, Friction);
 
-            PlayerHealth.Content = MainPlayer.HealthPoints;
+            PlayerHealthBar.Value = MainPlayer.HealthPoints;
+            RestEstus.Content = MainPlayer.AmoutOfEstus;
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
             {
                 if (element is Rectangle && (string)element.Tag == "arrow")
                 {
-                    List<double> xy = Calculation.Normalize(EnemiesList[0].EntityRect, TargetAimX, TargetAimY);
-                    Canvas.SetLeft(element, Canvas.GetLeft(element) + xy[0] * 20);
-                    Canvas.SetTop(element, Canvas.GetTop(element) + xy[1] * 20);
-
                     Rect ArrowHitBox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
 
-                    MainPlayer.SetHitBox(GameScreen);
+                    archer.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
+
+                    MainPlayer.SetHitBox();
                     if (MainPlayer.EntityHitBox.IntersectsWith(ArrowHitBox))
                     {
-                        arrows.Remove(element);
                         itemRemover.Add(element);
-                        MainPlayer.TakeDamage(EnemiesList[0].AttackDamage);
+                        MainPlayer.TakeDamage(archer.AttackDamage);
                     }
 
-                    if (Canvas.GetTop(element) < 10 || Canvas.GetLeft(element) < 10 || Canvas.GetRight(element) < 10 || Canvas.GetTop(element) > 850)
+                    if (Canvas.GetTop(element) < 10 || Canvas.GetLeft(element) < 10 || Canvas.GetLeft(element) > 1560 || Canvas.GetTop(element) > 850)
                     {
-                        arrows.Remove(element);
                         itemRemover.Add(element);
                     }
                 }
@@ -151,30 +150,10 @@ namespace MainMenu
         }
         private void ShotsTick(object sender, EventArgs e)
         {
-            for (int i = 0; i < EnemiesList.Count; i++)
-            {
-                Rectangle newArrow = new Rectangle
-                {
-                    Tag = "arrow",
-                    Height = 5,
-                    Width = 20,
-                    Fill = Brushes.Brown,
-                    Stroke = Brushes.Black,
-                };
-                newArrow.RenderTransformOrigin = new Point(0.5, 0.5);
-                arrows.Add(newArrow);
+            EnemiesList[0].CreateArrow(GameScreen, MainPlayer);
 
-                Canvas.SetLeft(arrows[i], Canvas.GetLeft(EnemiesList[i].EntityRect) - EnemiesList[i].EntityRect.Width / 2);
-                Canvas.SetTop(arrows[i], Canvas.GetTop(EnemiesList[i].EntityRect) + EnemiesList[i].EntityRect.Height / 2);
-
-
-                TargetAimY = Canvas.GetTop(MainPlayer.EntityRect);
-                TargetAimX = Canvas.GetLeft(MainPlayer.EntityRect) + MainPlayer.EntityRect.Width / 2;
-
-                arrows[i].RenderTransform = new RotateTransform(Calculation.GetDeegrese(arrows[i], TargetAimX, TargetAimY) * 180 / Math.PI);
-
-                GameScreen.Children.Add(arrows[i]);
-            }
+            TargetAimX = Canvas.GetLeft(MainPlayer.EntityRect) + MainPlayer.EntityRect.Width / 2;
+            TargetAimY = Canvas.GetTop(MainPlayer.EntityRect);
         }
 
         private void ShowMenu(object sender, KeyEventArgs e)

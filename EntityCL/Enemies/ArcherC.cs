@@ -7,6 +7,10 @@ using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows;
+using System.Windows.Controls;
+using System.Xml.Linq;
+using MainMenu;
+using ItemCL;
 
 namespace EntityCL.Enemies
 {
@@ -14,6 +18,7 @@ namespace EntityCL.Enemies
     {
         public override Rectangle EntityRect { get; protected set; }
         public override Rect EntityHitBox { get; protected set; }
+        public Arrow? arrow { get; set; }
         public ArcherC() : base()
         {
             MAXHealthPoints = 10;
@@ -41,6 +46,10 @@ namespace EntityCL.Enemies
         public override void TakeDamage(int atk)
         {
             HealthPoints -= atk;
+        }
+        public void CreateArrow(Canvas GameScreen, Player MainPlayer)
+        {
+            arrow = new Arrow(this, GameScreen, MainPlayer);
         }
     }
 }
