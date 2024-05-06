@@ -21,7 +21,6 @@ namespace MainMenu
     /// </summary>
     public partial class OptionMenu : Window
     {
-        MainWindow mainWindow = new MainWindow();
         Controls controls = new Controls();
         Resolution resolution = new Resolution();
         List<LinearGradientBrush> linearGradientBrushes = new List<LinearGradientBrush>();
@@ -58,7 +57,7 @@ namespace MainMenu
         }
         private void QuitBtnOption_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.Show();
+            new MainWindow().Show();
             this.Hide();
 
         }

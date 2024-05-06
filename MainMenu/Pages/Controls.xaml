@@ -28,19 +28,19 @@
                     <StackPanel Margin="100,0,100,0">
                         <DockPanel Margin="0, 10, 0, 10">
                             <TextBlock Text="Move Up" FontSize="20"></TextBlock>
-                            <Label Content="{Binding MoveUp, Mode=TwoWay}" MouseDoubleClick="ChangeKey" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                            <Label Content="W" MouseDoubleClick="ChangeKey" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
                         </DockPanel>
                         <DockPanel Margin="0, 10, 0, 10">
                             <TextBlock Text="Move Left" Grid.Column="0" FontSize="20" HorizontalAlignment="Left"></TextBlock>
-                            <Label Content="{Binding MoveLeft, Mode=TwoWay}" MouseDoubleClick="ChangeKey" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                            <Label Content="A" MouseDoubleClick="ChangeKey" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
                         </DockPanel>
                         <DockPanel Margin="0, 10, 0, 10">
                             <TextBlock Text="Move Down" Grid.Column="0" FontSize="20" HorizontalAlignment="Left"></TextBlock>
-                            <Label Content="{Binding MoveDown, Mode=TwoWay}" MouseDoubleClick="ChangeKey" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                            <Label Content="S" MouseDoubleClick="ChangeKey" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
                         </DockPanel>
                         <DockPanel Margin="0, 10, 0, 10">
                             <TextBlock Text="Move Right" Grid.Column="0" FontSize="20" HorizontalAlignment="Left"></TextBlock>
-                            <Label Content="{Binding MoveRight, Mode=TwoWay}" MouseDoubleClick="ChangeKey" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
+                            <Label Content="D" MouseDoubleClick="ChangeKey" Grid.Column="1" HorizontalAlignment="Right" FontSize="20" Foreground="White"></Label>
                         </DockPanel>
                     </StackPanel>
                 </GroupBox>

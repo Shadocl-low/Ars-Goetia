@@ -13,11 +13,9 @@ namespace MainMenu.Pages
     public partial class Controls : Page
     {
         private Label? UpdatedKey { get; set; }
-        KeysControl keys = new KeysControl();
         public Controls()
         {
             InitializeComponent();
-            this.DataContext = keys;
         }
         private void CaptureKey(object sender, KeyEventArgs e)
         {

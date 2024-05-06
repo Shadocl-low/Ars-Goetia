@@ -130,18 +130,16 @@ namespace MainMenu
                         itemRemover.Add(element);
                         MainPlayer.TakeDamage(archer.AttackDamage);
                     }
-
-                    if (Canvas.GetTop(element) < 10 || Canvas.GetLeft(element) < 10 || Canvas.GetLeft(element) > 1560 || Canvas.GetTop(element) > 850)
-                    {
-                        itemRemover.Add(element);
-                    }
                 }
             }
 
             if (archer.arrow != null && archer2.arrow != null)
             {
                 archer.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
+                archer.arrow.RemoveFromCanvas(itemRemover);
+
                 archer2.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
+                archer2.arrow.RemoveFromCanvas(itemRemover);
             }
 
             foreach (Rectangle element in itemRemover)
@@ -151,7 +149,7 @@ namespace MainMenu
 
             if (MainPlayer.HealthPoints == 0)
             {
-                GameOver("Don't lose healt next time, dude!");
+                GameOver("Don't lose health next time, dude!");
             }
         }
         private void ShotsTick(object sender, EventArgs e)

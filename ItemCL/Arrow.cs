@@ -53,5 +53,12 @@ namespace ItemCL
             Canvas.SetLeft(newArrow, Canvas.GetLeft(newArrow) + (xy[0] * 20));
             Canvas.SetTop(newArrow, Canvas.GetTop(newArrow) + (xy[1] * 20));
         }
+        public void RemoveFromCanvas(List<Rectangle> itemRemover)
+        {
+            if (Canvas.GetTop(newArrow) < 10 || Canvas.GetLeft(newArrow) < 10 || Canvas.GetLeft(newArrow) > 1560 || Canvas.GetTop(newArrow) > 850)
+            {
+                itemRemover.Add(newArrow);
+            }
+        }
     }
 }

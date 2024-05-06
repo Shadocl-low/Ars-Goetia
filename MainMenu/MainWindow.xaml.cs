@@ -22,17 +22,14 @@ namespace MainMenu
     public partial class MainWindow : Window
     {
         OptionMenu optMenu = new OptionMenu();
-        GameForm gameForm = new GameForm();
-        KeysControl keys = new KeysControl();
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = keys;
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            gameForm.Show();
+            new GameForm().Show();
             this.Hide();
         }
         private void Option_Click(object sender, RoutedEventArgs e)
