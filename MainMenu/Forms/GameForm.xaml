@@ -8,8 +8,12 @@
         Title="GameForm" Height="865" Width="1570" WindowState="Maximized" WindowStyle="None" Background="Gray" KeyDown="ShowMenu">
     <Canvas x:Name="GameScreen" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
 
-        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="10" Value="10" Maximum="10" Canvas.Left="75" Canvas.Top="88" Width="100"/>
-        <Label x:Name="RestEstus" Width="100" Height="40" Canvas.Left="75" Canvas.Top="116" FontSize="12"/>
+        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="15" Value="10" Maximum="10" Canvas.Left="75" Canvas.Top="88" Width="250"/>
+
+        <DockPanel Canvas.Left="75" Canvas.Top="136">
+            <Image Source="/Images/Estus_Flask.png" Width="75" Height="75"/>
+            <Label x:Name="RestEstus" Width="50" Height="25" FontSize="22" Foreground="Wheat" VerticalAlignment="Bottom" Margin="-25,0,0,0" Padding="0,0,0,0" HorizontalAlignment="Left"/>
+        </DockPanel>
 
         <BuildItems:Wall Canvas.Top="790"/>
         <BuildItems:Wall Canvas.Top="790" HorizontalAlignment="Left" Canvas.Left="150" VerticalAlignment="Center"/>

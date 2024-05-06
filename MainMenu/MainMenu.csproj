@@ -10,10 +10,10 @@
   <ItemGroup>
     <None Remove="Images\ArcherEnemy.png" />
     <None Remove="Images\ArcherEnemyAttack.png" />
+    <None Remove="Images\Estus_Flask.png" />
     <None Remove="Images\MainCharacter.jpg" />
     <None Remove="Images\MainCharacter.png" />
     <None Remove="Images\SplashScreen.png" />
-	<None Remove="Images\Estus_Flask.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <Resource Include="Images\ArcherEnemy.png" />
     <Resource Include="Images\ArcherEnemyAttack.png" />
+    <Resource Include="Images\Estus_Flask.png" />
     <Resource Include="Images\MainCharacter.png" />
   </ItemGroup>
 
