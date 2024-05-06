@@ -15,10 +15,10 @@ using System.Windows.Navigation;
 using MainMenu.Pages;
 using MainMenu.Forms;
 using System.Windows.Threading;
-using ItemCL;
 using EntityCL;
 using EntityCL.Enemies;
 using System.Xml.Linq;
+using ObjectsCL;
 
 namespace MainMenu
 {

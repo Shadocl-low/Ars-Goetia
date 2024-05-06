@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\1\Downloads\Ars Goetia\MainMenu\obj\Debug\net7.0-windows\
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\
 MainMenu
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\1\Downloads\Ars Goetia\MainMenu\App.xaml
+C:\Arc_Goetia\ars-goetia\MainMenu\App.xaml
 12-1044341702
 
-18-1565185643
-200413649342
+1795269198
+200-637006395
 Forms\GameForm.xaml;Forms\OptionMenu.xaml;Forms\OptionMenuInGame.xaml;Forms\SplashScreen.xaml;MainWindow.xaml;Pages\Controls.xaml;Pages\EscMenu.xaml;Pages\Resolution.xaml;Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;Styles\PlayerHealthBarStyles.xaml;Themes\Generic.xaml;
 images\splashscreen.png
 False

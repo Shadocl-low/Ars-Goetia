@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\MainMenu.csproj": {}
+    "C:\\Arc_Goetia\\ars-goetia\\MainMenu\\MainMenu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj": {
+    "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj",
+        "projectUniqueName": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj",
         "projectName": "EntityCL",
-        "projectPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj",
+        "projectPath": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\obj\\",
+        "outputPath": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -64,78 +64,14 @@
         }
       }
     },
-    "C:\\Users\\1\\Downloads\\Ars Goetia\\ItemCL\\ItemCL.csproj": {
+    "C:\\Arc_Goetia\\ars-goetia\\MainMenu\\MainMenu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Downloads\\Ars Goetia\\ItemCL\\ItemCL.csproj",
-        "projectName": "ItemCL",
-        "projectPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\ItemCL\\ItemCL.csproj",
-        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\ItemCL\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {
-              "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj": {
-                "projectPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\MainMenu.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\MainMenu.csproj",
+        "projectUniqueName": "C:\\Arc_Goetia\\ars-goetia\\MainMenu\\MainMenu.csproj",
         "projectName": "MainMenu",
-        "projectPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\MainMenu.csproj",
+        "projectPath": "C:\\Arc_Goetia\\ars-goetia\\MainMenu\\MainMenu.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\MainMenu\\obj\\",
+        "outputPath": "C:\\Arc_Goetia\\ars-goetia\\MainMenu\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -152,11 +88,11 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj": {
-                "projectPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj"
+              "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj": {
+                "projectPath": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj"
               },
-              "C:\\Users\\1\\Downloads\\Ars Goetia\\ItemCL\\ItemCL.csproj": {
-                "projectPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\ItemCL\\ItemCL.csproj"
+              "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj": {
+                "projectPath": "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj"
               }
             }
           }
@@ -192,6 +128,66 @@
             },
             "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj",
+        "projectName": "ObjectsCL",
+        "projectPath": "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj",
+        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
+        "outputPath": "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"

@@ -1,0 +1,12 @@
+C:\Arc_Goetia\ars-goetia\ObjectsCL\bin\Debug\net7.0\ObjectsCL.deps.json
+C:\Arc_Goetia\ars-goetia\ObjectsCL\bin\Debug\net7.0\ObjectsCL.dll
+C:\Arc_Goetia\ars-goetia\ObjectsCL\bin\Debug\net7.0\ObjectsCL.pdb
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.AssemblyInfoInputs.cache
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.AssemblyInfo.cs
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.csproj.CoreCompileInputs.cache
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.sourcelink.json
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.dll
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\refint\ObjectsCL.dll
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.pdb
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ref\ObjectsCL.dll

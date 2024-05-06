@@ -9,7 +9,7 @@
       "MainMenu/1.0.0": {
         "dependencies": {
           "EntityCL": "1.0.0",
-          "ItemCL": "1.0.0"
+          "ObjectsCL": "1.0.0"
         },
         "runtime": {
           "MainMenu.dll": {}
@@ -20,12 +20,9 @@
           "EntityCL.dll": {}
         }
       },
-      "ItemCL/1.0.0": {
-        "dependencies": {
-          "EntityCL": "1.0.0"
-        },
+      "ObjectsCL/1.0.0": {
         "runtime": {
-          "ItemCL.dll": {}
+          "ObjectsCL.dll": {}
         }
       }
     }
@@ -41,7 +38,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ItemCL/1.0.0": {
+    "ObjectsCL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

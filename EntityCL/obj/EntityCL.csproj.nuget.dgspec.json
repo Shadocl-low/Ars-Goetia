@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj": {}
+    "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj": {
+    "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj",
+        "projectUniqueName": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj",
         "projectName": "EntityCL",
-        "projectPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\EntityCL.csproj",
+        "projectPath": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityCL.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Downloads\\Ars Goetia\\EntityCL\\obj\\",
+        "outputPath": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",

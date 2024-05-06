@@ -9,8 +9,6 @@ using System.Windows.Media.Imaging;
 using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
-using MainMenu;
-using ItemCL;
 
 namespace EntityCL.Enemies
 {

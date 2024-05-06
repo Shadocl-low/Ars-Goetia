@@ -13,11 +13,12 @@
     <None Remove="Images\MainCharacter.jpg" />
     <None Remove="Images\MainCharacter.png" />
     <None Remove="Images\SplashScreen.png" />
+	<None Remove="Images\Estus_Flask.png" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EntityCL\EntityCL.csproj" />
-    <ProjectReference Include="..\ItemCL\ItemCL.csproj" />
+    <ProjectReference Include="..\ObjectsCL\ObjectsCL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
