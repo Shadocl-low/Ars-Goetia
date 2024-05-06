@@ -22,42 +22,42 @@ namespace ItemCL
         public ArcherC Parent { get; protected set; }
         public Canvas Screen { get; protected set; }
         public Player Target { get; protected set; }
-        public Rectangle newArrow { get; protected set; }
+        public Rectangle ArrowRect { get; protected set; }
         public Arrow(ArcherC parent, Canvas screen, Player terget)
         {
             Parent = parent;
             Screen = screen;
             Target = terget;
 
-            newArrow = new Rectangle();
-            newArrow.Tag = "arrow";
-            newArrow.Height = 5;
-            newArrow.Width = 20;
-            newArrow.Fill = Brushes.Brown;
-            newArrow.Stroke = Brushes.Black;
-            newArrow.RenderTransformOrigin = new Point(0.5, 0.5);
+            ArrowRect = new Rectangle();
+            ArrowRect.Tag = "arrow";
+            ArrowRect.Height = 5;
+            ArrowRect.Width = 20;
+            ArrowRect.Fill = Brushes.Brown;
+            ArrowRect.Stroke = Brushes.Black;
+            ArrowRect.RenderTransformOrigin = new Point(0.5, 0.5);
 
-            Canvas.SetLeft(newArrow, Canvas.GetLeft(Parent.EntityRect) - Parent.EntityRect.Width / 2);
-            Canvas.SetTop(newArrow, Canvas.GetTop(Parent.EntityRect) + Parent.EntityRect.Height / 2);
+            Canvas.SetLeft(ArrowRect, Canvas.GetLeft(Parent.EntityRect) - Parent.EntityRect.Width / 2);
+            Canvas.SetTop(ArrowRect, Canvas.GetTop(Parent.EntityRect) + Parent.EntityRect.Height / 2);
 
             double TargetAimY = Canvas.GetTop(Target.EntityRect);
             double TargetAimX = Canvas.GetLeft(Target.EntityRect) + Target.EntityRect.Width / 2;
 
-            newArrow.RenderTransform = new RotateTransform(Calculation.GetDeegrese(newArrow, TargetAimX, TargetAimY) * 180 / Math.PI);
+            ArrowRect.RenderTransform = new RotateTransform(Calculation.GetDeegrese(ArrowRect, TargetAimX, TargetAimY) * 180 / Math.PI);
 
-            Screen.Children.Add(newArrow);
+            Screen.Children.Add(ArrowRect);
         }
         public void Flying(double TargetAimX, double TargetAimY, List<Rectangle> itemRemover)
         {
             List<double> xy = Calculation.Normalize(Parent.EntityRect, TargetAimX, TargetAimY);
-            Canvas.SetLeft(newArrow, Canvas.GetLeft(newArrow) + (xy[0] * 20));
-            Canvas.SetTop(newArrow, Canvas.GetTop(newArrow) + (xy[1] * 20));
+            Canvas.SetLeft(ArrowRect, Canvas.GetLeft(ArrowRect) + (xy[0] * 20));
+            Canvas.SetTop(ArrowRect, Canvas.GetTop(ArrowRect) + (xy[1] * 20));
         }
         public void RemoveFromCanvas(List<Rectangle> itemRemover)
         {
-            if (Canvas.GetTop(newArrow) < 10 || Canvas.GetLeft(newArrow) < 10 || Canvas.GetLeft(newArrow) > 1560 || Canvas.GetTop(newArrow) > 850)
+            if (Canvas.GetTop(ArrowRect) < 10 || Canvas.GetLeft(ArrowRect) < 10 || Canvas.GetLeft(ArrowRect) > 1560 || Canvas.GetTop(ArrowRect) > 850)
             {
-                itemRemover.Add(newArrow);
+                itemRemover.Add(ArrowRect);
             }
         }
     }

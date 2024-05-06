@@ -18,10 +18,12 @@ namespace EntityCL
         public override Rect EntityHitBox { get; protected set; }
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
+        public int Speed { get; protected set; }
         public Player(string name, int maxhp, double hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
             Weapon = weapon;
             AmoutOfEstus = estus;
+            Speed = 5;
 
             EntityRect = new Rectangle();
             EntityRect.Height = 50;
@@ -39,15 +41,23 @@ namespace EntityCL
         {
             HealthPoints -= atk;
         }
-        public void DrinkEstus()
+        public async void DrinkEstus()
         {
             if ((int)HealthPoints != MAXHealthPoints && AmoutOfEstus != 0)
             {
                 AmoutOfEstus--;
-                HealthPoints = MAXHealthPoints;
+                int HealthAmount = 2;
+                while (HealthPoints < MAXHealthPoints && HealthAmount > 0) 
+                {
+                    Speed = 1;
+                    await Task.Delay(1000);
+                    HealthPoints += 1;
+                    HealthAmount--;
+                }
+                Speed = 5;
             }
         }
-        public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Speed, float Friction)
+        public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction)
         {
             if (UpKeyPressed && Canvas.GetTop(EntityRect) > 0)
             {

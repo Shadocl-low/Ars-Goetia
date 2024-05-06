@@ -36,7 +36,6 @@ namespace MainMenu
         private float SpeedX, SpeedY, Friction = 0.75f, Speed = 5;
         private double TargetAimY, TargetAimX;
 
-        List<ArcherC> EnemiesList = new List<ArcherC>();
         List<Rectangle> itemRemover = new List<Rectangle>();
 
         Player MainPlayer = new Player("Shadocl", 10, 10, 2, "Sword and shild", 5);
@@ -46,11 +45,8 @@ namespace MainMenu
         {
             InitializeComponent();
 
-            EnemiesList.Add(archer);
-            EnemiesList.Add(archer2);
-
-            AddToCanvas(EnemiesList[0].EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
-            AddToCanvas(EnemiesList[1].EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
+            AddToCanvas(archer.EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
+            AddToCanvas(archer2.EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
@@ -113,10 +109,13 @@ namespace MainMenu
         }
         private void GameTick(object sender, EventArgs e)
         {
-            MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Speed, Friction);
+            MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             RestEstus.Content = MainPlayer.AmoutOfEstus;
+
+            MainPlayer.SetHitBox();
+
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
             {
@@ -124,7 +123,6 @@ namespace MainMenu
                 {
                     Rect ArrowHitBox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
 
-                    MainPlayer.SetHitBox();
                     if (MainPlayer.EntityHitBox.IntersectsWith(ArrowHitBox))
                     {
                         itemRemover.Add(element);
@@ -154,8 +152,8 @@ namespace MainMenu
         }
         private void ShotsTick(object sender, EventArgs e)
         {
-            EnemiesList[0].CreateArrow(GameScreen, MainPlayer);
-            EnemiesList[1].CreateArrow(GameScreen, MainPlayer);
+            archer.CreateArrow(GameScreen, MainPlayer);
+            archer2.CreateArrow(GameScreen, MainPlayer);
 
             TargetAimX = Canvas.GetLeft(MainPlayer.EntityRect) + MainPlayer.EntityRect.Width / 2;
             TargetAimY = Canvas.GetTop(MainPlayer.EntityRect);
