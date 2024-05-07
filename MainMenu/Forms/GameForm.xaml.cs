@@ -19,6 +19,7 @@ using EntityCL;
 using EntityCL.Enemies;
 using System.Xml.Linq;
 using ObjectsCL;
+using MainMenu;
 
 namespace MainMenu
 {
@@ -105,6 +106,10 @@ namespace MainMenu
             if (e.Key == Key.Q)
             {
                 MainPlayer.DrinkEstus();
+            }
+            if (e.Key == Key.F)
+            {
+                MainPlayer.Attack(GameScreen);
             }
         }
         private void GameTick(object sender, EventArgs e)

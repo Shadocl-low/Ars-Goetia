@@ -19,11 +19,13 @@ namespace EntityCL
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
         public int Speed { get; protected set; }
+        public bool ImuneState { get; protected set; }
         public Player(string name, int maxhp, double hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
             Weapon = weapon;
             AmoutOfEstus = estus;
             Speed = 5;
+            ImuneState = false;
 
             EntityRect = new Rectangle();
             EntityRect.Height = 50;
@@ -37,9 +39,15 @@ namespace EntityCL
             State = "Burning";
             HealthPoints -= MAXHealthPoints * 0.01 / 16;
         }
-        public override void TakeDamage(int atk)
+        public override async void TakeDamage(int atk)
         {
-            HealthPoints -= atk;
+            if (!ImuneState)
+            {
+                HealthPoints -= atk;
+                ImuneState = true;
+                await Task.Delay(500);
+            }
+            ImuneState = false;
         }
         public async void DrinkEstus()
         {
@@ -47,9 +55,9 @@ namespace EntityCL
             {
                 AmoutOfEstus--;
                 int HealthAmount = 2;
+                Speed /= 5;
                 while (HealthPoints < MAXHealthPoints && HealthAmount > 0) 
                 {
-                    Speed = 1;
                     await Task.Delay(1000);
                     HealthPoints += 1;
                     HealthAmount--;
@@ -85,6 +93,22 @@ namespace EntityCL
         public void SetHitBox()
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
+        }
+        public void Attack(Canvas GameScreen)
+        {
+            Rect AttackHitBox = new Rect(Canvas.GetLeft(EntityRect)+EntityRect.Width, Canvas.GetTop(EntityRect)+EntityRect.Height, 100, 20);
+            Rectangle AttackRectangle = new Rectangle
+            {
+                Height = 20,
+                Width = 80,
+                Fill = Brushes.Black,
+                Stroke = Brushes.Black,
+            };
+
+            Canvas.SetLeft(AttackRectangle, Canvas.GetLeft(EntityRect) + EntityRect.Width/2);
+            Canvas.SetTop(AttackRectangle, Canvas.GetTop(EntityRect)+EntityRect.Height/2);
+
+            GameScreen.Children.Add(AttackRectangle);
         }
     }
 }
