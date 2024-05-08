@@ -56,7 +56,7 @@ namespace MainMenu
             GameTimer.Tick += GameTick;
             GameTimer.Start();
 
-            ShotsInterval.Interval = TimeSpan.FromSeconds(rand.Next(3,8));
+            ShotsInterval.Interval = TimeSpan.FromSeconds(rand.Next(3, 8));
             ShotsInterval.Tick += ShotsTick;
             ShotsInterval.Start();
         }
@@ -109,7 +109,7 @@ namespace MainMenu
             }
             if (e.Key == Key.F)
             {
-                MainPlayer.Attack(GameScreen);
+                MainPlayer.Attack(GameScreen, itemRemover);
             }
         }
         private void GameTick(object sender, EventArgs e)

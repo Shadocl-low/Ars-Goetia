@@ -13,7 +13,15 @@
     <None Remove="Images\Estus_Flask.png" />
     <None Remove="Images\MainCharacter.jpg" />
     <None Remove="Images\MainCharacter.png" />
+    <None Remove="Images\MainCharacterClaymore.png" />
+    <None Remove="Images\MainCharacterClaymoreAttack.png" />
+    <None Remove="Images\MainCharacterSwordAndShield.png" />
     <None Remove="Images\SplashScreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\MainCharacterClaymoreAttack.png" />
+    <Resource Include="Images\MainCharacterSwordAndShield.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +34,7 @@
     <Resource Include="Images\ArcherEnemyAttack.png" />
     <Resource Include="Images\Estus_Flask.png" />
     <Resource Include="Images\MainCharacter.png" />
+    <Resource Include="Images\MainCharacterClaymore.png" />
   </ItemGroup>
 
   <ItemGroup>

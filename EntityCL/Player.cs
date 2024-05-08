@@ -16,6 +16,7 @@ namespace EntityCL
     {
         public override Rectangle EntityRect { get; protected set; }
         public override Rect EntityHitBox { get; protected set; }
+        public Rect AttackHitBox { get; protected set; }
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
         public int Speed { get; protected set; }
@@ -28,10 +29,10 @@ namespace EntityCL
             ImuneState = false;
 
             EntityRect = new Rectangle();
-            EntityRect.Height = 50;
-            EntityRect.Width = 50;
+            EntityRect.Height = 55;
+            EntityRect.Width = 47;
             ImageBrush KnightImage = new ImageBrush();
-            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacter.png"));
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymore.png"));
             EntityRect.Fill = KnightImage;
         }
         public override void Burning()
@@ -92,23 +93,23 @@ namespace EntityCL
         }
         public void SetHitBox()
         {
-            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
+            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), 47, 55);
         }
-        public void Attack(Canvas GameScreen)
+        public async void Attack(Canvas GameScreen, List<Rectangle> itemRemover)
         {
-            Rect AttackHitBox = new Rect(Canvas.GetLeft(EntityRect)+EntityRect.Width, Canvas.GetTop(EntityRect)+EntityRect.Height, 100, 20);
-            Rectangle AttackRectangle = new Rectangle
-            {
-                Height = 20,
-                Width = 80,
-                Fill = Brushes.Black,
-                Stroke = Brushes.Black,
-            };
+            ImageBrush KnightImage = new ImageBrush();
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymoreAttack.png"));
 
-            Canvas.SetLeft(AttackRectangle, Canvas.GetLeft(EntityRect) + EntityRect.Width/2);
-            Canvas.SetTop(AttackRectangle, Canvas.GetTop(EntityRect)+EntityRect.Height/2);
+            AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 47, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+            EntityRect.Width = 87;
+            EntityRect.Fill = KnightImage;
 
-            GameScreen.Children.Add(AttackRectangle);
+            await Task.Delay(500);
+
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymore.png"));
+            AttackHitBox = new Rect();
+            EntityRect.Width = 47;
+            EntityRect.Fill = KnightImage;
         }
     }
 }
