@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Arc_Goetia\\ars-goetia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|C:\\Arc_Goetia\\ars-goetia\\mainmenu\\forms\\gameform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\arc_goetia\\ars-goetia\\mainmenu\\forms\\gameform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\gameform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\arc_goetia\\ars-goetia\\entitycl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|C:\\Arc_Goetia\\ars-goetia\\entitycl\\enemies\\archerc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\enemies\\archerc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|C:\\Arc_Goetia\\ars-goetia\\mainmenu\\forms\\gameform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\gameform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|C:\\Arc_Goetia\\ars-goetia\\entitycl\\enemyac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\enemyac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|C:\\Arc_Goetia\\ars-goetia\\entitycl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|C:\\Arc_Goetia\\ars-goetia\\entitycl\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|C:\\Arc_Goetia\\ars-goetia\\entitycl\\enemies\\swordsmanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\enemies\\swordsmanc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|C:\\Arc_Goetia\\ars-goetia\\entitycl\\entityac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\entityac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|C:\\Arc_Goetia\\ars-goetia\\mainmenu\\forms\\gameform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\gameform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +42,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "SwordsmanC.cs",
+              "DocumentMoniker": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\Enemies\\SwordsmanC.cs",
+              "RelativeDocumentMoniker": "EntityCL\\Enemies\\SwordsmanC.cs",
+              "ToolTip": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\Enemies\\SwordsmanC.cs",
+              "RelativeToolTip": "EntityCL\\Enemies\\SwordsmanC.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T17:41:18.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EntityAC.cs",
+              "DocumentMoniker": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityAC.cs",
+              "RelativeDocumentMoniker": "EntityCL\\EntityAC.cs",
+              "ToolTip": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EntityAC.cs",
+              "RelativeToolTip": "EntityCL\\EntityAC.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T17:21:36.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyAC.cs",
+              "DocumentMoniker": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EnemyAC.cs",
+              "RelativeDocumentMoniker": "EntityCL\\EnemyAC.cs",
+              "ToolTip": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\EnemyAC.cs",
+              "RelativeToolTip": "EntityCL\\EnemyAC.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAgwBAAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T17:42:29.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Arrow.cs",
               "DocumentMoniker": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\Arrow.cs",
               "RelativeDocumentMoniker": "EntityCL\\Arrow.cs",
@@ -38,17 +93,31 @@
               "RelativeToolTip": "EntityCL\\Arrow.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T09:06:16.565Z"
+              "WhenOpened": "2024-05-07T09:06:16.565Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ArcherC.cs",
+              "DocumentMoniker": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\Enemies\\ArcherC.cs",
+              "RelativeDocumentMoniker": "EntityCL\\Enemies\\ArcherC.cs",
+              "ToolTip": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\Enemies\\ArcherC.cs",
+              "RelativeToolTip": "EntityCL\\Enemies\\ArcherC.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwDcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T17:17:34.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\Player.cs",
               "RelativeDocumentMoniker": "EntityCL\\Player.cs",
               "ToolTip": "C:\\Arc_Goetia\\ars-goetia\\EntityCL\\Player.cs",
               "RelativeToolTip": "EntityCL\\Player.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAiwGoAAAAeAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAA5wBEAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T21:48:16.186Z",
               "EditorCaption": ""
@@ -61,22 +130,21 @@
               "RelativeDocumentMoniker": "MainMenu\\Forms\\GameForm.xaml.cs",
               "ToolTip": "C:\\Arc_Goetia\\ars-goetia\\MainMenu\\Forms\\GameForm.xaml.cs",
               "RelativeToolTip": "MainMenu\\Forms\\GameForm.xaml.cs",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAAwIYAAAAVAAAA",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAQwJUAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T19:05:28.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "GameForm.xaml",
               "DocumentMoniker": "C:\\Arc_Goetia\\ars-goetia\\MainMenu\\Forms\\GameForm.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\GameForm.xaml",
               "ToolTip": "C:\\Arc_Goetia\\ars-goetia\\MainMenu\\Forms\\GameForm.xaml",
               "RelativeToolTip": "MainMenu\\Forms\\GameForm.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-06T19:03:05.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-06T19:03:05.256Z"
             }
           ]
         }

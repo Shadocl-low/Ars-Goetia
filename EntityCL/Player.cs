@@ -20,7 +20,6 @@ namespace EntityCL
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
         public int Speed { get; protected set; }
-        public bool ImuneState { get; protected set; }
         public Player(string name, int maxhp, double hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
             Weapon = weapon;
@@ -39,16 +38,6 @@ namespace EntityCL
         {
             State = "Burning";
             HealthPoints -= MAXHealthPoints * 0.01 / 16;
-        }
-        public override async void TakeDamage(int atk)
-        {
-            if (!ImuneState)
-            {
-                HealthPoints -= atk;
-                ImuneState = true;
-                await Task.Delay(500);
-            }
-            ImuneState = false;
         }
         public async void DrinkEstus()
         {
@@ -91,7 +80,7 @@ namespace EntityCL
             Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) - SpeedY);
             Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + SpeedX);
         }
-        public void SetHitBox()
+        public override void SetHitbox()
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), 47, 55);
         }
@@ -104,7 +93,7 @@ namespace EntityCL
             EntityRect.Width = 87;
             EntityRect.Fill = KnightImage;
 
-            await Task.Delay(500);
+            await Task.Delay(400);
 
             KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymore.png"));
             AttackHitBox = new Rect();

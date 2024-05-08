@@ -24,8 +24,11 @@ namespace EntityCL.Enemies
             AttackDamage = 1;
             EntityName = "Old Archer";
             Class = "Archer";
+            ImuneState = false;
+            IsDead = false;
 
             EntityRect = new Rectangle();
+            EntityRect.Tag = "archerTag";
             EntityRect.Height = 50;
             EntityRect.Width = 50;
             ImageBrush ArcherImage = new ImageBrush();
@@ -41,13 +44,21 @@ namespace EntityCL.Enemies
             State = "Burning";
             HealthPoints -= MAXHealthPoints * 0.03 / 16;
         }
-        public override void TakeDamage(int atk)
-        {
-            HealthPoints -= atk;
-        }
         public void CreateArrow(Canvas GameScreen, Player MainPlayer)
         {
-            arrow = new Arrow(this, GameScreen, MainPlayer);
+            if (!IsDead) arrow = new Arrow(this, GameScreen, MainPlayer);
+        }
+        public void Death(List<Rectangle> itemRemover)
+        {
+            if (HealthPoints <= 0)
+            {
+                itemRemover.Add(EntityRect);
+                IsDead = true;
+            }
+        }
+        public override void SetHitbox()
+        {
+            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
         }
     }
 }

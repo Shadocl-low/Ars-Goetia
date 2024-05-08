@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Shapes;
 
 namespace EntityCL.Enemies
@@ -25,9 +26,9 @@ namespace EntityCL.Enemies
             State = "Burning";
             HealthPoints -= MAXHealthPoints * 0.03 / 16;
         }
-        public override void TakeDamage(int atk)
+        public override void SetHitbox()
         {
-            HealthPoints -= atk;
+            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
         }
     }
 }

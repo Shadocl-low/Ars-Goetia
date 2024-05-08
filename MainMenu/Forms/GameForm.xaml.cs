@@ -20,6 +20,7 @@ using EntityCL.Enemies;
 using System.Xml.Linq;
 using ObjectsCL;
 using MainMenu;
+using System.Data;
 
 namespace MainMenu
 {
@@ -42,12 +43,18 @@ namespace MainMenu
         Player MainPlayer = new Player("Shadocl", 10, 10, 2, "Sword and shild", 5);
         ArcherC archer = new ArcherC();
         ArcherC archer2 = new ArcherC();
+        List<ArcherC> Archers = new List<ArcherC>();
         public GameForm()
         {
             InitializeComponent();
 
-            AddToCanvas(archer.EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
-            AddToCanvas(archer2.EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
+            Archers.Add(archer);
+            Archers.Add(archer2);
+
+            foreach (ArcherC archers in Archers)
+            {
+                AddToCanvas(archers.EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
+            }
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
@@ -119,7 +126,9 @@ namespace MainMenu
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             RestEstus.Content = MainPlayer.AmoutOfEstus;
 
-            MainPlayer.SetHitBox();
+            MainPlayer.SetHitbox();
+            archer.SetHitbox();
+            archer2.SetHitbox();
 
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
@@ -136,13 +145,19 @@ namespace MainMenu
                 }
             }
 
-            if (archer.arrow != null && archer2.arrow != null)
+            foreach (ArcherC archers in Archers)
             {
-                archer.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
-                archer.arrow.RemoveFromCanvas(itemRemover);
+                archers.Death(itemRemover);
+                if (archers.EntityHitBox.IntersectsWith(MainPlayer.AttackHitBox))
+                {
+                    archers.TakeDamage(MainPlayer.AttackDamage);
+                }
 
-                archer2.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
-                archer2.arrow.RemoveFromCanvas(itemRemover);
+                if (archers.arrow != null)
+                {
+                    archers.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
+                    archers.arrow.RemoveFromCanvas(itemRemover);
+                }
             }
 
             foreach (Rectangle element in itemRemover)
@@ -157,9 +172,10 @@ namespace MainMenu
         }
         private void ShotsTick(object sender, EventArgs e)
         {
-            archer.CreateArrow(GameScreen, MainPlayer);
-            archer2.CreateArrow(GameScreen, MainPlayer);
-
+            foreach (ArcherC archers in Archers)
+            {
+                archers.CreateArrow(GameScreen, MainPlayer);
+            }
             TargetAimX = Canvas.GetLeft(MainPlayer.EntityRect) + MainPlayer.EntityRect.Width / 2;
             TargetAimY = Canvas.GetTop(MainPlayer.EntityRect);
         }

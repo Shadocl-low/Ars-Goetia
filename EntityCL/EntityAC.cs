@@ -15,6 +15,8 @@ namespace EntityCL
         public string State { get; protected set; }
         public abstract Rectangle EntityRect { get; protected set; }
         public abstract Rect EntityHitBox { get; protected set; }
+        public bool ImuneState { get; protected set; }
+
         public EntityAC(string name, int maxhp, double hp, int atk)
         {
             EntityName = name;
@@ -28,6 +30,16 @@ namespace EntityCL
             State = "Normal";
         }
         public abstract void Burning();
-        public abstract void TakeDamage(int atk);
+        public abstract void SetHitbox();
+        public async void TakeDamage(int atk)
+        {
+            if (!ImuneState)
+            {
+                HealthPoints -= atk;
+                ImuneState = true;
+                await Task.Delay(500);
+            }
+            ImuneState = false;
+        }
     }
 }
