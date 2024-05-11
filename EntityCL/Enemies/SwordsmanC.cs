@@ -19,11 +19,6 @@ namespace EntityCL.Enemies
             EntityName = "Royal Guard";
             Class = "Knight";
         }
-        public override void Burning()
-        {
-            State = "Burning";
-            HealthPoints -= MAXHealthPoints * 0.03 / 16;
-        }
         public override void SetHitbox()
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);

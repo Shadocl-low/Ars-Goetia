@@ -10,14 +10,14 @@ namespace EntityCL
     {
         public string? EntityName { get; protected set; }
         public int MAXHealthPoints { get; protected set; }
-        public double HealthPoints { get; protected set; }
+        public int HealthPoints { get; protected set; }
         public int AttackDamage { get; protected set; }
         public string State { get; protected set; }
         public Rectangle? EntityRect { get; protected set; }
         public Rect EntityHitBox { get; protected set; }
         public bool ImuneState { get; protected set; }
 
-        public EntityAC(string name, int maxhp, double hp, int atk)
+        public EntityAC(string name, int maxhp, int hp, int atk)
         {
             EntityName = name;
             MAXHealthPoints = maxhp;
@@ -29,7 +29,11 @@ namespace EntityCL
         {
             State = "Normal";
         }
-        public abstract void Burning();
+        public void Burning()
+        {
+            State = "Burning";
+            HealthPoints--;
+        }
         public abstract void SetHitbox();
         public virtual async void TakeDamage(int atk)
         {

@@ -127,9 +127,24 @@ namespace MainMenu
             RestEstus.Content = MainPlayer.AmoutOfEstus;
 
             MainPlayer.SetHitbox();
-            archer.SetHitbox();
-            archer2.SetHitbox();
 
+            foreach (ArcherC archers in Archers)
+            {
+                archers.SetHitbox();
+
+                archers.Death(itemRemover);
+                if (archers.EntityHitBox.IntersectsWith(MainPlayer.AttackHitBox))
+                {
+                    MainPlayer.DeleteAttackHitbox();
+                    archers.TakeDamage(MainPlayer.AttackDamage);
+                }
+
+                if (archers.arrow != null)
+                {
+                    archers.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
+                    archers.arrow.RemoveFromCanvas(itemRemover);
+                }
+            }
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
             {
@@ -142,22 +157,6 @@ namespace MainMenu
                         itemRemover.Add(element);
                         MainPlayer.TakeDamage(archer.AttackDamage);
                     }
-                }
-            }
-
-            foreach (ArcherC archers in Archers)
-            {
-                archers.Death(itemRemover);
-                if (archers.EntityHitBox.IntersectsWith(MainPlayer.AttackHitBox))
-                {
-                    MainPlayer.DeleteAttackHitbox();
-                    archers.TakeDamage(MainPlayer.AttackDamage);
-                }
-
-                if (archers.arrow != null)
-                {
-                    archers.arrow.Flying(TargetAimX, TargetAimY, itemRemover);
-                    archers.arrow.RemoveFromCanvas(itemRemover);
                 }
             }
 

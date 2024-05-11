@@ -18,7 +18,7 @@ namespace EntityCL
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
         public int Speed { get; protected set; }
-        public Player(string name, int maxhp, double hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
+        public Player(string name, int maxhp, int hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
             Weapon = weapon;
             AmoutOfEstus = estus;
@@ -32,22 +32,17 @@ namespace EntityCL
             KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymore.png"));
             EntityRect.Fill = KnightImage;
         }
-        public override void Burning()
-        {
-            State = "Burning";
-            HealthPoints -= MAXHealthPoints * 0.01 / 16;
-        }
         public async void DrinkEstus()
         {
-            if ((int)HealthPoints != MAXHealthPoints && AmoutOfEstus != 0)
+            if (HealthPoints < MAXHealthPoints && AmoutOfEstus != 0)
             {
                 AmoutOfEstus--;
                 int HealthAmount = 2;
                 Speed /= 5;
-                while (HealthPoints < MAXHealthPoints && HealthAmount > 0) 
+                while (HealthAmount > 0) 
                 {
                     await Task.Delay(1000);
-                    HealthPoints += 1;
+                    if (HealthPoints < MAXHealthPoints) HealthPoints += 1;
                     HealthAmount--;
                 }
                 Speed = 5;

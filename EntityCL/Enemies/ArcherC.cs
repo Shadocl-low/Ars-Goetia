@@ -37,11 +37,6 @@ namespace EntityCL.Enemies
             ArcherScaleTransform.CenterX = 0.5;
             EntityRect.RenderTransform = ArcherScaleTransform;
         }
-        public override void Burning()
-        {
-            State = "Burning";
-            HealthPoints -= MAXHealthPoints * 0.03 / 16;
-        }
         public void CreateArrow(Canvas GameScreen, Player MainPlayer)
         {
             if (!IsDead) arrow = new Arrow(this, GameScreen, MainPlayer);
