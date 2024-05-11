@@ -150,6 +150,7 @@ namespace MainMenu
                 archers.Death(itemRemover);
                 if (archers.EntityHitBox.IntersectsWith(MainPlayer.AttackHitBox))
                 {
+                    MainPlayer.DeleteAttackHitbox();
                     archers.TakeDamage(MainPlayer.AttackDamage);
                 }
 

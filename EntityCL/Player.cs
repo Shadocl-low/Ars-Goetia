@@ -14,8 +14,6 @@ namespace EntityCL
 {
     public class Player : EntityAC
     {
-        public override Rectangle EntityRect { get; protected set; }
-        public override Rect EntityHitBox { get; protected set; }
         public Rect AttackHitBox { get; protected set; }
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
@@ -89,16 +87,20 @@ namespace EntityCL
             ImageBrush KnightImage = new ImageBrush();
             KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymoreAttack.png"));
 
-            AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 47, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+            AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
             EntityRect.Width = 87;
             EntityRect.Fill = KnightImage;
 
-            await Task.Delay(400);
+            await Task.Delay(300);
 
             KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymore.png"));
             AttackHitBox = new Rect();
             EntityRect.Width = 47;
             EntityRect.Fill = KnightImage;
+        }
+        public void DeleteAttackHitbox()
+        {
+            AttackHitBox = new Rect();
         }
     }
 }

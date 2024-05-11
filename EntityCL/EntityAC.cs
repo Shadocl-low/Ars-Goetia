@@ -13,8 +13,8 @@ namespace EntityCL
         public double HealthPoints { get; protected set; }
         public int AttackDamage { get; protected set; }
         public string State { get; protected set; }
-        public abstract Rectangle EntityRect { get; protected set; }
-        public abstract Rect EntityHitBox { get; protected set; }
+        public Rectangle? EntityRect { get; protected set; }
+        public Rect EntityHitBox { get; protected set; }
         public bool ImuneState { get; protected set; }
 
         public EntityAC(string name, int maxhp, double hp, int atk)
@@ -31,7 +31,7 @@ namespace EntityCL
         }
         public abstract void Burning();
         public abstract void SetHitbox();
-        public async void TakeDamage(int atk)
+        public virtual async void TakeDamage(int atk)
         {
             if (!ImuneState)
             {

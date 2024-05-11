@@ -11,8 +11,6 @@ namespace EntityCL.Enemies
 {
     public class SwordsmanC : EnemyAC
     {
-        public override Rectangle EntityRect { get; protected set; }
-        public override Rect EntityHitBox { get; protected set; }
         public SwordsmanC() : base()
         {
             MAXHealthPoints = 12;

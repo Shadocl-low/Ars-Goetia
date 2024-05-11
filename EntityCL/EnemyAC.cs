@@ -19,5 +19,22 @@ namespace EntityCL
         {
 
         }
+        public override void SetHitbox()
+        {
+            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
+        }
+        public void Death(List<Rectangle> itemRemover)
+        {
+            if (HealthPoints <= 0)
+            {
+                itemRemover.Add(EntityRect);
+                IsDead = true;
+            }
+        }
+        public override async void TakeDamage(int atk)
+        {
+            base.TakeDamage(atk);
+
+        }
     }
 }

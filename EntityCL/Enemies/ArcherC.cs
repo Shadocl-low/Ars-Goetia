@@ -14,8 +14,6 @@ namespace EntityCL.Enemies
 {
     public class ArcherC : EnemyAC
     {
-        public override Rectangle EntityRect { get; protected set; }
-        public override Rect EntityHitBox { get; protected set; }
         public Arrow? arrow { get; set; }
         public ArcherC() : base()
         {
@@ -48,17 +46,6 @@ namespace EntityCL.Enemies
         {
             if (!IsDead) arrow = new Arrow(this, GameScreen, MainPlayer);
         }
-        public void Death(List<Rectangle> itemRemover)
-        {
-            if (HealthPoints <= 0)
-            {
-                itemRemover.Add(EntityRect);
-                IsDead = true;
-            }
-        }
-        public override void SetHitbox()
-        {
-            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
-        }
+        
     }
 }
