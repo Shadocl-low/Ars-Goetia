@@ -62,7 +62,6 @@ C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Pages\Controls.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Pages\EscMenu.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Pages\Resolution.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\App.g.cs
-C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu_MarkupCompile.cache
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu_MarkupCompile.lref
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\App.baml

@@ -17,8 +17,8 @@ namespace EntityCL.Enemies
         public Arrow? arrow { get; set; }
         public ArcherC() : base()
         {
-            MAXHealthPoints = 10;
-            HealthPoints = 10;
+            MAXHealthPoints = 5;
+            HealthPoints = 5;
             AttackDamage = 1;
             EntityName = "Old Archer";
             Class = "Archer";

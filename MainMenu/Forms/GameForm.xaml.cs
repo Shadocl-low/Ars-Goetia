@@ -40,7 +40,7 @@ namespace MainMenu
 
         List<Rectangle> itemRemover = new List<Rectangle>();
 
-        Player MainPlayer = new Player("Shadocl", 10, 10, 2, "Sword and shild", 5);
+        Player MainPlayer = new Player("Shadocl", 10, 10, 1, "Sword and shild", 5);
         ArcherC archer = new ArcherC();
         ArcherC archer2 = new ArcherC();
         List<ArcherC> Archers = new List<ArcherC>();
@@ -156,6 +156,31 @@ namespace MainMenu
                     {
                         itemRemover.Add(element);
                         MainPlayer.TakeDamage(archer.AttackDamage);
+                    }
+                }
+                if ((string)element.Tag == "wall")
+                {
+                    Rect wallHitbox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
+
+                    if (UpKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
+                    {
+                        UpKeyPressed = false;
+                        Canvas.SetTop(MainPlayer.EntityRect, Canvas.GetTop(MainPlayer.EntityRect) + 5);
+                    }
+                    if (LeftKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
+                    {
+                        LeftKeyPressed = false;
+                        Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) + 5);
+                    }
+                    if (DownKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
+                    {
+                        DownKeyPressed = false;
+                        Canvas.SetTop(MainPlayer.EntityRect, Canvas.GetTop(MainPlayer.EntityRect) - 5);
+                    }
+                    if (RightKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
+                    {
+                        RightKeyPressed = false;
+                        Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - 5);
                     }
                 }
             }
