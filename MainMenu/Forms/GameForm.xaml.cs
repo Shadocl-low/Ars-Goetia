@@ -21,6 +21,7 @@ using System.Xml.Linq;
 using ObjectsCL;
 using MainMenu;
 using System.Data;
+using MainMenu.Forms.Caves;
 
 namespace MainMenu
 {
@@ -35,7 +36,7 @@ namespace MainMenu
         Random rand = new Random();
 
         private bool UpKeyPressed, DownKeyPressed, LeftKeyPressed, RightKeyPressed;
-        private float SpeedX, SpeedY, Friction = 0.75f, Speed = 5;
+        private float SpeedX, SpeedY, Friction = 0.75f;
         private double TargetAimY, TargetAimX;
 
         List<Rectangle> itemRemover = new List<Rectangle>();
@@ -148,7 +149,7 @@ namespace MainMenu
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
             {
-                if (element is Rectangle && (string)element.Tag == "arrow")
+                if ((string)element.Tag == "arrow")
                 {
                     Rect ArrowHitBox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
 
@@ -181,6 +182,19 @@ namespace MainMenu
                     {
                         RightKeyPressed = false;
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - 5);
+                    }
+                }
+                if ((string)element.Tag == "door")
+                {
+                    Rect doorHitbox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
+                    if (MainPlayer.EntityHitBox.IntersectsWith(doorHitbox))
+                    {
+                        RightKeyPressed = false;
+                        Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect)-MainPlayer.EntityRect.Width);
+                        GameTimer.Stop();
+                        ShotsInterval.Stop();
+                        new CaveStart().Show();
+                        Close();
                     }
                 }
             }

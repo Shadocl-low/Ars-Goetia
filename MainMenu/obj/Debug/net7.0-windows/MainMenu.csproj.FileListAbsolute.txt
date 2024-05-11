@@ -90,3 +90,5 @@ C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.genruntimeco
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\ref\MainMenu.dll
 C:\Arc_Goetia\ars-goetia\MainMenu\bin\Debug\net7.0-windows\ObjectsCL.dll
 C:\Arc_Goetia\ars-goetia\MainMenu\bin\Debug\net7.0-windows\ObjectsCL.pdb
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveStart.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveStart.baml

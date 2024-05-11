@@ -17,5 +17,6 @@
         <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,350,0" Opacity="0.5"/>
 
         <Rectangle Width="250" Height="125" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Top="605" Canvas.Left="535"/>
+        <Rectangle Width="37" Height="125" Fill="Brown" Stroke="Black" Tag="door" Canvas.Top="370" Canvas.Left="1533" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Canvas>
 </Window>
