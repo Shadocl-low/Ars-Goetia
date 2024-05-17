@@ -58,6 +58,7 @@ namespace EntityCL
             if (LeftKeyPressed && Canvas.GetLeft(EntityRect) > 0)
             {
                 SpeedX -= Speed;
+                RotateWay.ScaleX = -1;
             }
             if (DownKeyPressed && Canvas.GetTop(EntityRect) < GameScreen.ActualHeight - EntityRect.ActualHeight)
             {
@@ -66,10 +67,13 @@ namespace EntityCL
             if (RightKeyPressed && Canvas.GetLeft(EntityRect) < GameScreen.ActualWidth - EntityRect.ActualWidth)
             {
                 SpeedX += Speed;
+                RotateWay.ScaleX = 1;
             }
 
             SpeedX = SpeedX * Friction;
             SpeedY = SpeedY * Friction;
+
+            EntityRect.RenderTransform = RotateWay;
 
             Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) - SpeedY);
             Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + SpeedX);
@@ -83,7 +87,14 @@ namespace EntityCL
             ImageBrush KnightImage = new ImageBrush();
             KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymoreAttack.png"));
 
-            AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+            if (RotateWay.ScaleX == 1)
+            {
+                AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+            }
+            else
+            {
+                AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+            }
             EntityRect.Width = 87;
             EntityRect.Fill = KnightImage;
 

@@ -15,11 +15,9 @@ namespace EntityCL
     public abstract class EnemyAC : EntityAC
     {
         public bool IsDead { get; protected set; }
-        public ScaleTransform RotateWay { get; protected set; }
         public EnemyAC() : base()
         {
-            RotateWay = new ScaleTransform();
-            RotateWay.CenterX = 25;
+            
         }
         public override void SetHitbox()
         {

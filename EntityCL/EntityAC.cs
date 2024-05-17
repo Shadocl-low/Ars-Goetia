@@ -16,7 +16,7 @@ namespace EntityCL
         public Rectangle? EntityRect { get; protected set; }
         public Rect EntityHitBox { get; protected set; }
         public bool ImuneState { get; protected set; }
-
+        public ScaleTransform RotateWay { get; protected set; }
         public EntityAC(string name, int maxhp, int hp, int atk)
         {
             EntityName = name;
@@ -24,10 +24,14 @@ namespace EntityCL
             HealthPoints = hp;
             AttackDamage = atk;
             State = "Normal";
+            RotateWay = new ScaleTransform();
+            RotateWay.CenterX = 25;
         }
         public EntityAC() 
         {
             State = "Normal";
+            RotateWay = new ScaleTransform();
+            RotateWay.CenterX = 25;
         }
         public void Burning()
         {
