@@ -21,7 +21,6 @@ namespace EntityCL.Enemies
             HealthPoints = 5;
             AttackDamage = 1;
             EntityName = "Old Archer";
-            Class = "Archer";
             ImuneState = false;
             IsDead = false;
 

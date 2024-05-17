@@ -17,7 +17,6 @@ namespace EntityCL.Enemies
             HealthPoints = 12;
             AttackDamage = 1;
             EntityName = "Royal Guard";
-            Class = "Knight";
         }
         public override void SetHitbox()
         {

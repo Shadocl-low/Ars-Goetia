@@ -13,7 +13,6 @@ namespace EntityCL
 {
     public abstract class EnemyAC : EntityAC
     {
-        public string? Class { get; protected set; }
         public bool IsDead { get; protected set; }
         public EnemyAC() : base()
         {

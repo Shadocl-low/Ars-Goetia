@@ -18,6 +18,7 @@ namespace EntityCL
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
         public int Speed { get; protected set; }
+        public RotateTransform Rotating { get; protected set; }
         public Player(string name, int maxhp, int hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
             Weapon = weapon;

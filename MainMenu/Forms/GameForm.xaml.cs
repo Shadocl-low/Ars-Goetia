@@ -22,29 +22,12 @@ using ObjectsCL;
 using MainMenu;
 using System.Data;
 using MainMenu.Forms.Caves;
+using System.Runtime.CompilerServices;
 
 namespace MainMenu
 {
-    /// <summary>
-    /// Interaction logic for GameForm.xaml
-    /// </summary>
-    public partial class GameForm : Window
+    public partial class GameForm : GameWindow
     {
-        EscMenu Menu = new EscMenu();
-        private DispatcherTimer GameTimer = new DispatcherTimer();
-        private DispatcherTimer ShotsInterval = new DispatcherTimer();
-        Random rand = new Random();
-
-        private bool UpKeyPressed, DownKeyPressed, LeftKeyPressed, RightKeyPressed;
-        private float SpeedX, SpeedY, Friction = 0.75f;
-        private double TargetAimY, TargetAimX;
-
-        List<Rectangle> itemRemover = new List<Rectangle>();
-
-        Player MainPlayer = new Player("Shadocl", 10, 10, 1, "Sword and shild", 5);
-        ArcherC archer = new ArcherC();
-        ArcherC archer2 = new ArcherC();
-        List<ArcherC> Archers = new List<ArcherC>();
         public GameForm()
         {
             InitializeComponent();
@@ -67,12 +50,6 @@ namespace MainMenu
             ShotsInterval.Interval = TimeSpan.FromSeconds(rand.Next(3, 8));
             ShotsInterval.Tick += ShotsTick;
             ShotsInterval.Start();
-        }
-        public static void AddToCanvas(Rectangle obj, Canvas GameScreen, int x, int y)
-        {
-            Canvas.SetLeft(obj, x);
-            Canvas.SetTop(obj, y);
-            GameScreen.Children.Add(obj);
         }
         private void KeyBoardUp(object sender, KeyEventArgs e)
         {
