@@ -109,6 +109,7 @@ namespace MainMenu
             foreach (ArcherC archers in Archers)
             {
                 archers.SetHitbox();
+                archers.RotateRect(MainPlayer.EntityRect);
 
                 archers.Death(itemRemover);
                 if (archers.EntityHitBox.IntersectsWith(MainPlayer.AttackHitBox))

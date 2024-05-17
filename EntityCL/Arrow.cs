@@ -30,7 +30,7 @@ namespace EntityCL
                 RenderTransformOrigin = new Point(0.5, 0.5)
             };
 
-            Canvas.SetLeft(ArrowRect, Canvas.GetLeft(Parent.EntityRect) - Parent.EntityRect.Width / 2);
+            Canvas.SetLeft(ArrowRect, Canvas.GetLeft(Parent.EntityRect) + 15);
             Canvas.SetTop(ArrowRect, Canvas.GetTop(Parent.EntityRect) + Parent.EntityRect.Height / 2);
 
             double TargetAimY = Canvas.GetTop(Target.EntityRect);

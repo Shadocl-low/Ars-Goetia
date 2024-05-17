@@ -31,10 +31,6 @@ namespace EntityCL.Enemies
             ImageBrush ArcherImage = new ImageBrush();
             ArcherImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/ArcherEnemy.png"));
             EntityRect.Fill = ArcherImage;
-            ScaleTransform ArcherScaleTransform = new ScaleTransform();
-            ArcherScaleTransform.ScaleX = -1;
-            ArcherScaleTransform.CenterX = 0.5;
-            EntityRect.RenderTransform = ArcherScaleTransform;
         }
         public void CreateArrow(Canvas GameScreen, Player MainPlayer)
         {
