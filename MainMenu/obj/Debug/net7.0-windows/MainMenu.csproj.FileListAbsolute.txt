@@ -52,7 +52,6 @@ C:\Arc_Goetia\ars-goetia\MainMenu\bin\Debug\net7.0-windows\MainMenu.pdb
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\MainMenu.csproj.AssemblyReference.cache
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Styles\ButtonStyles.baml
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Styles\ComboBoxStyles.baml
-C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Styles\PlayerHealthBarStyles.baml
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\GameForm.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMenu.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\OptionMenuInGame.g.cs
@@ -93,3 +92,4 @@ C:\Arc_Goetia\ars-goetia\MainMenu\bin\Debug\net7.0-windows\ObjectsCL.pdb
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveStart.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveStart.baml
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Styles\PlayersBarsStyles.baml

@@ -6,9 +6,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="GameForm" Height="865" Width="1550" Background="Gray" KeyDown="ShowMenu">
+
     <Canvas x:Name="GameScreen" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
 
         <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="15" Value="10" Maximum="10" Canvas.Left="75" Canvas.Top="88" Width="250"/>
+        <ProgressBar Style="{DynamicResource StaminaProgressBarStyle}" x:Name="PlayerStaminaBar" Height="15" Value="100" Maximum="100" Canvas.Left="75" Canvas.Top="104" Width="200"/>
 
         <DockPanel Canvas.Left="75" Canvas.Top="136">
             <Image Source="/Images/Estus_Flask.png" Width="75" Height="75"/>

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Windows.Controls;
 using System.Windows;
 
@@ -18,13 +17,17 @@ namespace EntityCL
         public string Weapon { get; protected set; }
         public int AmoutOfEstus { get; protected set; }
         public int Speed { get; protected set; }
+        public float Stamina { get; protected set; }
         public RotateTransform Rotating { get; protected set; }
+        public bool IsHealing { get; protected set; }
         public Player(string name, int maxhp, int hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
             Weapon = weapon;
             AmoutOfEstus = estus;
             Speed = 5;
+            Stamina = 100f;
             ImuneState = false;
+            IsHealing = false;
 
             EntityRect = new Rectangle();
             EntityRect.Height = 55;
@@ -37,6 +40,7 @@ namespace EntityCL
         {
             if (HealthPoints < MAXHealthPoints && AmoutOfEstus != 0)
             {
+                IsHealing = true;
                 AmoutOfEstus--;
                 int HealthAmount = 2;
                 Speed /= 5;
@@ -46,10 +50,11 @@ namespace EntityCL
                     if (HealthPoints < MAXHealthPoints) HealthPoints += 1;
                     HealthAmount--;
                 }
+                IsHealing = false;
                 Speed = 5;
             }
         }
-        public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction)
+        public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction, bool SprintKeyPressed)
         {
             if (UpKeyPressed && Canvas.GetTop(EntityRect) > 0)
             {
@@ -68,6 +73,29 @@ namespace EntityCL
             {
                 SpeedX += Speed;
                 RotateWay.ScaleX = 1;
+            }
+            if (SprintKeyPressed)
+            {
+                if (Stamina > 0f && !IsHealing)
+                {
+                    Speed = 10;
+                    Stamina--;
+                }
+                if (Stamina <= 0)
+                {
+                    Speed = 5;
+                }
+            }
+            else if (!SprintKeyPressed)
+            {
+                if (Stamina <= 100f)
+                {
+                    Stamina += 0.5f;
+                }
+                if (!IsHealing)
+                {
+                    Speed = 5;
+                }
             }
 
             SpeedX = SpeedX * Friction;

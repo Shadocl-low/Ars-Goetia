@@ -69,6 +69,10 @@ namespace MainMenu
             {
                 RightKeyPressed = false;
             }
+            if (e.Key == Key.LeftShift)
+            {
+                SprintKeyPressed = false;
+            }
         }
         private void KeyBoardDown(object sender, KeyEventArgs e)
         {
@@ -88,6 +92,10 @@ namespace MainMenu
             {
                 RightKeyPressed = true;
             }
+            if (e.Key == Key.LeftShift)
+            {
+                SprintKeyPressed = true;
+            }
             if (e.Key == Key.Q)
             {
                 MainPlayer.DrinkEstus();
@@ -99,9 +107,10 @@ namespace MainMenu
         }
         private void GameTick(object sender, EventArgs e)
         {
-            MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
+            MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction, SprintKeyPressed);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
+            PlayerStaminaBar.Value = MainPlayer.Stamina;
             RestEstus.Content = MainPlayer.AmoutOfEstus;
 
             MainPlayer.SetHitbox();

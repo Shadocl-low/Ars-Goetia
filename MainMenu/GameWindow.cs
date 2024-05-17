@@ -23,6 +23,7 @@ namespace MainMenu
         public bool DownKeyPressed { get; protected set; }
         public bool LeftKeyPressed { get; protected set; }
         public bool RightKeyPressed { get; protected set; }
+        public bool SprintKeyPressed { get; protected set; }
         public float SpeedX { get; protected set; }
         public float SpeedY { get; protected set; }
         public float Friction = 0.75f;
