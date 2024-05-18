@@ -13,8 +13,8 @@
         <ProgressBar Style="{DynamicResource StaminaProgressBarStyle}" x:Name="PlayerStaminaBar" Height="15" Value="100" Maximum="100" Canvas.Left="75" Canvas.Top="104" Width="200"/>
 
         <DockPanel Canvas.Left="75" Canvas.Top="136">
-            <Image Source="/Images/Estus_Flask.png" Width="75" Height="75"/>
-            <Label x:Name="RestEstus" Width="50" Height="25" FontSize="22" Foreground="Wheat" VerticalAlignment="Bottom" Margin="-25,0,0,0" Padding="0,0,0,0" HorizontalAlignment="Left"/>
+            <Image Source="/Images/Potions/hp_potion.png" Width="75" Height="75"/>
+            <Label x:Name="RestEstus" Width="50" Height="25" FontSize="22" Foreground="#FC4100" VerticalAlignment="Bottom" Margin="-25,0,0,0" Padding="0,0,0,0" HorizontalAlignment="Left"/>
             <Label>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Images/SoulCoins.png" Width="25" Height="25"/>

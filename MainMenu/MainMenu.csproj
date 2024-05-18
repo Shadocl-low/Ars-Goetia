@@ -16,6 +16,7 @@
     <None Remove="Images\MainCharacterClaymore.png" />
     <None Remove="Images\MainCharacterClaymoreAttack.png" />
     <None Remove="Images\MainCharacterSwordAndShield.png" />
+    <None Remove="Images\Potions\hp_potion.png" />
     <None Remove="Images\Slime\GreenSlime.png" />
     <None Remove="Images\SoulCoins.png" />
     <None Remove="Images\SplashScreen.png" />
@@ -37,6 +38,7 @@
     <Resource Include="Images\Estus_Flask.png" />
     <Resource Include="Images\Player\MainCharacter.png" />
     <Resource Include="Images\Player\MainCharacterClaymore.png" />
+    <Resource Include="Images\Potions\hp_potion.png" />
     <Resource Include="Images\Slime\GreenSlime.png" />
     <Resource Include="Images\SoulCoins.png" />
   </ItemGroup>
