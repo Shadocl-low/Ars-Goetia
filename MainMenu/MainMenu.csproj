@@ -17,6 +17,7 @@
     <None Remove="Images\MainCharacterClaymoreAttack.png" />
     <None Remove="Images\MainCharacterSwordAndShield.png" />
     <None Remove="Images\Slime\GreenSlime.png" />
+    <None Remove="Images\SoulCoins.png" />
     <None Remove="Images\SplashScreen.png" />
   </ItemGroup>
 
@@ -37,6 +38,7 @@
     <Resource Include="Images\Player\MainCharacter.png" />
     <Resource Include="Images\Player\MainCharacterClaymore.png" />
     <Resource Include="Images\Slime\GreenSlime.png" />
+    <Resource Include="Images\SoulCoins.png" />
   </ItemGroup>
 
   <ItemGroup>

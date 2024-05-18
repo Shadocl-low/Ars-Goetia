@@ -96,6 +96,7 @@ namespace MainMenu.Forms.Caves
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
             RestEstus.Content = MainPlayer.AmoutOfEstus;
+            RestCoins.Content = MainPlayer.AmountOfSoulCoins;
 
             MainPlayer.SetHitbox();
 
@@ -176,15 +177,6 @@ namespace MainMenu.Forms.Caves
                 GameTimer.Start();
                 ShotsInterval.Start();
             }
-        }
-        private void GameOver(string message)
-        {
-            GameTimer.Stop();
-            ShotsInterval.Stop();
-            MessageBox.Show(message, "ARS GOETIA");
-
-            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-            Application.Current.Shutdown();
         }
     }
 }

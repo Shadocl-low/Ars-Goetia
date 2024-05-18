@@ -15,6 +15,12 @@
         <DockPanel Canvas.Left="75" Canvas.Top="136">
             <Image Source="/Images/Estus_Flask.png" Width="75" Height="75"/>
             <Label x:Name="RestEstus" Width="50" Height="25" FontSize="22" Foreground="Wheat" VerticalAlignment="Bottom" Margin="-25,0,0,0" Padding="0,0,0,0" HorizontalAlignment="Left"/>
+            <Label>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/SoulCoins.png" Width="25" Height="25"/>
+                    <Label x:Name="RestCoins" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" Foreground="#6DC5D1"></Label>
+                </StackPanel>
+            </Label>
         </DockPanel>
 
         <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,350,0" Opacity="0.5"/>

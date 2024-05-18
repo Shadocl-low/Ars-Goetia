@@ -21,6 +21,7 @@ namespace EntityCL
         public float Stamina { get; protected set; }
         public RotateTransform Rotating { get; protected set; }
         public bool IsHealing { get; protected set; }
+        public int AmountOfSoulCoins { get; protected set; }
         public Player(string name, int maxhp, int hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
             Weapon = weapon;
@@ -29,6 +30,7 @@ namespace EntityCL
             Stamina = 100f;
             ImuneState = false;
             IsHealing = false;
+            AmountOfSoulCoins = 0;
 
             EntityRect = new Rectangle();
             EntityRect.Height = 55;
