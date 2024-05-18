@@ -15,7 +15,7 @@ namespace EntityCL.Enemies
     public class ArcherC : EnemyAC
     {
         public Arrow? arrow { get; set; }
-        public ArcherC() : base()
+        public ArcherC(Player mainPlayer) : base(mainPlayer)
         {
             MAXHealthPoints = 5;
             HealthPoints = 5;
@@ -23,6 +23,7 @@ namespace EntityCL.Enemies
             EntityName = "Old Archer";
             ImuneState = false;
             IsDead = false;
+            SoulCoins = 15;
 
             EntityRect = new Rectangle();
             EntityRect.Tag = "archerTag";
@@ -36,13 +37,13 @@ namespace EntityCL.Enemies
         {
             if (!IsDead) arrow = new Arrow(this, GameScreen, MainPlayer);
         }
-        public override void SetEntityBehavior(List<Rectangle> itemRemover, Player MainPlayer)
+        public override void SetEntityBehavior(List<Rectangle> itemRemover)
         {
             SetHitbox();
             LookToPlayer(MainPlayer.EntityRect);
 
             Death(itemRemover); 
-            TakeDamageFrom(MainPlayer);
+            TakeDamageFrom();
 
             if (arrow != null)
             {

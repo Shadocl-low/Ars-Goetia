@@ -11,7 +11,7 @@ namespace EntityCL.Enemies
 {
     public class SlimeC : EnemyAC
     {
-        public SlimeC() 
+        public SlimeC(Player mainPlayer) : base(mainPlayer)
         {
             MAXHealthPoints = 1;
             HealthPoints = 1;
@@ -19,6 +19,7 @@ namespace EntityCL.Enemies
             EntityName = "Acid Slime";
             ImuneState = false;
             IsDead = false;
+            SoulCoins = 1;
 
             EntityRect = new Rectangle();
             EntityRect.Tag = "slimeTag";
@@ -28,12 +29,12 @@ namespace EntityCL.Enemies
             SlimeImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Slime/GreenSlime.png"));
             EntityRect.Fill = SlimeImage;
         }
-        public override void SetEntityBehavior(List<Rectangle> itemRemover, Player MainPlayer)
+        public override void SetEntityBehavior(List<Rectangle> itemRemover)
         {
             SetHitbox();
 
             Death(itemRemover);
-            TakeDamageFrom(MainPlayer);
+            TakeDamageFrom();
         }
     }
 }

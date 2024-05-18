@@ -11,7 +11,7 @@ namespace EntityCL.Enemies
 {
     public class SwordsmanC : EnemyAC
     {
-        public SwordsmanC() : base()
+        public SwordsmanC(Player mainPlayer) : base(mainPlayer)
         {
             MAXHealthPoints = 12;
             HealthPoints = 12;
@@ -22,7 +22,7 @@ namespace EntityCL.Enemies
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
         }
-        public override void SetEntityBehavior(List<Rectangle> itemRemover, Player MainPlayer)
+        public override void SetEntityBehavior(List<Rectangle> itemRemover)
         {
             throw new NotImplementedException();
         }

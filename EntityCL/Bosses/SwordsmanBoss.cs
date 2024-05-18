@@ -9,6 +9,8 @@ namespace EntityCL.Bosses
 {
     public class SwordsmanBoss : SwordsmanC
     {
-
+        public SwordsmanBoss(Player mainPlayer) : base(mainPlayer)
+        {
+        }
     }
 }

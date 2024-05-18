@@ -143,5 +143,9 @@ namespace EntityCL
                 }
             }
         }
+        public void SetSoulCoins(EnemyAC enemy)
+        {
+            AmountOfSoulCoins += enemy.SoulCoins;
+        }
     }
 }

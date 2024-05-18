@@ -28,11 +28,14 @@ namespace MainMenu
 {
     public partial class CastleStart : GameWindow
     {
-        public ArcherC archer = new ArcherC();
-        public ArcherC archer2 = new ArcherC();
+        public ArcherC archer { get; protected set; }
+        public ArcherC archer2 { get; protected set; }
         public CastleStart()
         {
             InitializeComponent();
+
+            archer = new ArcherC(MainPlayer);
+            archer2 = new ArcherC(MainPlayer);
 
             Enemies.Add(archer);
             Enemies.Add(archer2);
@@ -121,7 +124,7 @@ namespace MainMenu
 
             foreach (var enemy in Enemies)
             {
-                enemy.SetEntityBehavior(itemRemover, MainPlayer);
+                enemy.SetEntityBehavior(itemRemover);
             }
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())

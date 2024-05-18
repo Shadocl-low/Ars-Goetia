@@ -15,9 +15,12 @@ namespace EntityCL
     public abstract class EnemyAC : EntityAC
     {
         public bool IsDead { get; protected set; }
-        public EnemyAC() : base()
+        public int SoulCoins { get; protected set; }
+        public Player MainPlayer { get; protected set; }
+        public EnemyAC(Player mainPlayer) : base()
         {
-
+            MainPlayer = mainPlayer;
+            IsDead = false;
         }
         public override void SetHitbox()
         {
@@ -25,17 +28,18 @@ namespace EntityCL
         }
         public void Death(List<Rectangle> itemRemover)
         {
-            if (HealthPoints <= 0)
+            if (HealthPoints <= 0 && !IsDead)
             {
                 itemRemover.Add(EntityRect);
                 IsDead = true;
+                MainPlayer.SetSoulCoins(this);
             }
         }
-        public override async void TakeDamageFrom(EntityAC MainPlayer)
+        public void TakeDamageFrom()
         {
-            if (EntityHitBox.IntersectsWith((MainPlayer as Player).AttackHitBox))
+            if (EntityHitBox.IntersectsWith(MainPlayer.AttackHitBox))
             {
-                (MainPlayer as Player).DeleteAttackHitbox();
+                MainPlayer.DeleteAttackHitbox();
                 base.TakeDamageFrom(MainPlayer);
             }
         }
@@ -53,6 +57,6 @@ namespace EntityCL
             EntityRect.RenderTransform = RotateWay;
 
         }
-        public abstract void SetEntityBehavior(List<Rectangle> itemRemover, Player MainPlayer);
+        public abstract void SetEntityBehavior(List<Rectangle> itemRemover);
     }
 }

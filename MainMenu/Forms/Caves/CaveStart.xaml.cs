@@ -20,10 +20,12 @@ namespace MainMenu.Forms.Caves
     /// </summary>
     public partial class CaveStart : GameWindow
     {
-        SlimeC slime = new SlimeC();
+        public SlimeC slime { get; protected set; }
         public CaveStart()
         {
             InitializeComponent();
+
+            slime = new SlimeC(mainPlayer: MainPlayer);
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
@@ -100,7 +102,7 @@ namespace MainMenu.Forms.Caves
 
             MainPlayer.SetHitbox();
 
-            slime.SetEntityBehavior(itemRemover, MainPlayer);
+            slime.SetEntityBehavior(itemRemover);
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
             {
