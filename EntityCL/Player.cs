@@ -47,7 +47,7 @@ namespace EntityCL
                 AmoutOfEstus--;
                 int HealthAmount = 2;
                 Speed /= 5;
-                while (HealthAmount > 0) 
+                while (HealthAmount > 0)
                 {
                     await Task.Delay(1000);
                     if (HealthPoints < MAXHealthPoints) HealthPoints += 1;
@@ -90,28 +90,34 @@ namespace EntityCL
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), 47, 55);
         }
-        public async void Attack(Canvas GameScreen, List<Rectangle> itemRemover)
+        public async void Attack()
         {
-            ImageBrush KnightImage = new ImageBrush();
-            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreAttack.png"));
-
-            if (RotateWay.ScaleX == 1)
+            if (Stamina >= 30)
             {
-                AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
-            }
-            else
-            {
-                AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
-            }
-            EntityRect.Width = 87;
-            EntityRect.Fill = KnightImage;
 
-            await Task.Delay(300);
+                Stamina -= 30f;
 
-            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
-            AttackHitBox = new Rect();
-            EntityRect.Width = 47;
-            EntityRect.Fill = KnightImage;
+                ImageBrush KnightImage = new ImageBrush();
+                KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreAttack.png"));
+
+                if (RotateWay.ScaleX == 1)
+                {
+                    AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+                }
+                else
+                {
+                    AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+                }
+                EntityRect.Width = 87;
+                EntityRect.Fill = KnightImage;
+
+                await Task.Delay(300);
+
+                KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
+                AttackHitBox = new Rect();
+                EntityRect.Width = 47;
+                EntityRect.Fill = KnightImage;
+            }
         }
         public void DeleteAttackHitbox()
         {
@@ -133,10 +139,6 @@ namespace EntityCL
             }
             else if (!SprintKeyPressed)
             {
-                if (Stamina <= 100f)
-                {
-                    Stamina += 0.5f;
-                }
                 if (!IsHealing)
                 {
                     Speed = 5;
@@ -146,6 +148,13 @@ namespace EntityCL
         public void SetSoulCoins(EnemyAC enemy)
         {
             AmountOfSoulCoins += enemy.SoulCoins;
+        }
+        public void StaminaRegen()
+        {
+            if (Stamina <= 100f)
+            {
+                Stamina += 0.5f;
+            }
         }
     }
 }

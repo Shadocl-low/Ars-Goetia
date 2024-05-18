@@ -107,13 +107,14 @@ namespace MainMenu
             }
             if (e.Key == Key.F)
             {
-                MainPlayer.Attack(GameScreen, itemRemover);
+                MainPlayer.Attack();
             }
         }
         private void GameTick(object sender, EventArgs e)
         {
             MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
             MainPlayer.Sprinting(SprintKeyPressed);
+            MainPlayer.StaminaRegen();
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
