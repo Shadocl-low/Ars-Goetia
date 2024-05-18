@@ -8,6 +8,6 @@ namespace EntityCL.Interfaces
 {
     public interface IDamageble
     {
-        public void TakeDamage(int atk);
+        public void TakeDamageFrom(EntityAC Entity);
     }
 }

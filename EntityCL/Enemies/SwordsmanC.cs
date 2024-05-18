@@ -22,5 +22,9 @@ namespace EntityCL.Enemies
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
         }
+        public override void SetEntityBehavior(List<Rectangle> itemRemover, Player MainPlayer)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Controls;
 using System.Windows;
+using System.Xml.Linq;
 
 namespace EntityCL
 {
@@ -33,7 +34,7 @@ namespace EntityCL
             EntityRect.Height = 55;
             EntityRect.Width = 47;
             ImageBrush KnightImage = new ImageBrush();
-            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymore.png"));
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
             EntityRect.Fill = KnightImage;
         }
         public async void DrinkEstus()
@@ -54,7 +55,7 @@ namespace EntityCL
                 Speed = 5;
             }
         }
-        public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction, bool SprintKeyPressed)
+        public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction)
         {
             if (UpKeyPressed && Canvas.GetTop(EntityRect) > 0)
             {
@@ -74,6 +75,48 @@ namespace EntityCL
                 SpeedX += Speed;
                 RotateWay.ScaleX = 1;
             }
+
+            SpeedX = SpeedX * Friction;
+            SpeedY = SpeedY * Friction;
+
+            EntityRect.RenderTransform = RotateWay;
+
+            Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) - SpeedY);
+            Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + SpeedX);
+        }
+        public override void SetHitbox()
+        {
+            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), 47, 55);
+        }
+        public async void Attack(Canvas GameScreen, List<Rectangle> itemRemover)
+        {
+            ImageBrush KnightImage = new ImageBrush();
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreAttack.png"));
+
+            if (RotateWay.ScaleX == 1)
+            {
+                AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+            }
+            else
+            {
+                AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
+            }
+            EntityRect.Width = 87;
+            EntityRect.Fill = KnightImage;
+
+            await Task.Delay(300);
+
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
+            AttackHitBox = new Rect();
+            EntityRect.Width = 47;
+            EntityRect.Fill = KnightImage;
+        }
+        public void DeleteAttackHitbox()
+        {
+            AttackHitBox = new Rect();
+        }
+        public void Sprinting(bool SprintKeyPressed)
+        {
             if (SprintKeyPressed)
             {
                 if (Stamina > 0f && !IsHealing)
@@ -97,45 +140,6 @@ namespace EntityCL
                     Speed = 5;
                 }
             }
-
-            SpeedX = SpeedX * Friction;
-            SpeedY = SpeedY * Friction;
-
-            EntityRect.RenderTransform = RotateWay;
-
-            Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) - SpeedY);
-            Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + SpeedX);
-        }
-        public override void SetHitbox()
-        {
-            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), 47, 55);
-        }
-        public async void Attack(Canvas GameScreen, List<Rectangle> itemRemover)
-        {
-            ImageBrush KnightImage = new ImageBrush();
-            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymoreAttack.png"));
-
-            if (RotateWay.ScaleX == 1)
-            {
-                AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
-            }
-            else
-            {
-                AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
-            }
-            EntityRect.Width = 87;
-            EntityRect.Fill = KnightImage;
-
-            await Task.Delay(300);
-
-            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/MainCharacterClaymore.png"));
-            AttackHitBox = new Rect();
-            EntityRect.Width = 47;
-            EntityRect.Fill = KnightImage;
-        }
-        public void DeleteAttackHitbox()
-        {
-            AttackHitBox = new Rect();
         }
     }
 }

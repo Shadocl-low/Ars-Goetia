@@ -17,8 +17,6 @@ namespace MainMenu
 {
     public class GameWindow : Window
     {
-        public double TargetAimY { get; protected set; }
-        public double TargetAimX { get; protected set; }
         public bool UpKeyPressed { get; protected set; }
         public bool DownKeyPressed { get; protected set; }
         public bool LeftKeyPressed { get; protected set; }
@@ -33,14 +31,13 @@ namespace MainMenu
         public Random rand = new Random();
 
         public List<Rectangle> itemRemover = new List<Rectangle>();
-        public List<ArcherC> Archers = new List<ArcherC>();
+        public List<EnemyAC> Enemies = new List<EnemyAC>();
 
         public DispatcherTimer GameTimer = new DispatcherTimer();
         public DispatcherTimer ShotsInterval = new DispatcherTimer();
 
         public Player MainPlayer = new Player("Shadocl", 10, 10, 1, "Sword and shild", 5);
-        public ArcherC archer = new ArcherC();
-        public ArcherC archer2 = new ArcherC();
+        
         public static void AddToCanvas(Rectangle obj, Canvas GameScreen, int x, int y)
         {
             Canvas.SetLeft(obj, x);

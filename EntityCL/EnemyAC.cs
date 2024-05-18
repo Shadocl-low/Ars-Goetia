@@ -17,7 +17,7 @@ namespace EntityCL
         public bool IsDead { get; protected set; }
         public EnemyAC() : base()
         {
-            
+
         }
         public override void SetHitbox()
         {
@@ -31,12 +31,15 @@ namespace EntityCL
                 IsDead = true;
             }
         }
-        public override async void TakeDamage(int atk)
+        public override async void TakeDamageFrom(EntityAC MainPlayer)
         {
-            base.TakeDamage(atk);
-
+            if (EntityHitBox.IntersectsWith((MainPlayer as Player).AttackHitBox))
+            {
+                (MainPlayer as Player).DeleteAttackHitbox();
+                base.TakeDamageFrom(MainPlayer);
+            }
         }
-        public void RotateRect(Rectangle Player)
+        public void LookToPlayer(Rectangle Player)
         {
 
             if (Canvas.GetLeft(Player) > Canvas.GetLeft(EntityRect))
@@ -50,5 +53,6 @@ namespace EntityCL
             EntityRect.RenderTransform = RotateWay;
 
         }
+        public abstract void SetEntityBehavior(List<Rectangle> itemRemover, Player MainPlayer);
     }
 }

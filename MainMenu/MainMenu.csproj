@@ -16,12 +16,13 @@
     <None Remove="Images\MainCharacterClaymore.png" />
     <None Remove="Images\MainCharacterClaymoreAttack.png" />
     <None Remove="Images\MainCharacterSwordAndShield.png" />
+    <None Remove="Images\Slime\GreenSlime.png" />
     <None Remove="Images\SplashScreen.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\MainCharacterClaymoreAttack.png" />
-    <Resource Include="Images\MainCharacterSwordAndShield.png" />
+    <Resource Include="Images\Player\MainCharacterClaymoreAttack.png" />
+    <Resource Include="Images\Player\MainCharacterSwordAndShield.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,23 +31,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\ArcherEnemy.png" />
-    <Resource Include="Images\ArcherEnemyAttack.png" />
+    <Resource Include="Images\Archer\ArcherEnemy.png" />
+    <Resource Include="Images\Archer\ArcherEnemyAttack.png" />
     <Resource Include="Images\Estus_Flask.png" />
-    <Resource Include="Images\MainCharacter.png" />
-    <Resource Include="Images\MainCharacterClaymore.png" />
+    <Resource Include="Images\Player\MainCharacter.png" />
+    <Resource Include="Images\Player\MainCharacterClaymore.png" />
+    <Resource Include="Images\Slime\GreenSlime.png" />
   </ItemGroup>
 
   <ItemGroup>
     <SplashScreen Include="Images\SplashScreen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </SplashScreen>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Forms\OptionMenuInGame.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using MainMenu.Pages;
+﻿using MainMenu.Forms.Caves;
+using MainMenu.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace MainMenu
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            new GameForm().Show();
+            new CaveStart().Show();
             this.Hide();
         }
         private void Option_Click(object sender, RoutedEventArgs e)

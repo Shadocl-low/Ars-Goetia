@@ -29,13 +29,26 @@ namespace EntityCL.Enemies
             EntityRect.Height = 50;
             EntityRect.Width = 50;
             ImageBrush ArcherImage = new ImageBrush();
-            ArcherImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/ArcherEnemy.png"));
+            ArcherImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Archer/ArcherEnemy.png"));
             EntityRect.Fill = ArcherImage;
         }
         public void CreateArrow(Canvas GameScreen, Player MainPlayer)
         {
             if (!IsDead) arrow = new Arrow(this, GameScreen, MainPlayer);
         }
-        
+        public override void SetEntityBehavior(List<Rectangle> itemRemover, Player MainPlayer)
+        {
+            SetHitbox();
+            LookToPlayer(MainPlayer.EntityRect);
+
+            Death(itemRemover); 
+            TakeDamageFrom(MainPlayer);
+
+            if (arrow != null)
+            {
+                arrow.Flying(arrow.TargetAimX, arrow.TargetAimY, itemRemover);
+                arrow.WallHit(itemRemover);
+            }
+        }
     }
 }

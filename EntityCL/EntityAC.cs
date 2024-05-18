@@ -39,11 +39,11 @@ namespace EntityCL
             HealthPoints--;
         }
         public abstract void SetHitbox();
-        public virtual async void TakeDamage(int atk)
+        public virtual async void TakeDamageFrom(EntityAC Entity)
         {
             if (!ImuneState)
             {
-                HealthPoints -= atk;
+                HealthPoints -= Entity.AttackDamage;
                 ImuneState = true;
                 await Task.Delay(500);
             }

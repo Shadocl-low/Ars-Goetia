@@ -8,8 +8,8 @@
     <SolidColorBrush x:Key="ProgressBar.Border" Color="#FFBCBCBC"/>
 
     <LinearGradientBrush x:Key="StaminaProgressBar.Progress">
-        <GradientStop Color="#FEB941" Offset="0.85"/>
-        <GradientStop Color="#FDE49E" Offset="0.95"/>
+        <GradientStop Color="#FDE49E" Offset="0.85"/>
+        <GradientStop Color="#FEB941" Offset="0.95"/>
     </LinearGradientBrush>
     <SolidColorBrush x:Key="StaminaProgressBar.Background" Color="#FFE6E6E6"/>
     <SolidColorBrush x:Key="StaminaProgressBar.Border" Color="#FFBCBCBC"/>

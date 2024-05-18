@@ -5,6 +5,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows;
 using System.Windows.Controls;
+using System.Xml.Linq;
 
 namespace EntityCL
 {
@@ -14,6 +15,9 @@ namespace EntityCL
         public Canvas Screen { get; protected set; }
         public Player Target { get; protected set; }
         public Rectangle ArrowRect { get; protected set; }
+        public Rect ArrowHitbox { get; protected set; }
+        public double TargetAimX { get; protected set; }
+        public double TargetAimY { get; protected set; }
         public Arrow(ArcherC parent, Canvas screen, Player terget)
         {
             Parent = parent;
@@ -36,22 +40,31 @@ namespace EntityCL
             double TargetAimY = Canvas.GetTop(Target.EntityRect);
             double TargetAimX = Canvas.GetLeft(Target.EntityRect) + Target.EntityRect.Width / 2;
 
-            ArrowRect.RenderTransform = new RotateTransform(Calculation.GetDeegrese(ArrowRect, TargetAimX, TargetAimY) * 180 / Math.PI);
+            ArrowRect.RenderTransform = new RotateTransform(CalculateVector.GetDeegrese(ArrowRect, TargetAimX, TargetAimY) * 180 / Math.PI);
 
             Screen.Children.Add(ArrowRect);
         }
+        public void SetTargetAim(double AimX, double AimY)
+        {
+            TargetAimX = AimX;
+            TargetAimY = AimY;
+        }
         public void Flying(double TargetAimX, double TargetAimY, List<Rectangle> itemRemover)
         {
-            List<double> xy = Calculation.Normalize(Parent.EntityRect, TargetAimX, TargetAimY);
+            List<double> xy = CalculateVector.Normalize(Parent.EntityRect, TargetAimX, TargetAimY);
             Canvas.SetLeft(ArrowRect, Canvas.GetLeft(ArrowRect) + (xy[0] * 20));
             Canvas.SetTop(ArrowRect, Canvas.GetTop(ArrowRect) + (xy[1] * 20));
         }
-        public void RemoveFromCanvas(List<Rectangle> itemRemover)
+        public void WallHit(List<Rectangle> itemRemover)
         {
             if (Canvas.GetTop(ArrowRect) < 10 || Canvas.GetLeft(ArrowRect) < 10 || Canvas.GetLeft(ArrowRect) > 1560 || Canvas.GetTop(ArrowRect) > 850)
             {
                 itemRemover.Add(ArrowRect);
             }
+        }
+        public void SetArrowHitbox()
+        {
+            ArrowHitbox = new Rect(Canvas.GetLeft(ArrowRect), Canvas.GetTop(ArrowRect), ArrowRect.Width, ArrowRect.Height);
         }
     }
 }
