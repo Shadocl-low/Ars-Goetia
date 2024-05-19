@@ -78,6 +78,10 @@ namespace MainMenu
             {
                 SprintKeyPressed = false;
             }
+            if (e.Key == Key.LeftCtrl)
+            {
+                BlockKeyPressed = false;
+            }
         }
         private void KeyBoardDown(object sender, KeyEventArgs e)
         {
@@ -101,6 +105,10 @@ namespace MainMenu
             {
                 SprintKeyPressed = true;
             }
+            if (e.Key == Key.LeftCtrl)
+            {
+                BlockKeyPressed = true;
+            }
             if (e.Key == Key.Q)
             {
                 MainPlayer.DrinkEstus();
@@ -115,6 +123,7 @@ namespace MainMenu
             MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
             MainPlayer.Sprinting(SprintKeyPressed);
             MainPlayer.StaminaRegen();
+            MainPlayer.Block(BlockKeyPressed);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;

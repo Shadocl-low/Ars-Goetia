@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ObjectsCL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e8cdbd50874cca2e4a410f02cf65dac6daa238e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6706b0f96c8bb8284fa9cea4b4f6b32681bfc4f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ObjectsCL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ObjectsCL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

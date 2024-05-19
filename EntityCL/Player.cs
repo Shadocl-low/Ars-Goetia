@@ -19,8 +19,10 @@ namespace EntityCL
         public int AmoutOfEstus { get; protected set; }
         public int Speed { get; protected set; }
         public float Stamina { get; protected set; }
-        public RotateTransform Rotating { get; protected set; }
-        public bool IsHealing { get; protected set; }
+        public ImageBrush KnightImage { get; protected set; }
+        private bool IsHealing { get; set; }
+        private bool IsAttacking { get; set; }
+        private bool IsShielded { get; set; }
         public int AmountOfSoulCoins { get; protected set; }
         public Player(string name, int maxhp, int hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
@@ -35,7 +37,7 @@ namespace EntityCL
             EntityRect = new Rectangle();
             EntityRect.Height = 55;
             EntityRect.Width = 47;
-            ImageBrush KnightImage = new ImageBrush();
+            KnightImage = new ImageBrush();
             KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
             EntityRect.Fill = KnightImage;
         }
@@ -92,12 +94,12 @@ namespace EntityCL
         }
         public async void Attack()
         {
+            IsAttacking = true;
             if (Stamina >= 30)
             {
 
                 Stamina -= 30f;
 
-                ImageBrush KnightImage = new ImageBrush();
                 KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreAttack.png"));
 
                 if (RotateWay.ScaleX == 1)
@@ -118,6 +120,7 @@ namespace EntityCL
                 EntityRect.Width = 47;
                 EntityRect.Fill = KnightImage;
             }
+            IsAttacking = false;
         }
         public void DeleteAttackHitbox()
         {
@@ -160,7 +163,23 @@ namespace EntityCL
         {
             if (BlockKeyPressed) 
             {
+                Speed = 2;
                 ImuneState = true;
+                IsShielded = true;
+                KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreShieldUp.png"));
+            }
+            else if (!IsAttacking)
+            {
+                IsShielded = false;
+                KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
+            }
+        }
+        public override void TakeDamageFrom(EntityAC Entity)
+        {
+            base.TakeDamageFrom(Entity);
+            if (IsShielded)
+            {
+                Stamina -= (Entity as EnemyAC).Strength;
             }
         }
     }
