@@ -45,6 +45,12 @@ namespace MainMenu
             Canvas.SetTop(obj, y);
             GameScreen.Children.Add(obj);
         }
+        public static void AddToCanvas(Control obj, Canvas GameScreen, int x, int y)
+        {
+            Canvas.SetLeft(obj, x);
+            Canvas.SetTop(obj, y);
+            GameScreen.Children.Add(obj);
+        }
         public void GameOver(string message)
         {
             GameTimer.Stop();

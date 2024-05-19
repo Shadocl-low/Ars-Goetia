@@ -161,10 +161,9 @@ namespace EntityCL
         }
         public void Block(bool BlockKeyPressed)
         {
-            if (BlockKeyPressed) 
+            if (BlockKeyPressed)
             {
                 Speed = 2;
-                ImuneState = true;
                 IsShielded = true;
                 KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreShieldUp.png"));
             }
@@ -176,11 +175,12 @@ namespace EntityCL
         }
         public override void TakeDamageFrom(EntityAC Entity)
         {
-            base.TakeDamageFrom(Entity);
-            if (IsShielded)
+            if (IsShielded && Stamina >= (Entity as EnemyAC).Strength)
             {
+                ImuneState = true;
                 Stamina -= (Entity as EnemyAC).Strength;
             }
+            base.TakeDamageFrom(Entity);
         }
     }
 }

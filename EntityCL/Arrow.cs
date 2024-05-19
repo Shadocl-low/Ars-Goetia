@@ -11,14 +11,14 @@ namespace EntityCL
 {
     public class Arrow
     {
-        public ArcherC Parent { get; protected set; }
+        public EnemyAC Parent { get; protected set; }
         public Canvas Screen { get; protected set; }
         public Player Target { get; protected set; }
         public Rectangle ArrowRect { get; protected set; }
         public Rect ArrowHitbox { get; protected set; }
         public double TargetAimX { get; protected set; }
         public double TargetAimY { get; protected set; }
-        public Arrow(ArcherC parent, Canvas screen, Player terget)
+        public Arrow(EnemyAC parent, Canvas screen, Player terget)
         {
             Parent = parent;
             Screen = screen;

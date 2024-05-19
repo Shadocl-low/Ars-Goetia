@@ -183,6 +183,7 @@ namespace MainMenu
                         RightKeyPressed = false;
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - MainPlayer.EntityRect.Width);
                         GameTimer.Stop();
+                        Enemies.Clear();
                         ShotsInterval.Stop();
                         new CaveStart().Show();
                         Close();

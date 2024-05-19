@@ -11,6 +11,7 @@
                 <ResourceDictionary Source="Styles/ComboBoxStyles.xaml"/>
                 <ResourceDictionary Source="Styles/PlayersBarsStyles.xaml"/>
                 <ResourceDictionary Source="Themes/Generic.xaml"/>
+                <ResourceDictionary Source="Styles/BossHealthBar.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -174,7 +174,8 @@ namespace MainMenu.Forms.Caves
                         RightKeyPressed = false;
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - MainPlayer.EntityRect.Height);
                         GameTimer.Stop();
-                        new CastleStart().Show();
+                        Enemies.Clear();
+                        new CaveFinal().Show();
                         Close();
                     }
                 }

@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="Images\ArcherEnemy.png" />
     <None Remove="Images\ArcherEnemyAttack.png" />
+    <None Remove="Images\Bosses\Slime\SlimeBoss.png" />
     <None Remove="Images\Estus_Flask.png" />
     <None Remove="Images\MainCharacter.jpg" />
     <None Remove="Images\MainCharacter.png" />
@@ -24,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Bosses\Slime\SlimeBoss.png" />
     <Resource Include="Images\Player\MainCharacterClaymoreAttack.png" />
   </ItemGroup>
 

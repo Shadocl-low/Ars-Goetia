@@ -34,6 +34,7 @@ namespace EntityCL
                 itemRemover.Add(EntityRect);
                 IsDead = true;
                 MainPlayer.SetSoulCoins(this);
+                EntityHitBox = new();
             }
         }
         public void TakeDamageFrom()

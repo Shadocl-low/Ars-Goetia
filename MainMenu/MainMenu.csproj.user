@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Forms\Caves\CaveFinal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Forms\Caves\CaveStart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -30,6 +33,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Forms\Caves\CaveFinal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Forms\Caves\CaveStart.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -52,6 +58,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Resolution.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\BossHealthBar.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\ButtonStyles.xaml">

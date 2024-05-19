@@ -17,13 +17,13 @@ namespace EntityCL.Enemies
         {
             MAXHealthPoints = 1;
             HealthPoints = 1;
-            AttackDamage = 0;
+            AttackDamage = 1;
             EntityName = "Acid Slime";
             ImuneState = false;
             IsDead = false;
             SoulCoins = 1;
             Strength = 0;
-            if (random.Next(-1, 1) == -1) 
+            if (random.Next(-1, 1) == -1)
             {
                 RotateWay.ScaleX = -1;
             }
@@ -44,27 +44,31 @@ namespace EntityCL.Enemies
         {
             SetHitbox();
             Moving();
-
+            Attack();
             Death(itemRemover);
+
             TakeDamageFrom();
         }
         public override void Moving()
         {
-            if (RotateWay.ScaleX == 1)
+            if (!IsDead)
             {
-                if (Canvas.GetLeft(EntityRect) > 1500)
+                if (RotateWay.ScaleX == 1)
                 {
-                    WallHit();
+                    if (Canvas.GetLeft(EntityRect) > (1540 - (int)EntityRect.Width))
+                    {
+                        WallHit();
+                    }
+                    Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + 1);
                 }
-                Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + 1);
-            }
-            else
-            {
-                if (Canvas.GetLeft(EntityRect) < 5)
+                else
                 {
-                    WallHit();
+                    if (Canvas.GetLeft(EntityRect) < 5)
+                    {
+                        WallHit();
+                    }
+                    Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) - 1);
                 }
-                Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) - 1);
             }
         }
         public override void WallHit()
@@ -78,6 +82,18 @@ namespace EntityCL.Enemies
                 Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + 5);
             }
             RotateWay.ScaleX *= -1;
+        }
+        public virtual void Attack()
+        {
+            if (!IsDead)
+            {
+                if (EntityHitBox.IntersectsWith(MainPlayer.EntityHitBox))
+                {
+                    HealthPoints--;
+
+                    MainPlayer.TakeDamageFrom(this);
+                }
+            }
         }
     }
 }

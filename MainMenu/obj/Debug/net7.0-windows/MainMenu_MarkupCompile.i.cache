@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Arc_Goetia\ars-goetia\MainMenu\App.xaml
-121570736278
+14374765018
 
-13488474205
+14-81947559
 200-637006395
-Forms\CastleStart.xaml;Forms\Caves\CaveStart.xaml;Forms\OptionMenu.xaml;Forms\SplashScreen.xaml;MainWindow.xaml;Pages\Controls.xaml;Pages\EscMenu.xaml;Pages\Resolution.xaml;Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;Styles\PlayersBarsStyles.xaml;Themes\Generic.xaml;
+Forms\CastleStart.xaml;Forms\Caves\CaveFinal.xaml;Forms\Caves\CaveStart.xaml;Forms\OptionMenu.xaml;Forms\SplashScreen.xaml;MainWindow.xaml;Pages\Controls.xaml;Pages\EscMenu.xaml;Pages\Resolution.xaml;Styles\BossHealthBar.xaml;Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;Styles\PlayersBarsStyles.xaml;Themes\Generic.xaml;
 images\splashscreen.png
-False
+True
 

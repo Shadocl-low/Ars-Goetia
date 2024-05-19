@@ -3,6 +3,7 @@ using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace EntityCL
 {
@@ -43,8 +44,8 @@ namespace EntityCL
         {
             if (!ImuneState)
             {
-                HealthPoints -= Entity.AttackDamage;
                 ImuneState = true;
+                HealthPoints -= Entity.AttackDamage;
                 await Task.Delay(500);
             }
             ImuneState = false;

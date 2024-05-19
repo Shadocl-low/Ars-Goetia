@@ -91,3 +91,6 @@ C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\GeneratedInternalType
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Styles\PlayersBarsStyles.baml
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\CastleStart.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\CastleStart.baml
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveFinal.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveFinal.baml
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Styles\BossHealthBar.baml
