@@ -18,13 +18,14 @@ namespace EntityCL.Enemies
             AttackDamage = 1;
             EntityName = "Royal Guard";
         }
-        public override void SetHitbox()
-        {
-            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
-        }
         public override void SetEntityBehavior(List<Rectangle> itemRemover)
         {
-            throw new NotImplementedException();
+        }
+        public override void Moving()
+        {
+        }
+        public override void WallHit()
+        {
         }
     }
 }

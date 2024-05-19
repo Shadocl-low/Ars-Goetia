@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using System.Windows.Controls;
 
 namespace EntityCL.Enemies
 {
     public class SlimeC : EnemyAC
     {
+        readonly Random random = new();
         public SlimeC(Player mainPlayer) : base(mainPlayer)
         {
             MAXHealthPoints = 1;
@@ -20,6 +22,15 @@ namespace EntityCL.Enemies
             ImuneState = false;
             IsDead = false;
             SoulCoins = 1;
+            Strength = 0;
+            if (random.Next(-1, 1) == -1) 
+            {
+                RotateWay.ScaleX = -1;
+            }
+            else
+            {
+                RotateWay.ScaleX = 1;
+            }
 
             EntityRect = new Rectangle();
             EntityRect.Tag = "slimeTag";
@@ -32,9 +43,41 @@ namespace EntityCL.Enemies
         public override void SetEntityBehavior(List<Rectangle> itemRemover)
         {
             SetHitbox();
+            Moving();
 
             Death(itemRemover);
             TakeDamageFrom();
+        }
+        public override void Moving()
+        {
+            if (RotateWay.ScaleX == 1)
+            {
+                if (Canvas.GetLeft(EntityRect) > 1500)
+                {
+                    WallHit();
+                }
+                Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + 1);
+            }
+            else
+            {
+                if (Canvas.GetLeft(EntityRect) < 5)
+                {
+                    WallHit();
+                }
+                Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) - 1);
+            }
+        }
+        public override void WallHit()
+        {
+            if (RotateWay.ScaleX == 1)
+            {
+                Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) - 5);
+            }
+            else
+            {
+                Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + 5);
+            }
+            RotateWay.ScaleX *= -1;
         }
     }
 }

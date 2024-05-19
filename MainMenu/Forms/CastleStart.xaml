@@ -5,23 +5,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Castle" Height="865" Width="1550" Background="Gray" KeyDown="ShowMenu">
+        Title="Castle" Height="865" Width="1550" Background="Gray" WindowState="Maximized" KeyDown="ShowMenu">
 
     <Canvas x:Name="GameScreen" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
 
-        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="15" Value="10" Maximum="10" Canvas.Left="75" Canvas.Top="88" Width="250"/>
-        <ProgressBar Style="{DynamicResource StaminaProgressBarStyle}" x:Name="PlayerStaminaBar" Height="15" Value="100" Maximum="100" Canvas.Left="75" Canvas.Top="104" Width="200"/>
+        <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="15" Value="10" Maximum="10" Canvas.Left="16" Canvas.Top="16" Width="250"/>
+        <ProgressBar Style="{DynamicResource StaminaProgressBarStyle}" x:Name="PlayerStaminaBar" Height="15" Value="100" Maximum="100" Canvas.Left="16" Canvas.Top="32" Width="200"/>
 
-        <DockPanel Canvas.Left="75" Canvas.Top="136">
+        <DockPanel Canvas.Left="16" Canvas.Top="64">
             <Image Source="/Images/Potions/hp_potion.png" Width="75" Height="75"/>
             <Label x:Name="RestEstus" Width="50" Height="25" FontSize="22" Foreground="#FC4100" VerticalAlignment="Bottom" Margin="-25,0,0,0" Padding="0,0,0,0" HorizontalAlignment="Left"/>
             <Label>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Images/SoulCoins.png" Width="25" Height="25"/>
-                    <Label x:Name="RestCoins" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" Foreground="#6DC5D1">0</Label>
+                    <Label x:Name="RestCoins" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="20" Foreground="#6DC5D1"></Label>
                 </StackPanel>
             </Label>
         </DockPanel>
+
+        <TextBlock Text="Замок" FontSize="100" Canvas.Left="676" Canvas.Top="102" FontFamily="Gabriola" Opacity="0">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard AutoReverse="True" BeginTime="0:0:1.5">
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" Duration="0:0:3" From="0" To="1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
 
         <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,350,0" Opacity="0.5"/>
 

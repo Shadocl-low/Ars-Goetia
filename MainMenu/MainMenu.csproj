@@ -24,7 +24,6 @@
 
   <ItemGroup>
     <Resource Include="Images\Player\MainCharacterClaymoreAttack.png" />
-    <Resource Include="Images\Player\MainCharacterSwordAndShield.png" />
   </ItemGroup>
 
   <ItemGroup>

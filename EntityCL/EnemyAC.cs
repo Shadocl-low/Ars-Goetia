@@ -16,6 +16,7 @@ namespace EntityCL
     {
         public bool IsDead { get; protected set; }
         public int SoulCoins { get; protected set; }
+        public int Strength { get; protected set; }
         public Player MainPlayer { get; protected set; }
         public EnemyAC(Player mainPlayer) : base()
         {
@@ -58,5 +59,7 @@ namespace EntityCL
 
         }
         public abstract void SetEntityBehavior(List<Rectangle> itemRemover);
+        public abstract void Moving();
+        public abstract void WallHit();
     }
 }

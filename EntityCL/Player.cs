@@ -156,5 +156,12 @@ namespace EntityCL
                 Stamina += 0.5f;
             }
         }
+        public void Block(bool BlockKeyPressed)
+        {
+            if (BlockKeyPressed) 
+            {
+                ImuneState = true;
+            }
+        }
     }
 }

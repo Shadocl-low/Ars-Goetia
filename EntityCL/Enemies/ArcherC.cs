@@ -24,6 +24,7 @@ namespace EntityCL.Enemies
             ImuneState = false;
             IsDead = false;
             SoulCoins = 15;
+            Strength = 15;
 
             EntityRect = new Rectangle();
             EntityRect.Tag = "archerTag";
@@ -50,6 +51,12 @@ namespace EntityCL.Enemies
                 arrow.Flying(arrow.TargetAimX, arrow.TargetAimY, itemRemover);
                 arrow.WallHit(itemRemover);
             }
+        }
+        public override void Moving()
+        {
+        }
+        public override void WallHit()
+        {
         }
     }
 }

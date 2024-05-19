@@ -21,15 +21,30 @@ namespace MainMenu.Forms.Caves
     public partial class CaveStart : GameWindow
     {
         public SlimeC slime { get; protected set; }
+        public SlimeC slime2 { get; protected set; }
+        public SlimeC slime3 { get; protected set; }
+        public SlimeC slime4 { get; protected set; }
+
         public CaveStart()
         {
             InitializeComponent();
 
             slime = new SlimeC(mainPlayer: MainPlayer);
+            slime2 = new SlimeC(mainPlayer: MainPlayer);
+            slime3 = new SlimeC(mainPlayer: MainPlayer);
+            slime4 = new SlimeC(mainPlayer: MainPlayer);
+
+            Enemies.Add(slime);
+            Enemies.Add(slime2);
+            Enemies.Add(slime3);
+            Enemies.Add(slime4);
+
+            foreach (var enemy in Enemies)
+            {
+                AddToCanvas(enemy.EntityRect, GameScreen, rand.Next(200, 1000), rand.Next(50, 800));
+            }
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
-
-            AddToCanvas(slime.EntityRect, GameScreen, 600, 400);
 
             GameScreen.Focus();
             GameTimer.Interval = TimeSpan.FromMilliseconds(16);
@@ -58,6 +73,10 @@ namespace MainMenu.Forms.Caves
             {
                 SprintKeyPressed = false;
             }
+            if (e.Key == Key.LeftCtrl)
+            {
+                BlockKeyPressed = false;
+            }
         }
         private void KeyBoardDown(object sender, KeyEventArgs e)
         {
@@ -81,6 +100,10 @@ namespace MainMenu.Forms.Caves
             {
                 SprintKeyPressed = true;
             }
+            if (e.Key == Key.LeftCtrl)
+            {
+                BlockKeyPressed = true;
+            }
             if (e.Key == Key.Q)
             {
                 MainPlayer.DrinkEstus();
@@ -95,6 +118,7 @@ namespace MainMenu.Forms.Caves
             MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
             MainPlayer.Sprinting(SprintKeyPressed);
             MainPlayer.StaminaRegen();
+            MainPlayer.Block(BlockKeyPressed);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
@@ -103,16 +127,13 @@ namespace MainMenu.Forms.Caves
 
             MainPlayer.SetHitbox();
 
-            slime.SetEntityBehavior(itemRemover);
+            foreach (var enemy in Enemies)
+            {
+                enemy.SetEntityBehavior(itemRemover);
+            }
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
             {
-                if ((string)element.Tag == "arrow")
-                {
-                    Rect ArrowHitBox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
-
-                    
-                }
                 if ((string)element.Tag == "wall")
                 {
                     Rect wallHitbox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
@@ -137,15 +158,21 @@ namespace MainMenu.Forms.Caves
                         RightKeyPressed = false;
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - 5);
                     }
-
+                    foreach (var enemy in Enemies)
+                    {
+                        if (enemy.EntityHitBox.IntersectsWith(wallHitbox))
+                        {
+                            enemy.WallHit();
+                        }   
+                    }
                 }
                 if ((string)element.Tag == "door")
                 {
                     Rect doorHitbox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
                     if (MainPlayer.EntityHitBox.IntersectsWith(doorHitbox))
                     {
-                        UpKeyPressed = false;
-                        Canvas.SetTop(MainPlayer.EntityRect, Canvas.GetTop(MainPlayer.EntityRect) + MainPlayer.EntityRect.Height);
+                        RightKeyPressed = false;
+                        Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - MainPlayer.EntityRect.Height);
                         GameTimer.Stop();
                         new CastleStart().Show();
                         Close();
