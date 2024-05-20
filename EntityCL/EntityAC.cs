@@ -50,5 +50,6 @@ namespace EntityCL
             }
             ImuneState = false;
         }
+        public abstract void Attack();
     }
 }

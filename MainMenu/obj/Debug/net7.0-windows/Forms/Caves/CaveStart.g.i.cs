@@ -102,7 +102,7 @@ namespace MainMenu.Forms.Caves {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainMenu;component/forms/caves/cavestart.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainMenu;V1.0.0.0;component/forms/caves/cavestart.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Forms\Caves\CaveStart.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

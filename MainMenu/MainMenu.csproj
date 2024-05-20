@@ -25,6 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.19" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\Bosses\Slime\SlimeBoss.png" />
     <Resource Include="Images\Player\MainCharacterClaymoreAttack.png" />
   </ItemGroup>

@@ -16,7 +16,7 @@ namespace EntityCL.Enemies
         public SlimeC(Player mainPlayer) : base(mainPlayer)
         {
             MAXHealthPoints = 1;
-            HealthPoints = 1;
+            HealthPoints = MAXHealthPoints;
             AttackDamage = 1;
             EntityName = "Acid Slime";
             ImuneState = false;
@@ -83,7 +83,7 @@ namespace EntityCL.Enemies
             }
             RotateWay.ScaleX *= -1;
         }
-        public virtual void Attack()
+        public override void Attack()
         {
             if (!IsDead)
             {

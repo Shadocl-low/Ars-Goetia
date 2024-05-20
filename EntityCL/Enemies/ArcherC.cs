@@ -18,7 +18,7 @@ namespace EntityCL.Enemies
         public ArcherC(Player mainPlayer) : base(mainPlayer)
         {
             MAXHealthPoints = 5;
-            HealthPoints = 5;
+            HealthPoints = MAXHealthPoints;
             AttackDamage = 1;
             EntityName = "Old Archer";
             ImuneState = false;

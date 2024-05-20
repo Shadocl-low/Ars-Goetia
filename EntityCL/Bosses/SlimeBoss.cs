@@ -14,22 +14,18 @@ using System.Windows.Media.Animation;
 
 namespace EntityCL.Bosses
 {
-    public class SlimeBoss : SlimeC
+    public class SlimeBoss : BossAC
     {
-        public ProgressBar HealthBar { get; protected set; }
-        public DispatcherTimer AttackTimer { get; protected set; }
-        private bool IsDangerous { get; set; }
         public SlimeBoss(Player mainPlayer) : base(mainPlayer)
         {
             MAXHealthPoints = 20;
-            HealthPoints = 20;
-            AttackDamage = 2;
+            HealthPoints = MAXHealthPoints;
+            AttackDamage = 6;
             EntityName = "King Slime";
             ImuneState = false;
             IsDead = false;
-            IsDangerous = true;
-            SoulCoins = 25;
-            Strength = 50;
+            SoulCoins = 35;
+            Strength = 65;
 
             EntityRect = new();
             EntityRect.Tag = "slimeTag";
@@ -40,24 +36,8 @@ namespace EntityCL.Bosses
 
             EntityRect.Fill = SlimeImage;
 
-            LinearGradientBrush BossBarBrush = new();
-            BossBarBrush.StartPoint = new Point(0, 0);
-            BossBarBrush.EndPoint = new Point(1, 1);
-            BossBarBrush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#C40C0C"), 0.00));
-            BossBarBrush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#FF6500"), 0.25));
-            BossBarBrush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#FF8A08"), 0.50));
-            BossBarBrush.GradientStops.Add(new GradientStop((Color)ColorConverter.ConvertFromString("#FFC100"), 0.75));
+            HealthBar.Maximum = MAXHealthPoints;
 
-            HealthBar = new()
-            {
-                Value = HealthPoints,
-                Maximum = MAXHealthPoints,
-                Width = 952,
-                Height = 25,
-                Foreground = BossBarBrush
-            };
-
-            AttackTimer = new();
             AttackTimer.Interval = TimeSpan.FromSeconds(8);
             AttackTimer.Tick += AttackTick;
             AttackTimer.Start();
@@ -101,16 +81,6 @@ namespace EntityCL.Bosses
             }
             IsDangerous = true;
         }
-        public override void Attack()
-        {
-            if (!IsDead && IsDangerous)
-            {
-                if (EntityHitBox.IntersectsWith(MainPlayer.EntityHitBox))
-                {
-                    IsDangerous = false;
-                    MainPlayer.TakeDamageFrom(this);
-                }
-            }
-        }
+        
     }
 }

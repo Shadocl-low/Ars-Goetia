@@ -62,5 +62,15 @@ namespace EntityCL
         public abstract void SetEntityBehavior(List<Rectangle> itemRemover);
         public abstract void Moving();
         public abstract void WallHit();
+        public override void Attack()
+        {
+            if (!IsDead)
+            {
+                if (EntityHitBox.IntersectsWith(MainPlayer.EntityHitBox))
+                {
+                    MainPlayer.TakeDamageFrom(this);
+                }
+            }
+        }
     }
 }

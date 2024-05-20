@@ -27,5 +27,8 @@ namespace EntityCL.Enemies
         public override void WallHit()
         {
         }
+        public override void Attack()
+        {
+        }
     }
 }

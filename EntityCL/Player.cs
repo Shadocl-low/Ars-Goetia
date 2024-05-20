@@ -92,7 +92,7 @@ namespace EntityCL
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), 47, 55);
         }
-        public async void Attack()
+        public override async void Attack()
         {
             IsAttacking = true;
             if (Stamina >= 30)
