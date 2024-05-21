@@ -60,5 +60,72 @@ namespace MainMenu
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
         }
+        public void AddEnemy(EnemyAC enemy, Canvas GameScreen, int x, int y)
+        {
+            Enemies.Add(enemy);
+            AddToCanvas(enemy.EntityRect, GameScreen, x, y);
+        }
+        public void KeyBoardUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.W)
+            {
+                UpKeyPressed = false;
+            }
+            if (e.Key == Key.A)
+            {
+                LeftKeyPressed = false;
+            }
+            if (e.Key == Key.S)
+            {
+                DownKeyPressed = false;
+            }
+            if (e.Key == Key.D)
+            {
+                RightKeyPressed = false;
+            }
+            if (e.Key == Key.LeftShift)
+            {
+                SprintKeyPressed = false;
+            }
+            if (e.Key == Key.LeftCtrl)
+            {
+                BlockKeyPressed = false;
+            }
+        }
+        public void KeyBoardDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.W)
+            {
+                UpKeyPressed = true;
+            }
+            if (e.Key == Key.A)
+            {
+                LeftKeyPressed = true;
+            }
+            if (e.Key == Key.S)
+            {
+                DownKeyPressed = true;
+            }
+            if (e.Key == Key.D)
+            {
+                RightKeyPressed = true;
+            }
+            if (e.Key == Key.LeftShift)
+            {
+                SprintKeyPressed = true;
+            }
+            if (e.Key == Key.LeftCtrl)
+            {
+                BlockKeyPressed = true;
+            }
+            if (e.Key == Key.Q)
+            {
+                MainPlayer.DrinkEstus();
+            }
+            if (e.Key == Key.F)
+            {
+                MainPlayer.Attack();
+            }
+        }
     }
 }

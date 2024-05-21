@@ -24,6 +24,7 @@ namespace EntityCL
             MainPlayer = mainPlayer;
             IsDead = false;
             CanMove = true;
+            ImuneState = false;
         }
         public override void SetHitbox()
         {

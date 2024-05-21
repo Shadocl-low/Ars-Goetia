@@ -19,14 +19,11 @@ namespace MainMenu.Forms.Caves
 {
     public partial class CaveFinal : GameWindow
     {
-        public SlimeBoss KingSlime { get; protected set; }
         public CaveFinal()
         {
             InitializeComponent();
 
-            KingSlime = new SlimeBoss(mainPlayer: MainPlayer, GameScreen, Enemies);
-
-            Enemies.Add(KingSlime);
+            Enemies.Add(new SlimeBoss(MainPlayer, GameScreen, Enemies));
 
             foreach (var enemy in Enemies)
             {
@@ -34,88 +31,20 @@ namespace MainMenu.Forms.Caves
             }
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
-            AddToCanvas(KingSlime.HealthBar, GameScreen, 294, 16);
 
             GameScreen.Focus();
             GameTimer.Interval = TimeSpan.FromMilliseconds(16);
             GameTimer.Tick += GameTick;
             GameTimer.Start();
         }
-        private void KeyBoardUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.W)
-            {
-                UpKeyPressed = false;
-            }
-            if (e.Key == Key.A)
-            {
-                LeftKeyPressed = false;
-            }
-            if (e.Key == Key.S)
-            {
-                DownKeyPressed = false;
-            }
-            if (e.Key == Key.D)
-            {
-                RightKeyPressed = false;
-            }
-            if (e.Key == Key.LeftShift)
-            {
-                SprintKeyPressed = false;
-            }
-            if (e.Key == Key.LeftCtrl)
-            {
-                BlockKeyPressed = false;
-            }
-        }
-        private void KeyBoardDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.W)
-            {
-                UpKeyPressed = true;
-            }
-            if (e.Key == Key.A)
-            {
-                LeftKeyPressed = true;
-            }
-            if (e.Key == Key.S)
-            {
-                DownKeyPressed = true;
-            }
-            if (e.Key == Key.D)
-            {
-                RightKeyPressed = true;
-            }
-            if (e.Key == Key.LeftShift)
-            {
-                SprintKeyPressed = true;
-            }
-            if (e.Key == Key.LeftCtrl)
-            {
-                BlockKeyPressed = true;
-            }
-            if (e.Key == Key.Q)
-            {
-                MainPlayer.DrinkEstus();
-            }
-            if (e.Key == Key.F)
-            {
-                MainPlayer.Attack();
-            }
-        }
         private void GameTick(object sender, EventArgs e)
         {
-            MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
-            MainPlayer.Sprinting(SprintKeyPressed);
-            MainPlayer.StaminaRegen();
-            MainPlayer.Block(BlockKeyPressed);
+            MainPlayer.SetEntityBehavior(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction, SprintKeyPressed, BlockKeyPressed);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
             RestEstus.Content = MainPlayer.AmoutOfEstus;
             RestCoins.Content = MainPlayer.AmountOfSoulCoins;
-
-            MainPlayer.SetHitbox();
 
             foreach (var enemy in Enemies)
             {
@@ -176,7 +105,7 @@ namespace MainMenu.Forms.Caves
                 GameScreen.Children.Remove(element);
             }
 
-            if (MainPlayer.HealthPoints == 0)
+            if (MainPlayer.HealthPoints <= 0)
             {
                 GameOver("Don't lose health next time, dude!");
             }
@@ -191,8 +120,8 @@ namespace MainMenu.Forms.Caves
 
                 GameTimer.Stop();
                 ShotsInterval.Stop();
-                
-                KingSlime.StopTimer();
+
+                (Enemies[0] as BossAC).StopTimer();
                 
             }
             else if (e.Key == Key.Escape && EscMenuFrame.Content == Menu)

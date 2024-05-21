@@ -16,11 +16,8 @@ namespace EntityCL
     {
         public ProgressBar HealthBar { get; protected set; }
         public DispatcherTimer AttackTimer { get; protected set; }
-        protected bool IsDangerous { get; set; }
         public BossAC(Player mainPlayer) : base(mainPlayer) 
         {
-            IsDangerous = true;
-
             LinearGradientBrush BossBarBrush = new();
             BossBarBrush.StartPoint = new Point(0, 0);
             BossBarBrush.EndPoint = new Point(1, 1);
@@ -40,11 +37,10 @@ namespace EntityCL
         public override void Moving() { }
         public override void Attack()
         {
-            if (!IsDead && IsDangerous)
+            if (!IsDead)
             {
                 if (EntityHitBox.IntersectsWith(MainPlayer.EntityHitBox))
                 {
-                    IsDangerous = false;
                     MainPlayer.TakeDamageFrom(this);
                 }
             }

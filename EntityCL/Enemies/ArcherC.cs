@@ -26,7 +26,6 @@ namespace EntityCL.Enemies
             SoulCoins = 15;
             Strength = 15;
 
-            EntityRect = new Rectangle();
             EntityRect.Tag = "archerTag";
             EntityRect.Height = 50;
             EntityRect.Width = 50;

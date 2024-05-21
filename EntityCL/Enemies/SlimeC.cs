@@ -21,8 +21,6 @@ namespace EntityCL.Enemies
             HealthPoints = MAXHealthPoints;
             AttackDamage = 1;
             EntityName = "Acid Slime";
-            ImuneState = false;
-            IsDead = false;
             SoulCoins = 1;
             Strength = 0;
             Speed = 1;
@@ -35,7 +33,6 @@ namespace EntityCL.Enemies
                 RotateWay.ScaleX = 1;
             }
 
-            EntityRect = new Rectangle();
             EntityRect.Tag = "slimeTag";
             EntityRect.Height = 30;
             EntityRect.Width = 35;
@@ -49,8 +46,6 @@ namespace EntityCL.Enemies
             HealthPoints = MAXHealthPoints;
             AttackDamage = 1;
             EntityName = "Acid Slime";
-            ImuneState = false;
-            IsDead = false;
             SoulCoins = 1;
             Strength = 0;
             Speed = speed;
@@ -63,13 +58,12 @@ namespace EntityCL.Enemies
                 RotateWay.ScaleX = 1;
             }
 
-            EntityRect = new Rectangle();
             EntityRect.Tag = "slimeTag";
             EntityRect.Height = height;
             EntityRect.Width = width;
-            ImageBrush SlimeImage = new ImageBrush();
-            SlimeImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Slime/GreenSlime.png"));
-            EntityRect.Fill = SlimeImage;
+            ImageBrush Image = new ImageBrush();
+            Image.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Slime/GreenSlime.png"));
+            EntityRect.Fill = Image;
         }
         public override void SetEntityBehavior(List<Rectangle> itemRemover)
         {

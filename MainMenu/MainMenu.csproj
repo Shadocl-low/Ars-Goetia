@@ -12,6 +12,8 @@
     <None Remove="Images\ArcherEnemyAttack.png" />
     <None Remove="Images\Bosses\Slime\SlimeBoss.png" />
     <None Remove="Images\Estus_Flask.png" />
+    <None Remove="Images\Goblin\Goblin.png" />
+    <None Remove="Images\Goblin\GoblinAttack.png" />
     <None Remove="Images\MainCharacter.jpg" />
     <None Remove="Images\MainCharacter.png" />
     <None Remove="Images\MainCharacterClaymore.png" />
@@ -31,6 +33,8 @@
 
   <ItemGroup>
     <Resource Include="Images\Bosses\Slime\SlimeBoss.png" />
+    <Resource Include="Images\Goblin\Goblin.png" />
+    <Resource Include="Images\Goblin\GoblinAttack.png" />
     <Resource Include="Images\Player\MainCharacterClaymoreAttack.png" />
   </ItemGroup>
 

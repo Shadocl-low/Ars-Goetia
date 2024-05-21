@@ -4,6 +4,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace EntityCL
 {
@@ -18,6 +19,7 @@ namespace EntityCL
         public Rect EntityHitBox { get; protected set; }
         public bool ImuneState { get; protected set; }
         public ScaleTransform RotateWay { get; protected set; }
+        public DispatcherTimer ImuneTimer { get; protected set; }
         public EntityAC(string name, int maxhp, int hp, int atk)
         {
             EntityName = name;
@@ -27,12 +29,21 @@ namespace EntityCL
             State = "Normal";
             RotateWay = new ScaleTransform();
             RotateWay.CenterX = 25;
+
+            ImuneTimer = new DispatcherTimer();
+            ImuneTimer.Interval = TimeSpan.FromSeconds(1.0);
+            ImuneTimer.Tick += ImuneTick;
         }
         public EntityAC() 
         {
             State = "Normal";
             RotateWay = new ScaleTransform();
             RotateWay.CenterX = 25;
+            EntityRect = new Rectangle();
+
+            ImuneTimer = new DispatcherTimer();
+            ImuneTimer.Interval = TimeSpan.FromSeconds(0.5);
+            ImuneTimer.Tick += ImuneTick; ;
         }
         public void Burning()
         {
@@ -40,16 +51,20 @@ namespace EntityCL
             HealthPoints--;
         }
         public abstract void SetHitbox();
-        public virtual async void TakeDamageFrom(EntityAC Entity)
+        public virtual void TakeDamageFrom(EntityAC Entity)
         {
             if (!ImuneState)
             {
                 ImuneState = true;
+                ImuneTimer.Start();
                 HealthPoints -= Entity.AttackDamage;
-                await Task.Delay(500);
             }
-            ImuneState = false;
         }
         public abstract void Attack();
+        public void ImuneTick(object sender, EventArgs e)
+        {
+            ImuneState = false;
+            ImuneTimer.Stop();
+        }
     }
 }

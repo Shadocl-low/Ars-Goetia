@@ -9,6 +9,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Controls;
 using System.Windows;
 using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Windows.Threading;
 
 namespace EntityCL
 {
@@ -173,14 +175,28 @@ namespace EntityCL
                 KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
             }
         }
+        public void SetEntityBehavior(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction, bool SprintKeyPressed, bool BlockKeyPressed)
+        {
+            Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
+            Sprinting(SprintKeyPressed);
+            StaminaRegen();
+            Block(BlockKeyPressed);
+            SetHitbox();
+        }
         public override void TakeDamageFrom(EntityAC Entity)
         {
-            if (IsShielded && Stamina >= (Entity as EnemyAC).Strength)
+            if (IsShielded && !ImuneState && Stamina >= (Entity as EnemyAC).Strength)
             {
                 ImuneState = true;
+                ImuneTimer.Start();
                 Stamina -= (Entity as EnemyAC).Strength;
             }
-            base.TakeDamageFrom(Entity);
+            if (!ImuneState && !IsShielded)
+            {
+                ImuneState = true;
+                ImuneTimer.Start();
+                HealthPoints -= Entity.AttackDamage;
+            };
         }
     }
 }

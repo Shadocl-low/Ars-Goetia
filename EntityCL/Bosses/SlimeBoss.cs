@@ -16,12 +16,12 @@ namespace EntityCL.Bosses
 {
     public class SlimeBoss : BossAC
     {
-        private Canvas GameScreen { get; set; }
         private List<EnemyAC> Enemies { get; set; }
+        private Canvas GameScreen { get; set; }
         public SlimeBoss(Player mainPlayer, Canvas gameField, List<EnemyAC> enemies) : base(mainPlayer)
         {
             MAXHealthPoints = 20;
-            HealthPoints = 2;
+            HealthPoints = MAXHealthPoints;
             AttackDamage = 6;
             EntityName = "King Slime";
             ImuneState = false;
@@ -38,12 +38,16 @@ namespace EntityCL.Bosses
 
             EntityRect.Fill = SlimeImage;
 
+            GameScreen = gameField;
+
             HealthBar.Maximum = MAXHealthPoints;
+            Canvas.SetLeft(HealthBar, 294);
+            Canvas.SetTop(HealthBar, 16);
+            GameScreen.Children.Add(HealthBar);
 
             AttackTimer.Interval = TimeSpan.FromSeconds(4);
             AttackTimer.Tick += AttackTick;
             AttackTimer.Start();
-            GameScreen = gameField;
             Enemies = enemies;
         }
         public override void SetEntityBehavior(List<Rectangle> itemRemover)
@@ -103,7 +107,6 @@ namespace EntityCL.Bosses
                         Enemies.Add(slime);
                     }
                 }
-                IsDangerous = true;
             }
         }
         public override void Death(List<Rectangle> itemRemover)

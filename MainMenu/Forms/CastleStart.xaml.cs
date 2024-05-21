@@ -28,21 +28,12 @@ namespace MainMenu
 {
     public partial class CastleStart : GameWindow
     {
-        public ArcherC archer { get; protected set; }
-        public ArcherC archer2 { get; protected set; }
         public CastleStart()
         {
             InitializeComponent();
 
-            archer = new ArcherC(MainPlayer);
-            archer2 = new ArcherC(MainPlayer);
-
-            AddToCanvas(archer.EntityRect, GameScreen, 1250, 20);
-            AddToCanvas(archer2.EntityRect, GameScreen, 1250, 770);
-
-            Enemies.Add(archer);
-            Enemies.Add(archer2);
-
+            AddEnemy(new ArcherC(MainPlayer), GameScreen, 1250, 20);
+            AddEnemy(new ArcherC(MainPlayer), GameScreen, 1250, 770);
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
@@ -55,81 +46,14 @@ namespace MainMenu
             ShotsInterval.Tick += ShotsTick;
             ShotsInterval.Start();
         }
-        private void KeyBoardUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.W)
-            {
-                UpKeyPressed = false;
-            }
-            if (e.Key == Key.A)
-            {
-                LeftKeyPressed = false;
-            }
-            if (e.Key == Key.S)
-            {
-                DownKeyPressed = false;
-            }
-            if (e.Key == Key.D)
-            {
-                RightKeyPressed = false;
-            }
-            if (e.Key == Key.LeftShift)
-            {
-                SprintKeyPressed = false;
-            }
-            if (e.Key == Key.LeftCtrl)
-            {
-                BlockKeyPressed = false;
-            }
-        }
-        private void KeyBoardDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.W)
-            {
-                UpKeyPressed = true;
-            }
-            if (e.Key == Key.A)
-            {
-                LeftKeyPressed = true;
-            }
-            if (e.Key == Key.S)
-            {
-                DownKeyPressed = true;
-            }
-            if (e.Key == Key.D)
-            {
-                RightKeyPressed = true;
-            }
-            if (e.Key == Key.LeftShift)
-            {
-                SprintKeyPressed = true;
-            }
-            if (e.Key == Key.LeftCtrl)
-            {
-                BlockKeyPressed = true;
-            }
-            if (e.Key == Key.Q)
-            {
-                MainPlayer.DrinkEstus();
-            }
-            if (e.Key == Key.F)
-            {
-                MainPlayer.Attack();
-            }
-        }
         private void GameTick(object sender, EventArgs e)
         {
-            MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
-            MainPlayer.Sprinting(SprintKeyPressed);
-            MainPlayer.StaminaRegen();
-            MainPlayer.Block(BlockKeyPressed);
+            MainPlayer.SetEntityBehavior(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction, SprintKeyPressed, BlockKeyPressed);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
             RestEstus.Content = MainPlayer.AmoutOfEstus;
             RestCoins.Content = MainPlayer.AmountOfSoulCoins;
-
-            MainPlayer.SetHitbox();
 
             foreach (var enemy in Enemies)
             {
@@ -145,7 +69,7 @@ namespace MainMenu
                     if (MainPlayer.EntityHitBox.IntersectsWith(ArrowHitBox))
                     {
                         itemRemover.Add(element);
-                        MainPlayer.TakeDamageFrom(archer);
+                        MainPlayer.TakeDamageFrom(new ArcherC(MainPlayer));
                     }
                 }
                 if ((string)element.Tag == "wall")

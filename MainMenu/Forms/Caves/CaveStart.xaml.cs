@@ -1,4 +1,5 @@
-﻿using EntityCL.Enemies;
+﻿using EntityCL;
+using EntityCL.Enemies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,28 +21,13 @@ namespace MainMenu.Forms.Caves
     /// </summary>
     public partial class CaveStart : GameWindow
     {
-        public SlimeC slime { get; protected set; }
-        public SlimeC slime2 { get; protected set; }
-        public SlimeC slime3 { get; protected set; }
-        public SlimeC slime4 { get; protected set; }
-
         public CaveStart()
         {
             InitializeComponent();
 
-            slime = new SlimeC(mainPlayer: MainPlayer);
-            slime2 = new SlimeC(mainPlayer: MainPlayer);
-            slime3 = new SlimeC(mainPlayer: MainPlayer);
-            slime4 = new SlimeC(mainPlayer: MainPlayer);
-
-            Enemies.Add(slime);
-            Enemies.Add(slime2);
-            Enemies.Add(slime3);
-            Enemies.Add(slime4);
-
-            foreach (var enemy in Enemies)
+            for (int i = 0; i < 4; i++)
             {
-                AddToCanvas(enemy.EntityRect, GameScreen, rand.Next(200, 1000), rand.Next(50, 800));
+                AddEnemy(new SlimeC(MainPlayer), GameScreen, rand.Next(200, 1000), rand.Next(50, 800));
             }
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
@@ -51,81 +37,14 @@ namespace MainMenu.Forms.Caves
             GameTimer.Tick += GameTick;
             GameTimer.Start();
         }
-        private void KeyBoardUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.W)
-            {
-                UpKeyPressed = false;
-            }
-            if (e.Key == Key.A)
-            {
-                LeftKeyPressed = false;
-            }
-            if (e.Key == Key.S)
-            {
-                DownKeyPressed = false;
-            }
-            if (e.Key == Key.D)
-            {
-                RightKeyPressed = false;
-            }
-            if (e.Key == Key.LeftShift)
-            {
-                SprintKeyPressed = false;
-            }
-            if (e.Key == Key.LeftCtrl)
-            {
-                BlockKeyPressed = false;
-            }
-        }
-        private void KeyBoardDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.W)
-            {
-                UpKeyPressed = true;
-            }
-            if (e.Key == Key.A)
-            {
-                LeftKeyPressed = true;
-            }
-            if (e.Key == Key.S)
-            {
-                DownKeyPressed = true;
-            }
-            if (e.Key == Key.D)
-            {
-                RightKeyPressed = true;
-            }
-            if (e.Key == Key.LeftShift)
-            {
-                SprintKeyPressed = true;
-            }
-            if (e.Key == Key.LeftCtrl)
-            {
-                BlockKeyPressed = true;
-            }
-            if (e.Key == Key.Q)
-            {
-                MainPlayer.DrinkEstus();
-            }
-            if (e.Key == Key.F)
-            {
-                MainPlayer.Attack();
-            }
-        }
         private void GameTick(object sender, EventArgs e)
         {
-            MainPlayer.Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
-            MainPlayer.Sprinting(SprintKeyPressed);
-            MainPlayer.StaminaRegen();
-            MainPlayer.Block(BlockKeyPressed);
+            MainPlayer.SetEntityBehavior(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction, SprintKeyPressed, BlockKeyPressed);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
             RestEstus.Content = MainPlayer.AmoutOfEstus;
             RestCoins.Content = MainPlayer.AmountOfSoulCoins;
-
-            MainPlayer.SetHitbox();
 
             foreach (var enemy in Enemies)
             {
@@ -175,7 +94,7 @@ namespace MainMenu.Forms.Caves
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - MainPlayer.EntityRect.Height);
                         GameTimer.Stop();
                         Enemies.Clear();
-                        new CaveFinal().Show();
+                        new CaveMiddle().Show();
                         Close();
                     }
                 }

@@ -10,6 +10,9 @@
     <Compile Update="Forms\Caves\CaveFinal.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Forms\Caves\CaveMiddle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Forms\Caves\CaveStart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +37,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Forms\Caves\CaveFinal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Forms\Caves\CaveMiddle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Forms\Caves\CaveStart.xaml">
