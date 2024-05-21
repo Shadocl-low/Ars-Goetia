@@ -10,3 +10,4 @@ C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.dll
 C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\refint\ObjectsCL.dll
 C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.pdb
 C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ref\ObjectsCL.dll
+C:\Arc_Goetia\ars-goetia\ObjectsCL\obj\Debug\net7.0\ObjectsCL.csproj.AssemblyReference.cache

@@ -18,10 +18,12 @@ namespace EntityCL
         public int SoulCoins { get; protected set; }
         public int Strength { get; protected set; }
         public Player MainPlayer { get; protected set; }
+        protected bool CanMove { get; set; }
         public EnemyAC(Player mainPlayer) : base()
         {
             MainPlayer = mainPlayer;
             IsDead = false;
+            CanMove = true;
         }
         public override void SetHitbox()
         {
@@ -60,7 +62,25 @@ namespace EntityCL
 
         }
         public abstract void SetEntityBehavior(List<Rectangle> itemRemover);
-        public abstract void Moving();
+        public virtual void Moving()
+        {
+            if (Canvas.GetLeft(EntityRect) > (1540 - (int)EntityRect.Width))
+            {
+                Canvas.SetLeft(EntityRect, 1535 - EntityRect.Width);
+            }
+            if (Canvas.GetLeft(EntityRect) < 5)
+            {
+                Canvas.SetLeft(EntityRect, 10);
+            }
+            if (Canvas.GetTop(EntityRect) > (865 - EntityRect.Height - 25))
+            {
+                Canvas.SetTop(EntityRect, 865 - EntityRect.Height - 25);
+            }
+            if (Canvas.GetTop(EntityRect) < 5)
+            {
+                Canvas.SetTop(EntityRect, 5);
+            }
+        }
         public abstract void WallHit();
         public override void Attack()
         {

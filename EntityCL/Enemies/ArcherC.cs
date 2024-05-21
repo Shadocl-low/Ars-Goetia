@@ -42,8 +42,10 @@ namespace EntityCL.Enemies
         {
             SetHitbox();
             LookToPlayer(MainPlayer.EntityRect);
+            Moving();
+            arrow?.SetArrowHitbox();
 
-            Death(itemRemover); 
+            Death(itemRemover);
             TakeDamageFrom();
 
             if (arrow != null)
@@ -54,9 +56,26 @@ namespace EntityCL.Enemies
         }
         public override void Moving()
         {
+            if (CanMove && Math.Abs(Canvas.GetLeft(EntityRect) - Canvas.GetLeft(MainPlayer.EntityRect)) < 100 && Math.Abs(Canvas.GetTop(EntityRect) - Canvas.GetTop(MainPlayer.EntityRect)) < 100)
+            {
+                base.Moving();
+
+                if (RotateWay.ScaleX == 1) Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) - 1);
+                if (RotateWay.ScaleX == -1) Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + 1);
+
+                if (Canvas.GetTop(EntityRect) > Canvas.GetTop(MainPlayer.EntityRect) + MainPlayer.EntityRect.Height)
+                {
+                    Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) + 1);
+                }
+                if (Canvas.GetTop(EntityRect) < Canvas.GetTop(MainPlayer.EntityRect) - MainPlayer.EntityRect.Height)
+                {
+                    Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) - 1);
+                }
+            }
         }
         public override void WallHit()
         {
+            CanMove = false;
         }
     }
 }

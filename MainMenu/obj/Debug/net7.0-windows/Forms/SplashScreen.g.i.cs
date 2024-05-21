@@ -61,7 +61,7 @@ namespace MainMenu.Forms {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainMenu;V1.0.0.0;component/forms/splashscreen.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainMenu;component/forms/splashscreen.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Forms\SplashScreen.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

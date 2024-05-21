@@ -37,13 +37,12 @@ namespace MainMenu
             archer = new ArcherC(MainPlayer);
             archer2 = new ArcherC(MainPlayer);
 
+            AddToCanvas(archer.EntityRect, GameScreen, 1250, 20);
+            AddToCanvas(archer2.EntityRect, GameScreen, 1250, 770);
+
             Enemies.Add(archer);
             Enemies.Add(archer2);
 
-            foreach (var enemy in Enemies)
-            {
-                AddToCanvas(enemy.EntityRect, GameScreen, rand.Next(500, 1000), rand.Next(100, 700));
-            }
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
@@ -173,7 +172,20 @@ namespace MainMenu
                         RightKeyPressed = false;
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - 5);
                     }
-
+                    foreach (var enemy in Enemies)
+                    {
+                        if (enemy.EntityHitBox.IntersectsWith(wallHitbox))
+                        {
+                            enemy.WallHit();
+                        }
+                        if (enemy is ArcherC && (enemy as ArcherC).arrow != null)
+                        {
+                            if ((enemy as ArcherC).arrow.ArrowHitbox.IntersectsWith(wallHitbox))
+                            {
+                                itemRemover.Add((enemy as ArcherC).arrow.ArrowRect);
+                            }
+                        }
+                    }
                 }
                 if ((string)element.Tag == "door")
                 {
@@ -207,7 +219,7 @@ namespace MainMenu
             {
                 archers.CreateArrow(GameScreen, MainPlayer);
                 archers.arrow.SetTargetAim(Canvas.GetLeft(MainPlayer.EntityRect) + MainPlayer.EntityRect.Width / 2, Canvas.GetTop(MainPlayer.EntityRect));
-            } 
+            }
         }
 
         private void ShowMenu(object sender, KeyEventArgs e)

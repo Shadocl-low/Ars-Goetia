@@ -37,8 +37,12 @@
 
         <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,350,0" Opacity="0.5"/>
 
-        <Rectangle Width="55" Height="125" Fill="Brown" Stroke="Black" Tag="door" Canvas.Top="362" Canvas.Left="1495" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Rectangle Width="10" Height="425" Fill="#EEEEEE" Stroke="Black" Tag="door" Canvas.Left="1540" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="212"/>
         <Rectangle Width="80" Height="300" Fill="#AAA99C" Stroke="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="wall" Canvas.Top="539" Canvas.Left="384"/>
-        <Rectangle Width="80" Height="300" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Top="10" Canvas.Left="384" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Rectangle Width="80" Height="300" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Top="5" Canvas.Left="384" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Width="42" Height="222" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Left="1508" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Rectangle Width="42" Height="212" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Left="1508" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="637"/>
+        <Rectangle Width="60" Height="300" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Top="424" Canvas.Left="1250" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Rectangle Width="60" Height="300" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Top="124" Canvas.Left="1250" HorizontalAlignment="Center" VerticalAlignment="Top"/>
     </Canvas>
 </local:GameWindow>

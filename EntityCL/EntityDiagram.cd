@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EntityCL.EntityAC" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACCAAAQAAAgAAEAAEAAAAAAJAACAABAAAAFAAAAAA=</HashCode>
+      <FileName>EntityAC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EntityCL.EnemyAC" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAaAAAAAAAAAAEAAAAEAAAAIBAAAAgAAQABAAAYAA=</HashCode>
+      <FileName>EnemyAC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.Arrow" Collapsed="true">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAKAAAAAAAgBAAAQCAACAAAAAAAAADABAAAAAA=</HashCode>
+      <FileName>Arrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.BossAC" Collapsed="true">
+    <Position X="8.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAEABAABAIAIAA=</HashCode>
+      <FileName>BossAC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.CalculateVector" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAIAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>CalculateVector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.Enemies.ArcherC" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAIIAA=</HashCode>
+      <FileName>Enemies\ArcherC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.Enemies.SlimeC" Collapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQABAAAIAA=</HashCode>
+      <FileName>Enemies\SlimeC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.Enemies.SwordsmanC" Collapsed="true">
+    <Position X="6.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAABAAAIAA=</HashCode>
+      <FileName>Enemies\SwordsmanC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.Bosses.SwordsmanBoss" Collapsed="true">
+    <Position X="9.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bosses\SwordsmanBoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.Bosses.SlimeBoss" Collapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bosses\SlimeBoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityCL.Player" Collapsed="true">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEiAAAAAmAAAwEAAAAQAABiIACAAgACAQAAAAAIAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Shapes;
 using EntityCL.Enemies;
 
 namespace EntityCL.Bosses
 {
-    public class SwordsmanBoss : SwordsmanC
+    public class SwordsmanBoss : BossAC
     {
         public SwordsmanBoss(Player mainPlayer) : base(mainPlayer)
         {
+        }
+
+        public override void SetEntityBehavior(List<Rectangle> itemRemover)
+        {
+            throw new NotImplementedException();
         }
     }
 }
