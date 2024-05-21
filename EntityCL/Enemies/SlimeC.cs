@@ -7,12 +7,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 namespace EntityCL.Enemies
 {
     public class SlimeC : EnemyAC
     {
         readonly Random random = new();
+        private int Speed { get; set; }
         public SlimeC(Player mainPlayer) : base(mainPlayer)
         {
             MAXHealthPoints = 1;
@@ -23,6 +25,7 @@ namespace EntityCL.Enemies
             IsDead = false;
             SoulCoins = 1;
             Strength = 0;
+            Speed = 1;
             if (random.Next(-1, 1) == -1)
             {
                 RotateWay.ScaleX = -1;
@@ -36,6 +39,34 @@ namespace EntityCL.Enemies
             EntityRect.Tag = "slimeTag";
             EntityRect.Height = 30;
             EntityRect.Width = 35;
+            ImageBrush SlimeImage = new ImageBrush();
+            SlimeImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Slime/GreenSlime.png"));
+            EntityRect.Fill = SlimeImage;
+        }
+        public SlimeC(Player mainPlayer, int width, int height, int speed) : base(mainPlayer)
+        {
+            MAXHealthPoints = 1;
+            HealthPoints = MAXHealthPoints;
+            AttackDamage = 1;
+            EntityName = "Acid Slime";
+            ImuneState = false;
+            IsDead = false;
+            SoulCoins = 1;
+            Strength = 0;
+            Speed = speed;
+            if (random.Next(-1, 1) == -1)
+            {
+                RotateWay.ScaleX = -1;
+            }
+            else
+            {
+                RotateWay.ScaleX = 1;
+            }
+
+            EntityRect = new Rectangle();
+            EntityRect.Tag = "slimeTag";
+            EntityRect.Height = height;
+            EntityRect.Width = width;
             ImageBrush SlimeImage = new ImageBrush();
             SlimeImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Slime/GreenSlime.png"));
             EntityRect.Fill = SlimeImage;
@@ -59,7 +90,7 @@ namespace EntityCL.Enemies
                     {
                         WallHit();
                     }
-                    Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + 1);
+                    Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + Speed);
                 }
                 else
                 {
@@ -67,7 +98,7 @@ namespace EntityCL.Enemies
                     {
                         WallHit();
                     }
-                    Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) - 1);
+                    Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) - Speed);
                 }
             }
         }

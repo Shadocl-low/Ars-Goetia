@@ -1,4 +1,5 @@
-﻿using EntityCL.Bosses;
+﻿using EntityCL;
+using EntityCL.Bosses;
 using EntityCL.Enemies;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace MainMenu.Forms.Caves
         {
             InitializeComponent();
 
-            KingSlime = new SlimeBoss(mainPlayer: MainPlayer);
+            KingSlime = new SlimeBoss(mainPlayer: MainPlayer, GameScreen, Enemies);
 
             Enemies.Add(KingSlime);
 
@@ -190,6 +191,9 @@ namespace MainMenu.Forms.Caves
 
                 GameTimer.Stop();
                 ShotsInterval.Stop();
+                
+                KingSlime.StopTimer();
+                
             }
             else if (e.Key == Key.Escape && EscMenuFrame.Content == Menu)
             {

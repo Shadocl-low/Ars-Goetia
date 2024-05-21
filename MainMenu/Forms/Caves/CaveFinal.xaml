@@ -23,7 +23,7 @@
             </Label>
         </DockPanel>
 
-        <TextBlock Text="Печери" FontSize="100" Canvas.Left="656" Canvas.Top="112" FontFamily="Gabriola" Opacity="0">
+        <TextBlock Text="Король Слаймів" FontSize="100" Foreground="Crimson" Canvas.Left="525" Canvas.Top="109" FontFamily="Gabriola" Opacity="0">
             <TextBlock.Triggers>
                 <EventTrigger RoutedEvent="Loaded">
                     <BeginStoryboard>

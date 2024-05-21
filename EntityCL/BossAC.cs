@@ -49,5 +49,9 @@ namespace EntityCL
                 }
             }
         }
+        public void StopTimer()
+        {
+            AttackTimer.Stop();
+        }
     }
 }

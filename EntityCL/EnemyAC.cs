@@ -29,7 +29,7 @@ namespace EntityCL
         {
             EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), EntityRect.Width, EntityRect.Height);
         }
-        public void Death(List<Rectangle> itemRemover)
+        public virtual void Death(List<Rectangle> itemRemover)
         {
             if (HealthPoints <= 0 && !IsDead)
             {
@@ -91,6 +91,10 @@ namespace EntityCL
                     MainPlayer.TakeDamageFrom(this);
                 }
             }
+        }
+        public void SetDeath()
+        {
+            HealthPoints = 0;
         }
     }
 }
