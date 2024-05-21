@@ -1,6 +1,7 @@
 ﻿using EntityCL;
 using EntityCL.Bosses;
 using EntityCL.Enemies;
+using MainMenu.Forms.Swamp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -94,7 +95,7 @@ namespace MainMenu.Forms.Caves
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - MainPlayer.EntityRect.Height);
                         GameTimer.Stop();
                         Enemies.Clear();
-                        new CastleStart().Show();
+                        new SwampStart().Show();
                         Close();
                     }
                 }

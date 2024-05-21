@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Forms\Castle\CastleFinal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Forms\Castle\CastleMiddle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Forms\Caves\CaveFinal.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -16,13 +22,22 @@
     <Compile Update="Forms\Caves\CaveStart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Forms\CastleStart.xaml.cs">
+    <Compile Update="Forms\Castle\CastleStart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Forms\OptionMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Forms\SplashScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Forms\Swamp\SwampFinal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Forms\Swamp\SwampMiddle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Forms\Swamp\SwampStart.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\Controls.xaml.cs">
@@ -36,6 +51,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Forms\Castle\CastleFinal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Forms\Castle\CastleMiddle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Forms\Caves\CaveFinal.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -45,10 +66,19 @@
     <Page Update="Forms\Caves\CaveStart.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Forms\CastleStart.xaml">
+    <Page Update="Forms\Castle\CastleStart.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Forms\SplashScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Forms\Swamp\SwampFinal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Forms\Swamp\SwampMiddle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Forms\Swamp\SwampStart.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

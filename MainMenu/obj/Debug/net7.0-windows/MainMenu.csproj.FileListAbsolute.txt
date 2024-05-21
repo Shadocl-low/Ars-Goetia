@@ -89,8 +89,6 @@ C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveStart
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveStart.baml
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Styles\PlayersBarsStyles.baml
-C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\CastleStart.g.cs
-C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\CastleStart.baml
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveFinal.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveFinal.baml
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Styles\BossHealthBar.baml
@@ -142,3 +140,15 @@ C:\Arc_Goetia\ars-goetia\MainMenu\bin\Debug\net7.0-windows\runtimes\win-x86\nati
 C:\Arc_Goetia\ars-goetia\MainMenu\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveMiddle.g.cs
 C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Caves\CaveMiddle.baml
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Castle\CastleStart.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Swamp\SwampFinal.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Swamp\SwampMiddle.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Swamp\SwampStart.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Castle\CastleStart.baml
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Swamp\SwampFinal.baml
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Swamp\SwampMiddle.baml
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Swamp\SwampStart.baml
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Castle\CastleFinal.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Castle\CastleMiddle.g.cs
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Castle\CastleFinal.baml
+C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\Forms\Castle\CastleMiddle.baml

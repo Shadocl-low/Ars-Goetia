@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EntityCL.Bosses;
+using EntityCL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,29 +13,22 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Windows.Navigation;
-using MainMenu.Pages;
-using MainMenu.Forms;
-using System.Windows.Threading;
-using EntityCL;
-using EntityCL.Enemies;
-using System.Xml.Linq;
-using ObjectsCL;
-using MainMenu;
-using System.Data;
-using MainMenu.Forms.Caves;
-using System.Runtime.CompilerServices;
 
-namespace MainMenu
+namespace MainMenu.Forms.Swamp
 {
-    public partial class CastleStart : GameWindow
+    /// <summary>
+    /// Interaction logic for SwampStart.xaml
+    /// </summary>
+    public partial class SwampStart : GameWindow
     {
-        public CastleStart()
+        public SwampStart()
         {
             InitializeComponent();
 
-            AddEnemy(new ArcherC(MainPlayer), GameScreen, 1250, 20);
-            AddEnemy(new ArcherC(MainPlayer), GameScreen, 1250, 770);
+            foreach (var enemy in Enemies)
+            {
+                AddToCanvas(enemy.EntityRect, GameScreen, 1000, 300);
+            }
 
             AddToCanvas(MainPlayer.EntityRect, GameScreen, 100, (int)Application.Current.MainWindow.Height / 2);
 
@@ -41,10 +36,6 @@ namespace MainMenu
             GameTimer.Interval = TimeSpan.FromMilliseconds(16);
             GameTimer.Tick += GameTick;
             GameTimer.Start();
-
-            ShotsInterval.Interval = TimeSpan.FromSeconds(rand.Next(3, 8));
-            ShotsInterval.Tick += ShotsTick;
-            ShotsInterval.Start();
         }
         private void GameTick(object sender, EventArgs e)
         {
@@ -62,16 +53,6 @@ namespace MainMenu
 
             foreach (var element in GameScreen.Children.OfType<Rectangle>())
             {
-                if ((string)element.Tag == "arrow")
-                {
-                    Rect ArrowHitBox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
-
-                    if (MainPlayer.EntityHitBox.IntersectsWith(ArrowHitBox))
-                    {
-                        itemRemover.Add(element);
-                        MainPlayer.TakeDamageFrom(new ArcherC(MainPlayer));
-                    }
-                }
                 if ((string)element.Tag == "wall")
                 {
                     Rect wallHitbox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
@@ -102,13 +83,6 @@ namespace MainMenu
                         {
                             enemy.WallHit();
                         }
-                        if (enemy is ArcherC && (enemy as ArcherC).arrow != null)
-                        {
-                            if ((enemy as ArcherC).arrow.ArrowHitbox.IntersectsWith(wallHitbox))
-                            {
-                                itemRemover.Add((enemy as ArcherC).arrow.ArrowRect);
-                            }
-                        }
                     }
                 }
                 if ((string)element.Tag == "door")
@@ -117,11 +91,10 @@ namespace MainMenu
                     if (MainPlayer.EntityHitBox.IntersectsWith(doorHitbox))
                     {
                         RightKeyPressed = false;
-                        Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - MainPlayer.EntityRect.Width);
+                        Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - MainPlayer.EntityRect.Height);
                         GameTimer.Stop();
                         Enemies.Clear();
-                        ShotsInterval.Stop();
-                        new CaveStart().Show();
+                        new SwampMiddle().Show();
                         Close();
                     }
                 }
@@ -132,20 +105,11 @@ namespace MainMenu
                 GameScreen.Children.Remove(element);
             }
 
-            if (MainPlayer.HealthPoints == 0)
+            if (MainPlayer.HealthPoints <= 0)
             {
                 GameOver("Don't lose health next time, dude!");
             }
         }
-        private void ShotsTick(object sender, EventArgs e)
-        {
-            foreach (ArcherC archers in Enemies)
-            {
-                archers.CreateArrow(GameScreen, MainPlayer);
-                archers.arrow.SetTargetAim(Canvas.GetLeft(MainPlayer.EntityRect) + MainPlayer.EntityRect.Width / 2, Canvas.GetTop(MainPlayer.EntityRect));
-            }
-        }
-
         private void ShowMenu(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape && EscMenuFrame.Content != Menu)
@@ -156,6 +120,9 @@ namespace MainMenu
 
                 GameTimer.Stop();
                 ShotsInterval.Stop();
+
+                (Enemies[0] as BossAC).StopTimer();
+
             }
             else if (e.Key == Key.Escape && EscMenuFrame.Content == Menu)
             {

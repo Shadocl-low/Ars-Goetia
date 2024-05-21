@@ -1,12 +1,12 @@
-﻿<local:GameWindow x:Class="MainMenu.CastleStart"
-        xmlns:local="clr-namespace:MainMenu"
+﻿<game:GameWindow x:Class="MainMenu.Forms.Castle.CastleFinal"
+        xmlns:game="clr-namespace:MainMenu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainMenu.Forms.Castle"
         mc:Ignorable="d"
-        Title="Castle" Height="865" Width="1550" Background="Gray" WindowState="Maximized" KeyDown="ShowMenu">
-
+        Title="CastleFinal" Height="865" Width="1540" Background="#535C91" KeyDown="ShowMenu" WindowState="Maximized">
     <Canvas x:Name="GameScreen" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
 
         <ProgressBar Style="{DynamicResource HealthProgressBarStyle}" x:Name="PlayerHealthBar" Height="15" Value="10" Maximum="10" Canvas.Left="16" Canvas.Top="16" Width="250"/>
@@ -23,7 +23,7 @@
             </Label>
         </DockPanel>
 
-        <TextBlock Text="Замок" FontSize="100" Canvas.Left="676" Canvas.Top="102" FontFamily="Gabriola" Opacity="0">
+        <TextBlock Text="Вічний Сторож" FontSize="100" Canvas.Left="513" Canvas.Top="102" FontFamily="Gabriola" Opacity="0" HorizontalAlignment="Left" VerticalAlignment="Center">
             <TextBlock.Triggers>
                 <EventTrigger RoutedEvent="Loaded">
                     <BeginStoryboard>
@@ -37,12 +37,9 @@
 
         <Frame x:Name="EscMenuFrame" NavigationUIVisibility="Hidden" Panel.ZIndex="6" Canvas.Left="0" Width="1920" HorizontalAlignment="Center" Padding="0,0,350,0" Opacity="0.5"/>
 
-        <Rectangle Width="10" Height="425" Fill="#EEEEEE" Stroke="Black" Tag="door" Canvas.Left="1540" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="212"/>
-        <Rectangle Width="80" Height="300" Fill="#AAA99C" Stroke="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="wall" Canvas.Top="539" Canvas.Left="384"/>
-        <Rectangle Width="80" Height="300" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Top="5" Canvas.Left="384" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Rectangle Width="42" Height="222" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Left="1508" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Rectangle Width="42" Height="212" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Left="1508" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="637"/>
-        <Rectangle Width="60" Height="300" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Top="424" Canvas.Left="1250" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Rectangle Width="60" Height="300" Fill="#AAA99C" Stroke="Black" Tag="wall" Canvas.Top="124" Canvas.Left="1250" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Rectangle Width="10" Height="425" Fill="#EEEEEE" Stroke="Black" Tag="door" Canvas.Left="1530" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="212"/>
+        <Rectangle Width="80" Height="300" Fill="#1B1A55" Stroke="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="wall" Canvas.Top="539" Canvas.Left="384"/>
+        <Rectangle Width="42" Height="222" Fill="#1B1A55" Stroke="Black" Tag="wall" Canvas.Left="1503" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Rectangle Width="42" Height="212" Fill="#1B1A55" Stroke="Black" Tag="wall" Canvas.Left="1498" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="637"/>
     </Canvas>
-</local:GameWindow>
+</game:GameWindow>

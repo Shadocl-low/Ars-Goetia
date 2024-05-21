@@ -61,4 +61,8 @@
     </SplashScreen>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Forms\Shops\" />
+  </ItemGroup>
+
 </Project>

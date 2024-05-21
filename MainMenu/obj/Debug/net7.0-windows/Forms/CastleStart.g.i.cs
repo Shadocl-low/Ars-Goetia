@@ -101,7 +101,7 @@ namespace MainMenu {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainMenu;component/forms/castlestart.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainMenu;V1.0.0.0;component/forms/castlestart.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Forms\CastleStart.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
