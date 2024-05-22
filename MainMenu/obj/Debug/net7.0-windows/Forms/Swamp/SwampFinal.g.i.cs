@@ -102,7 +102,7 @@ namespace MainMenu.Forms.Swamp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MainMenu;V1.0.0.0;component/forms/swamp/swampfinal.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MainMenu;component/forms/swamp/swampfinal.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Forms\Swamp\SwampFinal.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
