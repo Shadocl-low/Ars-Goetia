@@ -1,32 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj": {}
+    "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj": {}
   },
   "projects": {
-    "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj": {
+    "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj",
+        "projectUniqueName": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj",
         "projectName": "ObjectsCL",
-        "projectPath": "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj",
+        "projectPath": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj",
         "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Arc_Goetia\\ars-goetia\\ObjectsCL\\obj\\",
+        "outputPath": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -42,18 +43,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.19, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.19, )"
-            }
-          },
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -70,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,11 +1,11 @@
 ﻿using EntityCL.Enemies;
 using EntityCL.Interfaces;
-using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows;
 using System.Windows.Controls;
 using System.Xml.Linq;
+using System.Windows;
+using System.Windows.Shapes;
 
 namespace EntityCL
 {
@@ -15,7 +15,7 @@ namespace EntityCL
         public Canvas Screen { get; protected set; }
         public Player Target { get; protected set; }
         public Rectangle ArrowRect { get; protected set; }
-        public Rect ArrowHitbox { get; protected set; }
+        public System.Windows.Rect ArrowHitbox { get; protected set; }
         public double TargetAimX { get; protected set; }
         public double TargetAimY { get; protected set; }
         public Arrow(EnemyAC parent, Canvas screen, Player terget)

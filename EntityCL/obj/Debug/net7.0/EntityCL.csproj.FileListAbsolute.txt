@@ -105,3 +105,12 @@ C:\Arc_Goetia\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.dll
 C:\Arc_Goetia\ars-goetia\EntityCL\obj\Debug\net7.0\refint\EntityCL.dll
 C:\Arc_Goetia\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.pdb
 C:\Arc_Goetia\ars-goetia\EntityCL\obj\Debug\net7.0\ref\EntityCL.dll
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.csproj.AssemblyReference.cache
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.AssemblyInfoInputs.cache
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.AssemblyInfo.cs
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.csproj.CoreCompileInputs.cache
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.sourcelink.json
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.dll
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\refint\EntityCL.dll
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\EntityCL\obj\Debug\net7.0\EntityCL.pdb

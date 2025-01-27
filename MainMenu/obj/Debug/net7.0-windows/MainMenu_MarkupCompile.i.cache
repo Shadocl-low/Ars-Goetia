@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Arc_Goetia\ars-goetia\MainMenu\obj\Debug\net7.0-windows\
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\MainMenu\obj\Debug\net7.0-windows\
 MainMenu
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Arc_Goetia\ars-goetia\MainMenu\App.xaml
+C:\Users\1\Downloads\Practica\TechPrakt2025Debug\ars-goetia\MainMenu\App.xaml
 201114655549
 
 20393114771
-240-1964654189
+240934844845
 Forms\Castle\CastleFinal.xaml;Forms\Castle\CastleMiddle.xaml;Forms\Castle\CastleStart.xaml;Forms\Caves\CaveFinal.xaml;Forms\Caves\CaveMiddle.xaml;Forms\Caves\CaveStart.xaml;Forms\OptionMenu.xaml;Forms\SplashScreen.xaml;Forms\Swamp\SwampFinal.xaml;Forms\Swamp\SwampMiddle.xaml;Forms\Swamp\SwampStart.xaml;MainWindow.xaml;Pages\Controls.xaml;Pages\EscMenu.xaml;Pages\Resolution.xaml;Styles\BossHealthBar.xaml;Styles\ButtonStyles.xaml;Styles\ComboBoxStyles.xaml;Styles\PlayersBarsStyles.xaml;Themes\Generic.xaml;
 images\splashscreen.png
 False

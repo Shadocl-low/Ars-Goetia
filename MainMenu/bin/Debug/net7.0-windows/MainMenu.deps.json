@@ -551,7 +551,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.19"
         },
         "runtime": {
-          "EntityCL.dll": {}
+          "EntityCL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ObjectsCL/1.0.0": {
@@ -560,7 +563,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.19"
         },
         "runtime": {
-          "ObjectsCL.dll": {}
+          "ObjectsCL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
