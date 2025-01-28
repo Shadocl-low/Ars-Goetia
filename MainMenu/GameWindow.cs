@@ -39,18 +39,12 @@ namespace MainMenu
         public DispatcherTimer ShotsInterval = new DispatcherTimer();
 
         public Player MainPlayer = new Player("Shadocl", 10, 10, 1, "Sword and shild", 5);
-        
-        public static void AddToCanvas(Rectangle obj, Canvas GameScreen, int x, int y)
+
+        public static void AddToCanvas<T>(T obj, Canvas gameScreen, int x, int y) where T : UIElement
         {
             Canvas.SetLeft(obj, x);
             Canvas.SetTop(obj, y);
-            GameScreen.Children.Add(obj);
-        }
-        public static void AddToCanvas(Control obj, Canvas GameScreen, int x, int y)
-        {
-            Canvas.SetLeft(obj, x);
-            Canvas.SetTop(obj, y);
-            GameScreen.Children.Add(obj);
+            gameScreen.Children.Add(obj);
         }
         public void GameOver(string message)
         {
