@@ -16,23 +16,30 @@ namespace EntityCL.Bosses
 {
     public class SlimeBoss : BossAC
     {
-        private List<EnemyAC> Enemies { get; set; }
-        private Canvas GameScreen { get; set; }
+        private const int DefaultHealth = 20;
+        private const int DefaultAttackDamage = 6;
+        private const int DefaultStrength = 65;
+        private const int DefaultSoulCoins = 35;
+        private const int EntityWidth = 300;
+        private const int EntityHeight = 204;
+        private List<EnemyAC> Enemies;
+        private Canvas GameScreen;
+        private readonly Random random = new();
         public SlimeBoss(Player mainPlayer, Canvas gameField, List<EnemyAC> enemies) : base(mainPlayer)
         {
-            MAXHealthPoints = 20;
+            MAXHealthPoints = DefaultHealth;
             HealthPoints = MAXHealthPoints;
-            AttackDamage = 6;
+            AttackDamage = DefaultAttackDamage;
             EntityName = "King Slime";
             ImuneState = false;
             IsDead = false;
-            SoulCoins = 35;
-            Strength = 65;
+            SoulCoins = DefaultSoulCoins;
+            Strength = DefaultStrength;
 
             EntityRect = new();
             EntityRect.Tag = "slimeTag";
-            EntityRect.Height = 204;
-            EntityRect.Width = 300;
+            EntityRect.Height = EntityHeight;
+            EntityRect.Width = EntityWidth;
             ImageBrush SlimeImage = new();
             SlimeImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Bosses/Slime/SlimeBoss.png"));
 
