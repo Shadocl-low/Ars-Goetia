@@ -16,39 +16,55 @@ namespace EntityCL
 {
     public class Player : EntityAC
     {
-        public Rect AttackHitBox { get; protected set; }
-        public string Weapon { get; protected set; }
-        public int AmoutOfEstus { get; protected set; }
-        public int Speed { get; protected set; }
-        public float Stamina { get; protected set; }
-        public ImageBrush KnightImage { get; protected set; }
+        public int AmountOfEstus { get; private set; }
+        public int AmountOfSoulCoins { get; private set; }
+        public int Speed { get; private set; }
+        public float Stamina { get; private set; }
+        public Rect AttackHitBox { get; private set; }
+        public string Weapon { get; private set; }
+        public ImageBrush KnightImage { get; private set; }
+
         private bool IsHealing { get; set; }
         private bool IsAttacking { get; set; }
         private bool IsShielded { get; set; }
-        public int AmountOfSoulCoins { get; protected set; }
+
+        private PlayerParam Parameters;
         public Player(string name, int maxhp, int hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
         {
+            Parameters = new PlayerParam(10, 0, 1, 5, 47, 55);
+
             Weapon = weapon;
-            AmoutOfEstus = estus;
-            Speed = 5;
-            Stamina = 100f;
             ImuneState = false;
             IsHealing = false;
-            AmountOfSoulCoins = 0;
 
-            EntityRect = new Rectangle();
-            EntityRect.Height = 55;
-            EntityRect.Width = 47;
-            KnightImage = new ImageBrush();
-            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
+            SetupEntityAppearance();
+            SetupEntityParameters();
+        }
+        private void SetupEntityParameters()
+        {
+            MAXHealthPoints = Parameters.MAXDefaultHealth;
+            HealthPoints = Parameters.DefaultHealth;
+            AttackDamage = Parameters.DefaultAttackDamage;
+            AmountOfSoulCoins = Parameters.AmountOfSoulCoins;
+            AmountOfEstus = Parameters.AmountOfEstus;
+            Speed = Parameters.Speed;
+            Stamina = Parameters.Stamina;
+        }
+        private void SetupEntityAppearance()
+        {
+            EntityRect = new Rectangle { Height = Parameters.EntityHeight, Width = Parameters.EntityHeight };
+            KnightImage = new ImageBrush
+            {
+                ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"))
+            };
             EntityRect.Fill = KnightImage;
         }
         public async void DrinkEstus()
         {
-            if (HealthPoints < MAXHealthPoints && AmoutOfEstus != 0)
+            if (HealthPoints < MAXHealthPoints && AmountOfEstus != 0)
             {
                 IsHealing = true;
-                AmoutOfEstus--;
+                AmountOfEstus--;
                 int HealthAmount = 2;
                 Speed /= 5;
                 while (HealthAmount > 0)

@@ -23,6 +23,13 @@ namespace EntityCL
             EntityWidth = width;
             EntityHeight = height;
         }
+        public EntityParam(int hearth, int attack, int width, int height)
+        {
+            DefaultHealth = hearth;
+            DefaultAttackDamage = attack;
+            EntityWidth = width;
+            EntityHeight = height;
+        }
     }
 
 }
