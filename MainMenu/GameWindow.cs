@@ -45,14 +45,17 @@ namespace MainMenu
             Canvas.SetTop(obj, y);
             gameScreen.Children.Add(obj);
         }
+        public void RestartGame()
+        {
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
+        }
         public void GameOver(string message)
         {
             GameTimer.Stop();
             ShotsInterval.Stop();
             MessageBox.Show(message, GameTitle);
-
-            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
-            Application.Current.Shutdown();
+            RestartGame();
         }
         public void AddEnemy(EnemyAC enemy, Canvas GameScreen, int x, int y)
         {
