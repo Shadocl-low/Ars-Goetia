@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\pages\\escmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\pages\\escmenu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -54,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +66,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\InputManager.cs",
+              "RelativeDocumentMoniker": "MainMenu\\InputManager.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\InputManager.cs",
+              "RelativeToolTip": "MainMenu\\InputManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T16:47:46.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "EscMenu.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Pages\\EscMenu.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Pages\\EscMenu.xaml",
@@ -74,12 +91,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EscMenu.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Pages\\EscMenu.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Pages\\EscMenu.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Pages\\EscMenu.xaml.cs*",
-              "RelativeToolTip": "MainMenu\\Pages\\EscMenu.xaml.cs*",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Pages\\EscMenu.xaml.cs",
+              "RelativeToolTip": "MainMenu\\Pages\\EscMenu.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-28T16:45:16.196Z",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CaveMiddle.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveMiddle.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveMiddle.xaml.cs",
@@ -100,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CaveFinal.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveFinal.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveFinal.xaml.cs",
@@ -113,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Player.cs",
               "RelativeDocumentMoniker": "EntityCL\\Player.cs",
@@ -126,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "EntityAC.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityAC.cs",
               "RelativeDocumentMoniker": "EntityCL\\EntityAC.cs",
@@ -138,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "SlimeC.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Enemies\\SlimeC.cs",
               "RelativeDocumentMoniker": "EntityCL\\Enemies\\SlimeC.cs",
@@ -150,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "SlimeBoss.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Bosses\\SlimeBoss.cs",
               "RelativeDocumentMoniker": "EntityCL\\Bosses\\SlimeBoss.cs",
@@ -162,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GameWindow.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\GameWindow.cs",
               "RelativeDocumentMoniker": "MainMenu\\GameWindow.cs",
@@ -175,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "CaveStart.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveStart.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveStart.xaml.cs",
@@ -188,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CaveStart.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveStart.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveStart.xaml",
