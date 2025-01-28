@@ -44,7 +44,7 @@ namespace MainMenu.Forms.Caves
             RestEstus.Content = MainPlayer.AmoutOfEstus;
             RestCoins.Content = MainPlayer.AmountOfSoulCoins;
 
-            MainPlayer.SetEntityBehavior(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction, SprintKeyPressed, BlockKeyPressed);
+            MainPlayer.SetEntityBehavior(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, DefaultFriction, SprintKeyPressed, BlockKeyPressed);
 
             foreach (var enemy in Enemies)
             {

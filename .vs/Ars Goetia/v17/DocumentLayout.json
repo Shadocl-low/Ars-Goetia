@@ -3,108 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\swamp\\swampfinal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\swamp\\swampfinal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\swamp\\swampfinal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\swamp\\swampfinal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\castle\\castlestart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\castle\\castlestart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\castle\\castlemiddle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\castle\\castlemiddle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\caves\\cavestart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\caves\\cavestart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\caves\\cavemiddle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\caves\\cavemiddle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\caves\\cavemiddle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\caves\\cavemiddle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\entityac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\entityac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\entitydiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\entitydiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\mainmenu.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\mainmenu.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\castle\\castlefinal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\castle\\castlefinal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\bossac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\bossac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\castle\\castlefinal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\castle\\castlefinal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\caves\\cavefinal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\caves\\cavefinal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\caves\\cavefinal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\caves\\cavefinal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\swamp\\swampstart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\swamp\\swampstart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\entitycl.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\entitycl.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\mainmenu.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\mainmenu.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\castle\\castlemiddle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\castle\\castlemiddle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\castle\\castlestart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\castle\\castlestart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\swamp\\swampstart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\swamp\\swampstart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\castle\\castlemiddle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\castle\\castlemiddle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\swamp\\swampmiddle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\swamp\\swampmiddle.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\castle\\castlefinal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\castle\\castlefinal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\gamewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\gamewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\caves\\cavestart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\caves\\cavestart.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\caves\\cavestart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\caves\\cavestart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\forms\\swamp\\swampmiddle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\forms\\swamp\\swampmiddle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\bosses\\slimeboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\bosses\\slimeboss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\mainmenu\\gamewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9A455AD-C4CB-467B-B47A-230F05AB9223}|MainMenu\\MainMenu.csproj|solutionrelative:mainmenu\\gamewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\enemies\\slimec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\enemies\\slimec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\entityac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\entityac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|c:\\users\\1\\downloads\\practica\\techprakt2025debug\\ars-goetia\\entitycl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDEE5900-35B6-4408-8BD7-B059173FF3EF}|EntityCL\\EntityCL.csproj|solutionrelative:entitycl\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,283 +54,127 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EntityCL",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityCL.csproj",
-              "RelativeDocumentMoniker": "EntityCL\\EntityCL.csproj",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityCL.csproj",
-              "RelativeToolTip": "EntityCL\\EntityCL.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-27T18:55:23.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MainMenu.csproj",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\MainMenu.csproj",
-              "RelativeDocumentMoniker": "MainMenu\\MainMenu.csproj",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\MainMenu.csproj",
-              "RelativeToolTip": "MainMenu\\MainMenu.csproj",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-27T18:52:47.857Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainMenu",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\MainMenu.csproj",
-              "RelativeDocumentMoniker": "MainMenu\\MainMenu.csproj",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\MainMenu.csproj",
-              "RelativeToolTip": "MainMenu\\MainMenu.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-27T18:53:00.388Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Arrow.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Arrow.cs",
-              "RelativeDocumentMoniker": "EntityCL\\Arrow.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Arrow.cs",
-              "RelativeToolTip": "EntityCL\\Arrow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T18:46:33.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EntityDiagram.cd",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityDiagram.cd",
-              "RelativeDocumentMoniker": "EntityCL\\EntityDiagram.cd",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityDiagram.cd",
-              "RelativeToolTip": "EntityCL\\EntityDiagram.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2025-01-27T18:15:59.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EntityAC.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityAC.cs",
-              "RelativeDocumentMoniker": "EntityCL\\EntityAC.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityAC.cs",
-              "RelativeToolTip": "EntityCL\\EntityAC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T17:44:50.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BossAC.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\BossAC.cs",
-              "RelativeDocumentMoniker": "EntityCL\\BossAC.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\BossAC.cs",
-              "RelativeToolTip": "EntityCL\\BossAC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T17:42:12.42Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CastleMiddle.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleMiddle.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleMiddle.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleMiddle.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleMiddle.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T22:19:00.18Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CastleStart.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleStart.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleStart.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleStart.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleStart.xaml.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwAYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T22:18:59.583Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CastleFinal.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleFinal.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleFinal.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleFinal.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleFinal.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T22:18:31.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CastleFinal.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleFinal.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleFinal.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleFinal.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleFinal.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T22:10:44.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CastleMiddle.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleMiddle.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleMiddle.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleMiddle.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleMiddle.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T22:10:22.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CastleStart.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleStart.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleStart.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleStart.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleStart.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T22:09:14.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SwampFinal.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampFinal.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Swamp\\SwampFinal.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampFinal.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\Swamp\\SwampFinal.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T21:55:20.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SwampFinal.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampFinal.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Swamp\\SwampFinal.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampFinal.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\Swamp\\SwampFinal.xaml.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAewB0AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T21:56:41.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SwampMiddle.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampMiddle.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Swamp\\SwampMiddle.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampMiddle.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\Swamp\\SwampMiddle.xaml.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGAAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T21:56:42.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "SwampMiddle.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampMiddle.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Swamp\\SwampMiddle.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampMiddle.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\Swamp\\SwampMiddle.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T21:55:07.107Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SwampStart.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampStart.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Swamp\\SwampStart.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampStart.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\Swamp\\SwampStart.xaml.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAiwGAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T21:56:43.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "SwampStart.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampStart.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Swamp\\SwampStart.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Swamp\\SwampStart.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\Swamp\\SwampStart.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T21:54:50.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CaveFinal.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveFinal.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveFinal.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveFinal.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\Caves\\CaveFinal.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-19T15:46:28.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "CaveFinal.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveFinal.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveFinal.xaml.cs",
               "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveFinal.xaml.cs",
               "RelativeToolTip": "MainMenu\\Forms\\Caves\\CaveFinal.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACoAAACTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:26:04.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CaveMiddle.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveMiddle.xaml.cs",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveMiddle.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveMiddle.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\Caves\\CaveMiddle.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T17:19:34.535Z",
+              "WhenOpened": "2025-01-28T10:02:41.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CaveMiddle.xaml",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveMiddle.xaml",
-              "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveMiddle.xaml",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveMiddle.xaml",
-              "RelativeToolTip": "MainMenu\\Forms\\Caves\\CaveMiddle.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-21T17:18:43.74Z",
+              "DocumentIndex": 1,
+              "Title": "CastleStart.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleStart.xaml.cs",
+              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleStart.xaml.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleStart.xaml.cs",
+              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleStart.xaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwCQAAACTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T09:59:45.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CastleMiddle.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleMiddle.xaml.cs",
+              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleMiddle.xaml.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleMiddle.xaml.cs",
+              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleMiddle.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswCQAAACTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T09:59:35.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CastleFinal.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleFinal.xaml.cs",
+              "RelativeDocumentMoniker": "MainMenu\\Forms\\Castle\\CastleFinal.xaml.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Castle\\CastleFinal.xaml.cs",
+              "RelativeToolTip": "MainMenu\\Forms\\Castle\\CastleFinal.xaml.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwCIAAACTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T09:57:37.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Player.cs",
+              "RelativeDocumentMoniker": "EntityCL\\Player.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Player.cs*",
+              "RelativeToolTip": "EntityCL\\Player.cs*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAuwD8AAACsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T08:06:26.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EntityAC.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityAC.cs",
+              "RelativeDocumentMoniker": "EntityCL\\EntityAC.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\EntityAC.cs",
+              "RelativeToolTip": "EntityCL\\EntityAC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T08:14:27.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SlimeC.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Enemies\\SlimeC.cs",
+              "RelativeDocumentMoniker": "EntityCL\\Enemies\\SlimeC.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Enemies\\SlimeC.cs",
+              "RelativeToolTip": "EntityCL\\Enemies\\SlimeC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T08:06:20.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SlimeBoss.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Bosses\\SlimeBoss.cs",
+              "RelativeDocumentMoniker": "EntityCL\\Bosses\\SlimeBoss.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\EntityCL\\Bosses\\SlimeBoss.cs",
+              "RelativeToolTip": "EntityCL\\Bosses\\SlimeBoss.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-28T08:06:03.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameWindow.cs",
+              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\GameWindow.cs",
+              "RelativeDocumentMoniker": "MainMenu\\GameWindow.cs",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\GameWindow.cs*",
+              "RelativeToolTip": "MainMenu\\GameWindow.cs*",
+              "ViewState": "AgIAABQAAAAAAAAAAAA6wBsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T14:56:44.968Z",
               "EditorCaption": ""
             },
             {
@@ -399,35 +183,24 @@
               "Title": "CaveStart.xaml.cs",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveStart.xaml.cs",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveStart.xaml.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveStart.xaml.cs",
-              "RelativeToolTip": "MainMenu\\Forms\\Caves\\CaveStart.xaml.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAYwCYAAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveStart.xaml.cs*",
+              "RelativeToolTip": "MainMenu\\Forms\\Caves\\CaveStart.xaml.cs*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACkAAACLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T14:26:16.289Z",
+              "WhenOpened": "2025-01-28T08:54:47.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 6,
               "Title": "CaveStart.xaml",
               "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveStart.xaml",
               "RelativeDocumentMoniker": "MainMenu\\Forms\\Caves\\CaveStart.xaml",
               "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\Forms\\Caves\\CaveStart.xaml",
               "RelativeToolTip": "MainMenu\\Forms\\Caves\\CaveStart.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-11T16:16:50.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "GameWindow.cs",
-              "DocumentMoniker": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\GameWindow.cs",
-              "RelativeDocumentMoniker": "MainMenu\\GameWindow.cs",
-              "ToolTip": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\MainMenu\\GameWindow.cs",
-              "RelativeToolTip": "MainMenu\\GameWindow.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAYwEMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-18T14:56:44.968Z"
+              "WhenOpened": "2025-01-28T08:54:38.669Z",
+              "EditorCaption": ""
             }
           ]
         }

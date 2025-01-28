@@ -25,7 +25,8 @@ namespace MainMenu
         public bool BlockKeyPressed { get; protected set; }
         public float SpeedX { get; protected set; }
         public float SpeedY { get; protected set; }
-        public float Friction = 0.75f;
+        public const float DefaultFriction = 0.75f;
+        public const string GameTitle = "ARS GOETIA";
 
         public EscMenu Menu = new EscMenu();
 
@@ -55,7 +56,7 @@ namespace MainMenu
         {
             GameTimer.Stop();
             ShotsInterval.Stop();
-            MessageBox.Show(message, "ARS GOETIA");
+            MessageBox.Show(message, GameTitle);
 
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
