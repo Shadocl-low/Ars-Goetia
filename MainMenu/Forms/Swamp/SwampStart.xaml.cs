@@ -39,7 +39,7 @@ namespace MainMenu.Forms.Swamp
         }
         private void GameTick(object sender, EventArgs e)
         {
-            MainPlayer.SetEntityBehavior(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, DefaultFriction, SprintKeyPressed, BlockKeyPressed);
+            MainPlayer.SetEntityBehavior(GameScreen, inputManager.UpKeyPressed, inputManager.LeftKeyPressed, inputManager.DownKeyPressed, inputManager.RightKeyPressed, SpeedX, SpeedY, DefaultFriction, inputManager.SprintKeyPressed, inputManager.BlockKeyPressed);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
@@ -57,24 +57,24 @@ namespace MainMenu.Forms.Swamp
                 {
                     Rect wallHitbox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
 
-                    if (UpKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
+                    if (inputManager.UpKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
                     {
-                        UpKeyPressed = false;
+                        inputManager.UpKeyPressed = false;
                         Canvas.SetTop(MainPlayer.EntityRect, Canvas.GetTop(MainPlayer.EntityRect) + 5);
                     }
-                    if (LeftKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
+                    if (inputManager.LeftKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
                     {
-                        LeftKeyPressed = false;
+                        inputManager.LeftKeyPressed = false;
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) + 5);
                     }
-                    if (DownKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
+                    if (inputManager.DownKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
                     {
-                        DownKeyPressed = false;
+                        inputManager.DownKeyPressed = false;
                         Canvas.SetTop(MainPlayer.EntityRect, Canvas.GetTop(MainPlayer.EntityRect) - 5);
                     }
-                    if (RightKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
+                    if (inputManager.RightKeyPressed && MainPlayer.EntityHitBox.IntersectsWith(wallHitbox))
                     {
-                        RightKeyPressed = false;
+                        inputManager.RightKeyPressed = false;
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - 5);
                     }
                     foreach (var enemy in Enemies)
@@ -90,7 +90,7 @@ namespace MainMenu.Forms.Swamp
                     Rect doorHitbox = new Rect(Canvas.GetLeft(element), Canvas.GetTop(element), element.Width, element.Height);
                     if (MainPlayer.EntityHitBox.IntersectsWith(doorHitbox))
                     {
-                        RightKeyPressed = false;
+                        inputManager.RightKeyPressed = false;
                         Canvas.SetLeft(MainPlayer.EntityRect, Canvas.GetLeft(MainPlayer.EntityRect) - MainPlayer.EntityRect.Height);
                         GameTimer.Stop();
                         Enemies.Clear();

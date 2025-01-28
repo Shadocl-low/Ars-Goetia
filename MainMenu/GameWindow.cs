@@ -17,12 +17,7 @@ namespace MainMenu
 {
     public class GameWindow : Window
     {
-        public bool UpKeyPressed { get; protected set; }
-        public bool DownKeyPressed { get; protected set; }
-        public bool LeftKeyPressed { get; protected set; }
-        public bool RightKeyPressed { get; protected set; }
-        public bool SprintKeyPressed { get; protected set; }
-        public bool BlockKeyPressed { get; protected set; }
+        public EntityCL.InputManager inputManager;
         public float SpeedX { get; protected set; }
         public float SpeedY { get; protected set; }
         public const float DefaultFriction = 0.75f;
@@ -39,6 +34,10 @@ namespace MainMenu
         public DispatcherTimer ShotsInterval = new DispatcherTimer();
 
         public Player MainPlayer = new Player("Shadocl", 10, 10, 1, "Sword and shild", 5);
+        public GameWindow()
+        {
+            inputManager = new EntityCL.InputManager(MainPlayer);
+        }
 
         public static void AddToCanvas<T>(T obj, Canvas gameScreen, int x, int y) where T : UIElement
         {
@@ -60,67 +59,7 @@ namespace MainMenu
             Enemies.Add(enemy);
             AddToCanvas(enemy.EntityRect, GameScreen, x, y);
         }
-        public void KeyBoardUp(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.W)
-            {
-                UpKeyPressed = false;
-            }
-            if (e.Key == Key.A)
-            {
-                LeftKeyPressed = false;
-            }
-            if (e.Key == Key.S)
-            {
-                DownKeyPressed = false;
-            }
-            if (e.Key == Key.D)
-            {
-                RightKeyPressed = false;
-            }
-            if (e.Key == Key.LeftShift)
-            {
-                SprintKeyPressed = false;
-            }
-            if (e.Key == Key.LeftCtrl)
-            {
-                BlockKeyPressed = false;
-            }
-        }
-        public void KeyBoardDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.W)
-            {
-                UpKeyPressed = true;
-            }
-            if (e.Key == Key.A)
-            {
-                LeftKeyPressed = true;
-            }
-            if (e.Key == Key.S)
-            {
-                DownKeyPressed = true;
-            }
-            if (e.Key == Key.D)
-            {
-                RightKeyPressed = true;
-            }
-            if (e.Key == Key.LeftShift)
-            {
-                SprintKeyPressed = true;
-            }
-            if (e.Key == Key.LeftCtrl)
-            {
-                BlockKeyPressed = true;
-            }
-            if (e.Key == Key.Q)
-            {
-                MainPlayer.DrinkEstus();
-            }
-            if (e.Key == Key.F)
-            {
-                MainPlayer.Attack();
-            }
-        }
+        public void KeyBoardUp(object sender, KeyEventArgs e) => inputManager.HandleKey(e, false);
+        public void KeyBoardDown(object sender, KeyEventArgs e) => inputManager.HandleKey(e, true);
     }
 }
