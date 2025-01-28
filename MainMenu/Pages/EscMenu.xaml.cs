@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MainMenu.Forms.Caves;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,14 +30,14 @@ namespace MainMenu.Pages
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             Task.Delay(1000).Wait();
-            new CastleStart().Hide();
+            new CaveStart().Hide();
         }
 
         private void QuitToMenu_Click(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();
             Task.Delay(1000).Wait();
-            new CastleStart().Hide();
+            new CaveStart().Hide();
         }
         private void QuitFromGame_Click(object sender, RoutedEventArgs e)
         {

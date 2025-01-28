@@ -25,7 +25,8 @@ namespace MainMenu
         public bool BlockKeyPressed { get; protected set; }
         public float SpeedX { get; protected set; }
         public float SpeedY { get; protected set; }
-        public float Friction = 0.75f;
+        public const float DefaultFriction = 0.75f;
+        private const string GameTitle = "ARS GOETIA";
 
         public EscMenu Menu = new EscMenu();
 
@@ -38,24 +39,18 @@ namespace MainMenu
         public DispatcherTimer ShotsInterval = new DispatcherTimer();
 
         public Player MainPlayer = new Player("Shadocl", 10, 10, 1, "Sword and shild", 5);
-        
-        public static void AddToCanvas(Rectangle obj, Canvas GameScreen, int x, int y)
+
+        public static void AddToCanvas<T>(T obj, Canvas gameScreen, int x, int y) where T : UIElement
         {
             Canvas.SetLeft(obj, x);
             Canvas.SetTop(obj, y);
-            GameScreen.Children.Add(obj);
-        }
-        public static void AddToCanvas(Control obj, Canvas GameScreen, int x, int y)
-        {
-            Canvas.SetLeft(obj, x);
-            Canvas.SetTop(obj, y);
-            GameScreen.Children.Add(obj);
+            gameScreen.Children.Add(obj);
         }
         public void GameOver(string message)
         {
             GameTimer.Stop();
             ShotsInterval.Stop();
-            MessageBox.Show(message, "ARS GOETIA");
+            MessageBox.Show(message, GameTitle);
 
             System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
             Application.Current.Shutdown();
