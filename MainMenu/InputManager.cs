@@ -10,10 +10,10 @@ namespace MainMenu
 {
     public class InputManager
     {
-        public bool UpKeyPressed { get; private set; }
-        public bool DownKeyPressed { get; private set; }
-        public bool LeftKeyPressed { get; private set; }
-        public bool RightKeyPressed { get; private set; }
+        public bool UpKeyPressed;
+        public bool DownKeyPressed;
+        public bool LeftKeyPressed;
+        public bool RightKeyPressed;
         public bool SprintKeyPressed { get; private set; }
         public bool BlockKeyPressed { get; private set; }
 
