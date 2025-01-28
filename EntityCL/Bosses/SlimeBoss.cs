@@ -80,53 +80,66 @@ namespace EntityCL.Bosses
 
             HealthBar.Value = HealthPoints;
         }
-        public void AttackTick(object sender, EventArgs e)
+        private void AttackTick(object sender, EventArgs e)
         {
-            if (!IsDead)
+            if (IsDead) return;
+
+            var randomAttack = random.Next(3);
+            PerformAttack(randomAttack);
+        }
+        private void PerformAttack(int attackType)
+        {
+            PlayAttackAnimation();
+
+            switch (attackType)
             {
-                Random rand = new();
-                int randomAttack = rand.Next(0, 3);
+                case 0:
+                    PerformHorizontalAttack(50);
+                    break;
+                case 1:
+                    PerformHorizontalAttack(1250);
+                    break;
+                case 2:
+                    SummonSlimes();
+                    break;
+            }
+        }
+        private void PlayAttackAnimation()
+        {
+            var attackAnimation = new DoubleAnimationUsingKeyFrames
+            {
+                SpeedRatio = 0.7,
+                AutoReverse = true
+            };
+            attackAnimation.KeyFrames.Add(new LinearDoubleKeyFrame(EntityRect.Height, KeyTime.FromPercent(0.0)));
+            attackAnimation.KeyFrames.Add(new LinearDoubleKeyFrame(EntityRect.Height + 100, KeyTime.FromPercent(0.3)));
 
-                DoubleAnimationUsingKeyFrames startAttack = new();
-                startAttack.KeyFrames.Add(new LinearDoubleKeyFrame(EntityRect.Height, KeyTime.FromPercent(0.0)));
-                startAttack.KeyFrames.Add(new LinearDoubleKeyFrame(EntityRect.Height + 100, KeyTime.FromPercent(0.3)));
-                startAttack.SpeedRatio = 0.7;
-                startAttack.AutoReverse = true;
+            EntityRect.BeginAnimation(Canvas.HeightProperty, attackAnimation);
+        }
+        private void PerformHorizontalAttack(double targetPosition)
+        {
+            var horizontalAnimation = new DoubleAnimationUsingKeyFrames
+            {
+                SpeedRatio = 0.7,
+                AutoReverse = true
+            };
+            horizontalAnimation.KeyFrames.Add(new LinearDoubleKeyFrame(Canvas.GetLeft(EntityRect), KeyTime.FromPercent(0.6)));
+            horizontalAnimation.KeyFrames.Add(new LinearDoubleKeyFrame(targetPosition, KeyTime.FromPercent(1.0)));
 
-                EntityRect.BeginAnimation(Canvas.HeightProperty, startAttack);
+            EntityRect?.BeginAnimation(Canvas.LeftProperty, horizontalAnimation);
+        }
+        private void SummonSlimes()
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                var slime = new SlimeC(MainPlayer, 70, 60, 3);
+                var offset = i == 0 ? -random.Next(100, 250) : Params.EntityHeight + random.Next(150, 250);
 
-                if (randomAttack == 0)
-                {
-                    DoubleAnimationUsingKeyFrames moving = new();
-                    moving.KeyFrames.Add(new LinearDoubleKeyFrame(Canvas.GetLeft(EntityRect), KeyTime.FromPercent(0.6)));
-                    moving.KeyFrames.Add(new LinearDoubleKeyFrame(50, KeyTime.FromPercent(1.0)));
-                    moving.SpeedRatio = 0.7;
-                    moving.AutoReverse = true;
+                Canvas.SetLeft(slime.EntityRect, Canvas.GetLeft(EntityRect) + EntityRect.Width / 2);
+                Canvas.SetTop(slime.EntityRect, Canvas.GetTop(EntityRect) + offset);
 
-                    EntityRect.BeginAnimation(Canvas.LeftProperty, moving);
-                }
-                if (randomAttack == 1)
-                {
-                    DoubleAnimationUsingKeyFrames moving = new();
-                    moving.KeyFrames.Add(new LinearDoubleKeyFrame(Canvas.GetLeft(EntityRect), KeyTime.FromPercent(0.6)));
-                    moving.KeyFrames.Add(new LinearDoubleKeyFrame(1250, KeyTime.FromPercent(1.0)));
-                    moving.SpeedRatio = 0.6;
-                    moving.AutoReverse = true;
-
-                    EntityRect.BeginAnimation(Canvas.LeftProperty, moving);
-                }
-                if (randomAttack == 2)
-                {
-                    for (int i = 0; i < 2; i++)
-                    {
-                        var slime = new SlimeC(MainPlayer, 70, 60, 3);
-                        Canvas.SetLeft(slime.EntityRect, Canvas.GetLeft(EntityRect) + EntityRect.Width / 2);
-                        if (i == 0) Canvas.SetTop(slime.EntityRect, Canvas.GetTop(EntityRect) - new Random().Next(100, 250));
-                        else Canvas.SetTop(slime.EntityRect, Canvas.GetTop(EntityRect) + EntityRect.Height + new Random().Next(150, 250));
-                        GameScreen.Children.Add(slime.EntityRect);
-                        Enemies.Add(slime);
-                    }
-                }
+                GameScreen.Children.Add(slime.EntityRect);
+                Enemies.Add(slime);
             }
         }
         public override void Death(List<Rectangle> itemRemover)
