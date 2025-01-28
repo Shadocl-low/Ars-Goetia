@@ -16,40 +16,61 @@ namespace EntityCL.Bosses
 {
     public class SlimeBoss : BossAC
     {
-        private List<EnemyAC> Enemies { get; set; }
-        private Canvas GameScreen { get; set; }
+        private List<EnemyAC> Enemies;
+        private Canvas GameScreen;
+        private EntityParam Parameters;
         public SlimeBoss(Player mainPlayer, Canvas gameField, List<EnemyAC> enemies) : base(mainPlayer)
         {
-            MAXHealthPoints = 20;
-            HealthPoints = MAXHealthPoints;
-            AttackDamage = 6;
+            Parameters = new EntityParam(20, 6, 65, 35, 300, 204);
+
             EntityName = "King Slime";
             ImuneState = false;
             IsDead = false;
-            SoulCoins = 35;
-            Strength = 65;
-
-            EntityRect = new();
-            EntityRect.Tag = "slimeTag";
-            EntityRect.Height = 204;
-            EntityRect.Width = 300;
-            ImageBrush SlimeImage = new();
-            SlimeImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Bosses/Slime/SlimeBoss.png"));
-
-            EntityRect.Fill = SlimeImage;
 
             GameScreen = gameField;
+            Enemies = enemies;
 
+            SetupEntityParameters();
+            SetupEntityAppearance();
+            InitializeHealthBar();
+            InitializeAttackTimer();
+        }
+        private void SetupEntityParameters()
+        {
+            MAXHealthPoints = Parameters.DefaultHealth;
+            HealthPoints = MAXHealthPoints;
+            AttackDamage = Parameters.DefaultAttackDamage;
+            SoulCoins = Parameters.DefaultSoulCoins;
+            Strength = Parameters.DefaultStrength;
+        }
+        private void SetupEntityAppearance()
+        {
+            EntityRect = new Rectangle
+            {
+                Tag = "slimeTag",
+                Height = Parameters.EntityHeight,
+                Width = Parameters.EntityWidth,
+                Fill = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Bosses/Slime/SlimeBoss.png"))
+                }
+            };
+        }
+        private void InitializeHealthBar()
+        {
             HealthBar.Maximum = MAXHealthPoints;
             Canvas.SetLeft(HealthBar, 294);
             Canvas.SetTop(HealthBar, 16);
             GameScreen.Children.Add(HealthBar);
+        }
 
+        private void InitializeAttackTimer()
+        {
             AttackTimer.Interval = TimeSpan.FromSeconds(4);
             AttackTimer.Tick += AttackTick;
             AttackTimer.Start();
-            Enemies = enemies;
         }
+
         public override void SetEntityBehavior(List<Rectangle> itemRemover)
         {
             SetHitbox();
