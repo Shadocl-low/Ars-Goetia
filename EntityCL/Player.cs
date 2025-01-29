@@ -11,6 +11,7 @@ using System.Windows;
 using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Windows.Threading;
+using System.Windows.Media.Media3D;
 
 namespace EntityCL
 {
@@ -35,8 +36,8 @@ namespace EntityCL
             ImuneState = false;
             IsHealing = false;
 
-            SetupEntityAppearance();
             SetupEntityParameters();
+            SetupEntityAppearance();
         }
         private void SetupEntityParameters()
         {
@@ -50,7 +51,9 @@ namespace EntityCL
         }
         private void SetupEntityAppearance()
         {
-            EntityRect = new Rectangle { Height = Parameters.EntityHeight, Width = Parameters.EntityHeight };
+            EntityRect = new Rectangle();
+            EntityRect.Height = Parameters.EntityHeight;
+            EntityRect.Width = Parameters.EntityWidth;
             KnightImage = new ImageBrush
             {
                 ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"))
@@ -73,29 +76,26 @@ namespace EntityCL
                 Speed = Parameters.DefaultSpeed;
             }
         }
-        public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction)
+        public void Moving(Canvas GameScreen, InputManager inputManager, float Friction)
         {
-            if (UpKeyPressed && Canvas.GetTop(EntityRect) > 0)
-            {
-                SpeedY += Speed;
-            }
-            if (LeftKeyPressed && Canvas.GetLeft(EntityRect) > 0)
+            float SpeedX = 0f;
+            float SpeedY = 0f;
+
+            if (inputManager.UpKeyPressed && Canvas.GetTop(EntityRect) > 0) SpeedY += Speed;
+            if (inputManager.LeftKeyPressed && Canvas.GetLeft(EntityRect) > 0)
             {
                 SpeedX -= Speed;
                 RotateWay.ScaleX = -1;
             }
-            if (DownKeyPressed && Canvas.GetTop(EntityRect) < GameScreen.ActualHeight - EntityRect.ActualHeight)
-            {
-                SpeedY -= Speed;
-            }
-            if (RightKeyPressed && Canvas.GetLeft(EntityRect) < GameScreen.ActualWidth - EntityRect.ActualWidth)
+            if (inputManager.DownKeyPressed && Canvas.GetTop(EntityRect) < GameScreen.ActualHeight - EntityRect.ActualHeight) SpeedY -= Speed;
+            if (inputManager.RightKeyPressed && Canvas.GetLeft(EntityRect) < GameScreen.ActualWidth - EntityRect.ActualWidth)
             {
                 SpeedX += Speed;
                 RotateWay.ScaleX = 1;
             }
 
-            SpeedX = SpeedX * Friction;
-            SpeedY = SpeedY * Friction;
+            SpeedX *= Friction;
+            SpeedY *= Friction;
 
             EntityRect.RenderTransform = RotateWay;
 
@@ -104,7 +104,7 @@ namespace EntityCL
         }
         public override void SetHitbox()
         {
-            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), 47, 55);
+            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), Parameters.EntityWidth, Parameters.EntityHeight);
         }
         public override async void Attack()
         {
@@ -187,12 +187,12 @@ namespace EntityCL
                 KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
             }
         }
-        public void SetEntityBehavior(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction, bool SprintKeyPressed, bool BlockKeyPressed)
+        public void SetEntityBehavior(Canvas GameScreen, InputManager manager, float Friction)
         {
-            Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
-            Sprinting(SprintKeyPressed);
+            Moving(GameScreen, manager, Friction);
+            Sprinting(manager.SprintKeyPressed);
             StaminaRegen();
-            Block(BlockKeyPressed);
+            Block(manager.BlockKeyPressed);
             SetHitbox();
         }
         public override void TakeDamageFrom(EntityAC Entity)

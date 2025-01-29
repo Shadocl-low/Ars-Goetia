@@ -41,10 +41,10 @@ namespace MainMenu.Forms.Caves
         {
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
-            RestEstus.Content = MainPlayer.AmoutOfEstus;
+            RestEstus.Content = MainPlayer.AmountOfEstus;
             RestCoins.Content = MainPlayer.AmountOfSoulCoins;
 
-            MainPlayer.SetEntityBehavior(GameScreen, inputManager.UpKeyPressed, inputManager.LeftKeyPressed, inputManager.DownKeyPressed, inputManager.RightKeyPressed, SpeedX, SpeedY, DefaultFriction, inputManager.SprintKeyPressed, inputManager.BlockKeyPressed);
+            MainPlayer.SetEntityBehavior(GameScreen, inputManager, DefaultFriction);
 
             foreach (var enemy in Enemies)
             {
