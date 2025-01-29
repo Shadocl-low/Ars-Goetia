@@ -19,6 +19,7 @@ namespace EntityCL
         public int BlockSpeed { get; private set; } = 2;
         public float StaminaRegenRate { get; private set; } = 0.5f;
         public int AttackStaminaCost { get; private set; } = 30;
+        public int EstusHealthRegen { get; private set; } = 2;
         public PlayerParam(int hearth, int attack, int coins, int estus, int width, int height) : base(hearth, attack, width, hearth)
         {
             AmountOfEstus = estus;

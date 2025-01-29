@@ -63,16 +63,14 @@ namespace EntityCL
             {
                 IsHealing = true;
                 AmountOfEstus--;
-                int HealthAmount = 2;
-                Speed /= 5;
-                while (HealthAmount > 0)
+                Speed = Parameters.DefaultSpeed / 5;
+                for (int i = 0; i < Parameters.EstusHealthRegen; i++)
                 {
                     await Task.Delay(1000);
-                    if (HealthPoints < MAXHealthPoints) HealthPoints += 1;
-                    HealthAmount--;
+                    if (HealthPoints < MAXHealthPoints) HealthPoints++;
                 }
                 IsHealing = false;
-                Speed = 5;
+                Speed = Parameters.DefaultSpeed;
             }
         }
         public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction)
