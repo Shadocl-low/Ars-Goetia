@@ -148,18 +148,15 @@ namespace EntityCL
         {
             AmountOfSoulCoins += enemy.SoulCoins;
         }
-        public void StaminaRegen()
+        public void RegenerateStamina()
         {
-            if (Stamina <= 100f)
-            {
-                Stamina += 0.5f;
-            }
+            if (Stamina < Parameters.MAXStamina) Stamina = Math.Min(Parameters.MAXStamina, Stamina + Parameters.StaminaRegenRate);
         }
         public void Block(bool BlockKeyPressed)
         {
             if (BlockKeyPressed)
             {
-                Speed = 2;
+                Speed = Parameters.BlockSpeed;
                 IsShielded = true;
                 KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreShieldUp.png"));
             }
@@ -173,7 +170,7 @@ namespace EntityCL
         {
             Moving(GameScreen, manager, Friction);
             Sprint(manager.SprintKeyPressed);
-            StaminaRegen();
+            RegenerateStamina();
             Block(manager.BlockKeyPressed);
             SetHitbox();
         }
