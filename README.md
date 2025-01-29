@@ -8,13 +8,11 @@
 4. WindowsBase
 
 ## Controls:
-W - Up
-A - Left
-S - Down
-D - Right
-
-F - Attack
-Q - Use Ustus(heal)
-
-LeftShift - Run
-LeftCtrl - Block
++ W - Up
++ A - Left
++ S - Down
++ D - Right
++ F - Attack
++ Q - Use Ustus(heal)
++ LeftShift - Run
++ LeftCtrl - Block
