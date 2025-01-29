@@ -44,7 +44,6 @@ namespace EntityCL
         {
             if (EntityHitBox.IntersectsWith(MainPlayer.AttackHitBox))
             {
-                MainPlayer.DeleteAttackHitbox();
                 base.TakeDamageFrom(MainPlayer);
             }
         }

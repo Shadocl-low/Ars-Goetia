@@ -132,30 +132,16 @@ namespace EntityCL
             AttackHitBox = new Rect();
             EntityRect.Width = 47;
         }
-        public void DeleteAttackHitbox()
+        public void Sprint(bool isSprinting)
         {
-            AttackHitBox = new Rect();
-        }
-        public void Sprinting(bool SprintKeyPressed)
-        {
-            if (SprintKeyPressed)
+            if (isSprinting && Stamina > 0 && !IsHealing)
             {
-                if (Stamina > 0f && !IsHealing)
-                {
-                    Speed = 10;
-                    Stamina--;
-                }
-                if (Stamina <= 0)
-                {
-                    Speed = 5;
-                }
+                Speed = Parameters.SprintSpeed;
+                Stamina = Math.Max(0, Stamina - 1);
             }
-            else if (!SprintKeyPressed)
+            else
             {
-                if (!IsHealing)
-                {
-                    Speed = 5;
-                }
+                Speed = Parameters.DefaultSpeed;
             }
         }
         public void SetSoulCoins(EnemyAC enemy)
@@ -186,7 +172,7 @@ namespace EntityCL
         public void SetEntityBehavior(Canvas GameScreen, InputManager manager, float Friction)
         {
             Moving(GameScreen, manager, Friction);
-            Sprinting(manager.SprintKeyPressed);
+            Sprint(manager.SprintKeyPressed);
             StaminaRegen();
             Block(manager.BlockKeyPressed);
             SetHitbox();
