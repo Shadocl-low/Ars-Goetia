@@ -176,18 +176,17 @@ namespace EntityCL
         }
         public override void TakeDamageFrom(EntityAC Entity)
         {
-            if (IsShielded && !ImuneState && Stamina >= (Entity as EnemyAC).Strength)
+            if (IsShielded && !ImuneState && Stamina >= (Entity as EnemyAC)?.Strength)
             {
-                ImuneState = true;
-                ImuneTimer.Start();
-                Stamina -= (Entity as EnemyAC).Strength;
+                Stamina -= (Entity as EnemyAC)?.Strength ?? 0;
             }
-            if (!ImuneState && !IsShielded)
+            else if (!ImuneState)
             {
-                ImuneState = true;
-                ImuneTimer.Start();
                 HealthPoints -= Entity.AttackDamage;
-            };
+            }
+
+            ImuneState = true;
+            ImuneTimer.Start();
         }
     }
 }
