@@ -108,33 +108,29 @@ namespace EntityCL
         }
         public override async void Attack()
         {
+            if (Stamina < Parameters.AttackStaminaCost || IsAttacking) return;
+
             IsAttacking = true;
-            if (Stamina >= 30)
-            {
+            Stamina -= Parameters.AttackStaminaCost;
 
-                Stamina -= 30f;
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreAttack.png"));
 
-                KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreAttack.png"));
+            AttackHitBox = RotateWay.ScaleX == 1
+                ? new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30)
+                : new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
 
-                if (RotateWay.ScaleX == 1)
-                {
-                    AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
-                }
-                else
-                {
-                    AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
-                }
-                EntityRect.Width = 87;
-                EntityRect.Fill = KnightImage;
+            EntityRect.Width = 87;
 
-                await Task.Delay(300);
+            await Task.Delay(300);
 
-                KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
-                AttackHitBox = new Rect();
-                EntityRect.Width = 47;
-                EntityRect.Fill = KnightImage;
-            }
+            ResetAttack();
             IsAttacking = false;
+        }
+        private void ResetAttack()
+        {
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
+            AttackHitBox = new Rect();
+            EntityRect.Width = 47;
         }
         public void DeleteAttackHitbox()
         {
