@@ -18,10 +18,9 @@ namespace EntityCL
         public bool ImuneState { get; protected set; }
         public ScaleTransform RotateWay { get; protected set; }
         public DispatcherTimer ImuneTimer { get; protected set; }
-        public EntityAC(string name, int maxhp, int hp, int atk)
+        public EntityAC(string name, int hp, int atk)
         {
             EntityName = name;
-            MAXHealthPoints = maxhp;
             HealthPoints = hp;
             AttackDamage = atk;
             State = "Normal";

@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace MainMenu
+namespace EntityCL
 {
     public class InputManager
     {
-        public bool UpKeyPressed;
-        public bool DownKeyPressed;
-        public bool LeftKeyPressed;
-        public bool RightKeyPressed;
+        public bool UpKeyPressed { get; set; }
+        public bool DownKeyPressed { get; set; }
+        public bool LeftKeyPressed { get; set; }
+        public bool RightKeyPressed { get; set; }
         public bool SprintKeyPressed { get; private set; }
         public bool BlockKeyPressed { get; private set; }
 

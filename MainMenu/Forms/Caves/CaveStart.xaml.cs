@@ -39,11 +39,11 @@ namespace MainMenu.Forms.Caves
         }
         private void GameTick(object sender, EventArgs e)
         {
-            MainPlayer.SetEntityBehavior(GameScreen, inputManager.UpKeyPressed, inputManager.LeftKeyPressed, inputManager.DownKeyPressed, inputManager.RightKeyPressed, SpeedX, SpeedY, DefaultFriction, inputManager.SprintKeyPressed, inputManager.BlockKeyPressed);
+            MainPlayer.SetEntityBehavior(GameScreen, inputManager, DefaultFriction);
 
             PlayerHealthBar.Value = MainPlayer.HealthPoints;
             PlayerStaminaBar.Value = MainPlayer.Stamina;
-            RestEstus.Content = MainPlayer.AmoutOfEstus;
+            RestEstus.Content = MainPlayer.AmountOfEstus;
             RestCoins.Content = MainPlayer.AmountOfSoulCoins;
 
             foreach (var enemy in Enemies)

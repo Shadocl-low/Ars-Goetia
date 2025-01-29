@@ -11,79 +11,91 @@ using System.Windows;
 using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Windows.Threading;
+using System.Windows.Media.Media3D;
 
 namespace EntityCL
 {
     public class Player : EntityAC
     {
-        public Rect AttackHitBox { get; protected set; }
-        public string Weapon { get; protected set; }
-        public int AmoutOfEstus { get; protected set; }
-        public int Speed { get; protected set; }
-        public float Stamina { get; protected set; }
-        public ImageBrush KnightImage { get; protected set; }
+        public int AmountOfEstus { get; private set; }
+        public int AmountOfSoulCoins { get; private set; }
+        public int Speed { get; private set; }
+        public float Stamina { get; private set; }
+        public Rect AttackHitBox { get; private set; }
+        public ImageBrush KnightImage { get; private set; }
+
         private bool IsHealing { get; set; }
         private bool IsAttacking { get; set; }
         private bool IsShielded { get; set; }
-        public int AmountOfSoulCoins { get; protected set; }
-        public Player(string name, int maxhp, int hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
+
+        private PlayerParam Parameters;
+        public Player(string name, int hp, int atk, int coins, int estus) : base(name, hp, atk)
         {
-            Weapon = weapon;
-            AmoutOfEstus = estus;
-            Speed = 5;
-            Stamina = 100f;
+            Parameters = new PlayerParam(hp, atk, coins, estus, 47, 55);
+
             ImuneState = false;
             IsHealing = false;
-            AmountOfSoulCoins = 0;
 
+            SetupEntityParameters();
+            SetupEntityAppearance();
+        }
+        private void SetupEntityParameters()
+        {
+            MAXHealthPoints = Parameters.MAXDefaultHealth;
+            HealthPoints = Parameters.DefaultHealth;
+            AttackDamage = Parameters.DefaultAttackDamage;
+            AmountOfSoulCoins = Parameters.AmountOfSoulCoins;
+            AmountOfEstus = Parameters.AmountOfEstus;
+            Speed = Parameters.Speed;
+            Stamina = Parameters.Stamina;
+        }
+        private void SetupEntityAppearance()
+        {
             EntityRect = new Rectangle();
-            EntityRect.Height = 55;
-            EntityRect.Width = 47;
-            KnightImage = new ImageBrush();
-            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
+            EntityRect.Height = Parameters.EntityHeight;
+            EntityRect.Width = Parameters.EntityWidth;
+            KnightImage = new ImageBrush
+            {
+                ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"))
+            };
             EntityRect.Fill = KnightImage;
         }
         public async void DrinkEstus()
         {
-            if (HealthPoints < MAXHealthPoints && AmoutOfEstus != 0)
+            if (HealthPoints < MAXHealthPoints && AmountOfEstus != 0)
             {
                 IsHealing = true;
-                AmoutOfEstus--;
-                int HealthAmount = 2;
-                Speed /= 5;
-                while (HealthAmount > 0)
+                AmountOfEstus--;
+                Speed = Parameters.DefaultSpeed / 5;
+                for (int i = 0; i < Parameters.EstusHealthRegen; i++)
                 {
                     await Task.Delay(1000);
-                    if (HealthPoints < MAXHealthPoints) HealthPoints += 1;
-                    HealthAmount--;
+                    if (HealthPoints < MAXHealthPoints) HealthPoints++;
                 }
                 IsHealing = false;
-                Speed = 5;
+                Speed = Parameters.DefaultSpeed;
             }
         }
-        public void Moving(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction)
+        public void Moving(Canvas GameScreen, InputManager inputManager, float Friction)
         {
-            if (UpKeyPressed && Canvas.GetTop(EntityRect) > 0)
-            {
-                SpeedY += Speed;
-            }
-            if (LeftKeyPressed && Canvas.GetLeft(EntityRect) > 0)
+            float SpeedX = 0f;
+            float SpeedY = 0f;
+
+            if (inputManager.UpKeyPressed && Canvas.GetTop(EntityRect) > 0) SpeedY += Speed;
+            if (inputManager.LeftKeyPressed && Canvas.GetLeft(EntityRect) > 0)
             {
                 SpeedX -= Speed;
                 RotateWay.ScaleX = -1;
             }
-            if (DownKeyPressed && Canvas.GetTop(EntityRect) < GameScreen.ActualHeight - EntityRect.ActualHeight)
-            {
-                SpeedY -= Speed;
-            }
-            if (RightKeyPressed && Canvas.GetLeft(EntityRect) < GameScreen.ActualWidth - EntityRect.ActualWidth)
+            if (inputManager.DownKeyPressed && Canvas.GetTop(EntityRect) < GameScreen.ActualHeight - EntityRect.ActualHeight) SpeedY -= Speed;
+            if (inputManager.RightKeyPressed && Canvas.GetLeft(EntityRect) < GameScreen.ActualWidth - EntityRect.ActualWidth)
             {
                 SpeedX += Speed;
                 RotateWay.ScaleX = 1;
             }
 
-            SpeedX = SpeedX * Friction;
-            SpeedY = SpeedY * Friction;
+            SpeedX *= Friction;
+            SpeedY *= Friction;
 
             EntityRect.RenderTransform = RotateWay;
 
@@ -92,80 +104,59 @@ namespace EntityCL
         }
         public override void SetHitbox()
         {
-            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), 47, 55);
+            EntityHitBox = new Rect(Canvas.GetLeft(EntityRect), Canvas.GetTop(EntityRect), Parameters.EntityWidth, Parameters.EntityHeight);
         }
         public override async void Attack()
         {
+            if (Stamina < Parameters.AttackStaminaCost || IsAttacking) return;
+
             IsAttacking = true;
-            if (Stamina >= 30)
-            {
+            Stamina -= Parameters.AttackStaminaCost;
 
-                Stamina -= 30f;
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreAttack.png"));
 
-                KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreAttack.png"));
+            AttackHitBox = RotateWay.ScaleX == 1
+                ? new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30)
+                : new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
 
-                if (RotateWay.ScaleX == 1)
-                {
-                    AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) + 77, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
-                }
-                else
-                {
-                    AttackHitBox = new Rect(Canvas.GetLeft(EntityRect) - 40, Canvas.GetTop(EntityRect) + EntityRect.Height / 2, 60, 30);
-                }
-                EntityRect.Width = 87;
-                EntityRect.Fill = KnightImage;
+            EntityRect.Width = 87;
 
-                await Task.Delay(300);
+            await Task.Delay(300);
 
-                KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
-                AttackHitBox = new Rect();
-                EntityRect.Width = 47;
-                EntityRect.Fill = KnightImage;
-            }
+            ResetAttack();
             IsAttacking = false;
         }
-        public void DeleteAttackHitbox()
+        private void ResetAttack()
         {
+            KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
             AttackHitBox = new Rect();
+            EntityRect.Width = 47;
         }
-        public void Sprinting(bool SprintKeyPressed)
+        public void Sprint(bool isSprinting)
         {
-            if (SprintKeyPressed)
+            if (isSprinting && Stamina > 0 && !IsHealing)
             {
-                if (Stamina > 0f && !IsHealing)
-                {
-                    Speed = 10;
-                    Stamina--;
-                }
-                if (Stamina <= 0)
-                {
-                    Speed = 5;
-                }
+                Speed = Parameters.SprintSpeed;
+                Stamina = Math.Max(0, Stamina - 1);
             }
-            else if (!SprintKeyPressed)
+            else
             {
-                if (!IsHealing)
-                {
-                    Speed = 5;
-                }
+                Speed = Parameters.DefaultSpeed;
             }
         }
         public void SetSoulCoins(EnemyAC enemy)
         {
             AmountOfSoulCoins += enemy.SoulCoins;
         }
-        public void StaminaRegen()
+        public void RegenerateStamina()
         {
-            if (Stamina <= 100f)
-            {
-                Stamina += 0.5f;
-            }
+            if (Stamina < Parameters.MAXStamina) Stamina = Math.Min(Parameters.MAXStamina, Stamina + Parameters.StaminaRegenRate);
         }
         public void Block(bool BlockKeyPressed)
         {
             if (BlockKeyPressed)
             {
-                Speed = 2;
+                Speed = Parameters.BlockSpeed;
                 IsShielded = true;
                 KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymoreShieldUp.png"));
             }
@@ -175,28 +166,27 @@ namespace EntityCL
                 KnightImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Images/Player/MainCharacterClaymore.png"));
             }
         }
-        public void SetEntityBehavior(Canvas GameScreen, bool UpKeyPressed, bool LeftKeyPressed, bool DownKeyPressed, bool RightKeyPressed, float SpeedX, float SpeedY, float Friction, bool SprintKeyPressed, bool BlockKeyPressed)
+        public void SetEntityBehavior(Canvas GameScreen, InputManager manager, float Friction)
         {
-            Moving(GameScreen, UpKeyPressed, LeftKeyPressed, DownKeyPressed, RightKeyPressed, SpeedX, SpeedY, Friction);
-            Sprinting(SprintKeyPressed);
-            StaminaRegen();
-            Block(BlockKeyPressed);
+            Moving(GameScreen, manager, Friction);
+            Sprint(manager.SprintKeyPressed);
+            RegenerateStamina();
+            Block(manager.BlockKeyPressed);
             SetHitbox();
         }
         public override void TakeDamageFrom(EntityAC Entity)
         {
-            if (IsShielded && !ImuneState && Stamina >= (Entity as EnemyAC).Strength)
+            if (IsShielded && !ImuneState && Stamina >= (Entity as EnemyAC)?.Strength)
             {
-                ImuneState = true;
-                ImuneTimer.Start();
-                Stamina -= (Entity as EnemyAC).Strength;
+                Stamina -= (Entity as EnemyAC)?.Strength ?? 0;
             }
-            if (!ImuneState && !IsShielded)
+            else if (!ImuneState)
             {
-                ImuneState = true;
-                ImuneTimer.Start();
                 HealthPoints -= Entity.AttackDamage;
-            };
+            }
+
+            ImuneState = true;
+            ImuneTimer.Start();
         }
     }
 }

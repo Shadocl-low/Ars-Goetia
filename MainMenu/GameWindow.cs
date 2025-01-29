@@ -17,11 +17,9 @@ namespace MainMenu
 {
     public class GameWindow : Window
     {
-        public float SpeedX { get; protected set; }
-        public float SpeedY { get; protected set; }
         public const float DefaultFriction = 0.75f;
         private const string GameTitle = "ARS GOETIA";
-        public InputManager inputManager;
+        public EntityCL.InputManager inputManager;
 
         public EscMenu Menu = new EscMenu();
 
@@ -33,10 +31,10 @@ namespace MainMenu
         public DispatcherTimer GameTimer = new DispatcherTimer();
         public DispatcherTimer ShotsInterval = new DispatcherTimer();
 
-        public Player MainPlayer = new Player("Shadocl", 10, 10, 1, "Sword and shild", 5);
+        public Player MainPlayer = new Player("Shadocl", 10, 1, 0, 5);
         public GameWindow()
         {
-            inputManager = new InputManager(MainPlayer);
+            inputManager = new EntityCL.InputManager(MainPlayer);
         }
         public static void AddToCanvas<T>(T obj, Canvas gameScreen, int x, int y) where T : UIElement
         {
