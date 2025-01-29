@@ -21,7 +21,6 @@ namespace EntityCL
         public int Speed { get; private set; }
         public float Stamina { get; private set; }
         public Rect AttackHitBox { get; private set; }
-        public string Weapon { get; private set; }
         public ImageBrush KnightImage { get; private set; }
 
         private bool IsHealing { get; set; }
@@ -29,11 +28,10 @@ namespace EntityCL
         private bool IsShielded { get; set; }
 
         private PlayerParam Parameters;
-        public Player(string name, int maxhp, int hp, int atk, string weapon, int estus) : base(name, maxhp, hp, atk)
+        public Player(string name, int hp, int atk, int coins, int estus) : base(name, hp, atk)
         {
-            Parameters = new PlayerParam(10, 0, 1, 5, 47, 55);
+            Parameters = new PlayerParam(hp, atk, coins, estus, 47, 55);
 
-            Weapon = weapon;
             ImuneState = false;
             IsHealing = false;
 
