@@ -12,59 +12,47 @@ namespace EntityCL
     public class Arrow
     {
         public EnemyAC Parent { get; protected set; }
-        public Canvas Screen { get; protected set; }
         public Player Target { get; protected set; }
-        public Rectangle ArrowRect { get; protected set; }
+        public ArrowRenderer Renderer { get; protected set; }
         public System.Windows.Rect ArrowHitbox { get; protected set; }
         public double TargetAimX { get; protected set; }
         public double TargetAimY { get; protected set; }
-        public Arrow(EnemyAC parent, Canvas screen, Player terget)
+
+        public Arrow(EnemyAC parent, Canvas screen, Player target)
         {
             Parent = parent;
-            Screen = screen;
-            Target = terget;
+            Target = target;
+            Renderer = new ArrowRenderer(screen, parent, target);
 
-            ArrowRect = new Rectangle
-            {
-                Tag = "arrow",
-                Height = 5,
-                Width = 20,
-                Fill = Brushes.Brown,
-                Stroke = Brushes.Black,
-                RenderTransformOrigin = new Point(0.5, 0.5)
-            };
-
-            Canvas.SetLeft(ArrowRect, Canvas.GetLeft(Parent.EntityRect) + 15);
-            Canvas.SetTop(ArrowRect, Canvas.GetTop(Parent.EntityRect) + Parent.EntityRect.Height / 2);
-
-            double TargetAimY = Canvas.GetTop(Target.EntityRect);
-            double TargetAimX = Canvas.GetLeft(Target.EntityRect) + Target.EntityRect.Width / 2;
-
-            ArrowRect.RenderTransform = new RotateTransform(CalculateVector.GetDeegrese(ArrowRect, TargetAimX, TargetAimY) * 180 / Math.PI);
-
-            Screen.Children.Add(ArrowRect);
+            double targetAimY = Canvas.GetTop(Target.EntityRect);
+            double targetAimX = Canvas.GetLeft(Target.EntityRect) + Target.EntityRect.Width / 2;
+            Renderer.RotateArrow(targetAimX, targetAimY);
         }
+
         public void SetTargetAim(double AimX, double AimY)
         {
             TargetAimX = AimX;
             TargetAimY = AimY;
         }
+
         public void Flying(double TargetAimX, double TargetAimY, List<Rectangle> itemRemover)
         {
             List<double> xy = CalculateVector.Normalize(Parent.EntityRect, TargetAimX, TargetAimY);
-            Canvas.SetLeft(ArrowRect, Canvas.GetLeft(ArrowRect) + (xy[0] * 20));
-            Canvas.SetTop(ArrowRect, Canvas.GetTop(ArrowRect) + (xy[1] * 20));
+            Renderer.UpdatePosition(xy[0] * 20, xy[1] * 20);
         }
+
         public void WallHit(List<Rectangle> itemRemover)
         {
-            if (Canvas.GetTop(ArrowRect) < 10 || Canvas.GetLeft(ArrowRect) < 10 || Canvas.GetLeft(ArrowRect) > 1560 || Canvas.GetTop(ArrowRect) > 850)
+            if (Canvas.GetTop(Renderer.ArrowRect) < 10 || Canvas.GetLeft(Renderer.ArrowRect) < 10 ||
+                Canvas.GetLeft(Renderer.ArrowRect) > 1560 || Canvas.GetTop(Renderer.ArrowRect) > 850)
             {
-                itemRemover.Add(ArrowRect);
+                itemRemover.Add(Renderer.ArrowRect);
             }
         }
+
         public void SetArrowHitbox()
         {
-            ArrowHitbox = new Rect(Canvas.GetLeft(ArrowRect), Canvas.GetTop(ArrowRect), ArrowRect.Width, ArrowRect.Height);
+            ArrowHitbox = new Rect(Canvas.GetLeft(Renderer.ArrowRect), Canvas.GetTop(Renderer.ArrowRect), Renderer.ArrowRect.Width, Renderer.ArrowRect.Height);
         }
     }
 }
