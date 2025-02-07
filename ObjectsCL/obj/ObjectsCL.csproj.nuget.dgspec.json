@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj": {}
+    "D:\\University\\Classes\\2 курс\\02\\ТПр\\Refactoring\\Ars-Goetia\\ObjectsCL\\ObjectsCL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj": {
+    "D:\\University\\Classes\\2 курс\\02\\ТПр\\Refactoring\\Ars-Goetia\\ObjectsCL\\ObjectsCL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj",
+        "projectUniqueName": "D:\\University\\Classes\\2 курс\\02\\ТПр\\Refactoring\\Ars-Goetia\\ObjectsCL\\ObjectsCL.csproj",
         "projectName": "ObjectsCL",
-        "projectPath": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\ObjectsCL.csproj",
-        "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1\\Downloads\\Practica\\TechPrakt2025Debug\\ars-goetia\\ObjectsCL\\obj\\",
+        "projectPath": "D:\\University\\Classes\\2 курс\\02\\ТПр\\Refactoring\\Ars-Goetia\\ObjectsCL\\ObjectsCL.csproj",
+        "packagesPath": "C:\\Users\\dzheh\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\Classes\\2 курс\\02\\ТПр\\Refactoring\\Ars-Goetia\\ObjectsCL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dzheh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
