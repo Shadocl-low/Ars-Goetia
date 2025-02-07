@@ -51,9 +51,10 @@ namespace EntityCL
         }
         public void Flying(double TargetAimX, double TargetAimY, List<Rectangle> itemRemover)
         {
-            List<double> xy = CalculateVector.Normalize(Parent.EntityRect, TargetAimX, TargetAimY);
-            Canvas.SetLeft(ArrowRect, Canvas.GetLeft(ArrowRect) + (xy[0] * 20));
-            Canvas.SetTop(ArrowRect, Canvas.GetTop(ArrowRect) + (xy[1] * 20));
+            Vector2D direction = CalculateVector.Normalize(Parent.EntityRect, TargetAimX, TargetAimY);
+
+            Canvas.SetLeft(ArrowRect, Canvas.GetLeft(ArrowRect) + (direction.X * 20));
+            Canvas.SetTop(ArrowRect, Canvas.GetTop(ArrowRect) + (direction.Y * 20));
         }
         public void WallHit(List<Rectangle> itemRemover)
         {

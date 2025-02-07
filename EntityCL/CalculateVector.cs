@@ -10,24 +10,23 @@ namespace EntityCL
 {
     public static class CalculateVector
     {
-        public static List<double> GetVectorCoordinates(Rectangle Element, double TargetX, double TargetY)
+        public static Vector2D GetVectorCoordinates(Rectangle element, double targetX, double targetY)
         {
-            double Xcord = TargetX - Canvas.GetLeft(Element);
-            double Ycord = TargetY - Canvas.GetTop(Element);
-            return new List<double> { Xcord, Ycord };
+            double x = targetX - Canvas.GetLeft(element);
+            double y = targetY - Canvas.GetTop(element);
+            return new Vector2D(x, y);
         }
-        public static List<double> Normalize(Rectangle Element, double TargetX, double TargetY)
+
+        public static Vector2D Normalize(Rectangle element, double targetX, double targetY)
         {
-            List<double> Coordinates = GetVectorCoordinates(Element, TargetX, TargetY);
-            double Model = Math.Sqrt(Math.Pow(Coordinates[0], 2) + Math.Pow(Coordinates[1], 2));
-            double X = Coordinates[0] / Model;
-            double Y = Coordinates[1] / Model;
-            return new List<double> { X, Y };
+            Vector2D vector = GetVectorCoordinates(element, targetX, targetY);
+            return vector.Normalize();
         }
-        public static double GetDeegrese(Rectangle Element, double TargetX, double TargetY)
+
+        public static double GetDeegrese(Rectangle element, double targetX, double targetY)
         {
-            List<double> Coordinates = GetVectorCoordinates(Element, TargetX, TargetY);
-            return Math.Atan(Coordinates[1] / Coordinates[0]);
+            Vector2D vector = GetVectorCoordinates(element, targetX, targetY);
+            return vector.Angle();
         }
     }
 }
