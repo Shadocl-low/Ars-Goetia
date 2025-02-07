@@ -78,22 +78,18 @@ namespace EntityCL.Enemies
         {
             if (!IsDead)
             {
-                if (RotateWay.ScaleX == 1)
+                int direction = RotateWay.ScaleX == 1 ? 1 : -1;
+
+                double currentPosition = Canvas.GetLeft(EntityRect);
+                double maxPosition = 1540 - EntityRect.Width;
+                double minPosition = 5;
+
+                if ((direction == 1 && currentPosition > maxPosition) || (direction == -1 && currentPosition < minPosition))
                 {
-                    if (Canvas.GetLeft(EntityRect) > (1540 - (int)EntityRect.Width))
-                    {
-                        WallHit();
-                    }
-                    Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + Speed);
+                    WallHit();
                 }
-                else
-                {
-                    if (Canvas.GetLeft(EntityRect) < 5)
-                    {
-                        WallHit();
-                    }
-                    Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) - Speed);
-                }
+
+                Canvas.SetLeft(EntityRect, currentPosition + direction * Speed);
             }
         }
         public override void WallHit()
