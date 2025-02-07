@@ -48,9 +48,10 @@ namespace EntityCL.Enemies
             {
                 base.Moving();
 
-                List<double> xy = CalculateVector.Normalize(EntityRect, Canvas.GetLeft(MainPlayer.EntityRect), Canvas.GetTop(MainPlayer.EntityRect));
-                Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + (xy[0] * Speed));
-                Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) + (xy[1] * Speed));
+                Vector2D direction = CalculateVector.Normalize(EntityRect, Canvas.GetLeft(MainPlayer.EntityRect), Canvas.GetTop(MainPlayer.EntityRect));
+
+                Canvas.SetLeft(EntityRect, Canvas.GetLeft(EntityRect) + (direction.X * Speed));
+                Canvas.SetTop(EntityRect, Canvas.GetTop(EntityRect) + (direction.Y * Speed));
             }
         }
         public override void WallHit()
